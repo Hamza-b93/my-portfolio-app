@@ -8,8 +8,7 @@
         >
           <div id="brandName" class="align-middle text-center">
             <span id="brandText" class="">
-              Hi! I Am Hamza. Welcome To My Personal Development Portfolio
-              Website!
+              Hi! I Am Hamza. Welcome To My Personal Portfolio Website!
             </span>
             <br />
             <!-- <p id="moto" class="">The Ultimate Streaming Experience!</p> -->
@@ -25,7 +24,9 @@
             </form> -->
             <p id="" class="shortDescription">
               I am a <b>Software Engineer</b> with 3+ years of development
-              experience in the industry.
+              experience in the industry. Having worked on a wide variety of
+              projects, my knowledge and experience makes me a great addition to
+              any development team.
             </p>
           </div>
           <div
@@ -42,10 +43,6 @@
         </div>
       </div>
     </div>
-    <div id="" class="grid grid-rows-1">
-      <Footer />
-    </div>
-    <!-- <Example /> -->
   </div>
 </template>
 
