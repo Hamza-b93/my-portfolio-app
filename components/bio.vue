@@ -6,7 +6,7 @@
           id=""
           class="grid-cols-2 2xl:columns-2 xl:columns-2 lg:columns-2 md:columns-1 sm:columns-1 xs:columns-1"
         >
-          <div id="brandName" class="align-middle text-center">
+          <div id="introSection" class="align-middle text-center">
             <span id="brandText" class="">
               Hi! I Am Hamza. Welcome To My Personal Portfolio Website!
             </span>
@@ -28,6 +28,88 @@
               projects, my knowledge and experience makes me a great addition to
               any development team.
             </p>
+            <br />
+            <div class="grid grid-cols-2 gap-4 px-4 mx-auto max-w-screen-lg">
+              <span id="" class="">
+                <Icon
+                  name="material-symbols:android-contacts"
+                  style="color: whitesmoke"
+                  id=""
+                  class="icons"
+                />
+                <p id="" class="introDetails">Muhammad Hamza Butt</p>
+              </span>
+              <span id="" class="">
+                <Icon
+                  name="material-symbols:calendar-month"
+                  style="color: whitesmoke"
+                  id=""
+                  class="icons"
+                />
+                <p id="" class="introDetails">19-06-1993</p>
+              </span>
+              <span id="" class="">
+                <Icon
+                  name="material-symbols:alternate-email"
+                  style="color: whitesmoke"
+                  id=""
+                  class="icons"
+                />
+                <p id="" class="introDetails">hamza.b93@protonmail.com</p>
+              </span>
+              <span id="" class="">
+                <Icon
+                  name="material-symbols:smartphone"
+                  style="color: whitesmoke"
+                  id=""
+                  class="icons"
+                />
+                <p id="" class="introDetails">+92-319-5040505</p>
+              </span>
+              <span id="" class="">
+                <a href="https://bit.ly/4fdsGz0">
+                  <Icon
+                    name="akar-icons:linkedin-box-fill"
+                    style="color: whitesmoke"
+                    id=""
+                    class="icons"
+                  />
+                </a>
+                <!-- <p id="" class=""></p> -->
+              </span>
+              <span id="" class="">
+                <a href="https://bit.ly/4goh1P1">
+                  <Icon
+                    name="octicon:logo-github-16"
+                    style="color: whitesmoke"
+                    id=""
+                    class="icons"
+                  />
+                </a>
+                <!-- <p id="" class=""></p> -->
+              </span>
+              <span id="" class="">
+                <a href="https://bit.ly/3ZtN8pB"
+                  ><Icon
+                    name="devicon-plain:gitlab-wordmark"
+                    style="color: whitesmoke"
+                    id=""
+                    class="icons"
+                /></a>
+                <!-- <p id="" class=""></p> -->
+              </span>
+              <span id="" class="">
+                <a href="https://bit.ly/4gtaPW4">
+                  <Icon
+                    name="bi:sourceforge"
+                    style="color: whitesmoke"
+                    id=""
+                    class="icons"
+                  />
+                </a>
+                <!-- <p id="" class=""></p> -->
+              </span>
+            </div>
           </div>
           <div
             id=""
@@ -117,12 +199,12 @@ export default {
     margin: 0;
   }
 
-  #brandName {
+  #introSection {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 35%;
+    margin-top: 20%;
   }
   #brandText {
     font-family: "Rubik Mono One", monospace;
@@ -140,11 +222,20 @@ export default {
     margin: 5px;
     padding: 4px;
   }
+  .icons {
+    font-size: 25px;
+  }
+  .icons:hover {
+    opacity: 50%;
+  }
   .images {
     height: 300px;
     box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
+  }
+  .introDetails {
+    font-size: 16px;
   }
   #moto {
     font-family: "Rubik", sans-serif;
@@ -163,12 +254,12 @@ export default {
     margin: 0;
   }
 
-  #brandName {
+  #introSection {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 35%;
+    margin-top: 20%;
   }
   #brandText {
     font-family: "Rubik Mono One", monospace;
@@ -187,11 +278,20 @@ export default {
     overflow-x: scroll;
     padding: 4px;
   }
+  .icons {
+    font-size: 25px;
+  }
+  .icons:hover {
+    opacity: 50%;
+  }
   .images {
     height: 300px;
     box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
+  }
+  .introDetails {
+    font-size: 16px;
   }
   #moto {
     font-family: "Rubik", sans-serif;
@@ -210,12 +310,12 @@ export default {
     margin: 0;
   }
 
-  #brandName {
+  #introSection {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 35%;
+    margin-top: 20%;
   }
   #brandText {
     font-family: "Rubik Mono One", monospace;
@@ -234,12 +334,21 @@ export default {
     overflow-x: scroll;
     padding: 4px;
   }
+  .icons {
+    font-size: 25px;
+  }
+  .icons:hover {
+    opacity: 50%;
+  }
   .images {
     height: 700px;
     width: 100%; /* Set image width to 100% */
     box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
+  }
+  .introDetails {
+    font-size: 16px;
   }
   #moto {
     font-family: "Rubik", sans-serif;
@@ -258,12 +367,12 @@ export default {
     margin: 0;
   }
 
-  #brandName {
+  #introSection {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 35%;
+    margin-top: 20%;
   }
   #brandText {
     font-family: "Rubik Mono One", monospace;
@@ -282,12 +391,21 @@ export default {
     overflow-x: scroll;
     padding: 4px;
   }
+  .icons {
+    font-size: 25px;
+  }
+  .icons:hover {
+    opacity: 50%;
+  }
   .images {
     height: 750px;
     width: 100%; /* Set image width to 100% */
     box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
     -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
     -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
+  }
+  .introDetails {
+    font-size: 16px;
   }
   #moto {
     font-family: "Rubik", sans-serif;
@@ -306,12 +424,12 @@ export default {
 
 /* Large devices (laptops/desktops, 1280px and up) */
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
-  #brandName {
+  #introSection {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 35%;
+    margin-top: 20%;
   }
   #brandText {
     font-family: "Rubik Mono One", monospace;
@@ -330,12 +448,21 @@ export default {
     overflow-x: scroll;
     padding: 4px;
   }
+  .icons {
+    font-size: 25px;
+  }
+  .icons:hover {
+    opacity: 50%;
+  }
   .images {
     height: 750px;
     width: 100%; /* Set image width to 100% */
     box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
     -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
     -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
+  }
+  .introDetails {
+    font-size: 16px;
   }
   #moto {
     font-family: "Rubik", sans-serif;
@@ -354,12 +481,12 @@ export default {
 
 /* Extra large devices (large laptops and desktops, 1536px and up) */
 @media only screen and (min-width: 1536px) {
-  #brandName {
+  #introSection {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 35%;
+    margin-top: 20%;
   }
   #brandText {
     font-family: "Rubik Mono One", monospace;
@@ -378,6 +505,12 @@ export default {
     overflow-x: scroll;
     padding: 4px;
   }
+  .icons {
+    font-size: 25px;
+  }
+  .icons:hover {
+    opacity: 50%;
+  }
   .images {
     margin-top: 50px;
     height: 750px;
@@ -385,6 +518,9 @@ export default {
     box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
     -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
     -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
+  }
+  .introDetails {
+    font-size: 16px;
   }
   #moto {
     font-family: "Rubik", sans-serif;
