@@ -4,11 +4,161 @@
       <div id="content" class="bg-slate-950">
         <div
           id=""
-          class="grid-cols-2 2xl:columns-2 xl:columns-2 lg:columns-2 md:columns-1 sm:columns-1 xs:columns-1"
+          class="grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
         >
-          <div id="introSection" class="align-middle text-center">
-            <span id="brandText" class="">
-              Hi! I Am Hamza. Welcome To My Personal Portfolio Website!
+          <span id="sectionHeading" class="">
+            <h1>Work Experience</h1>
+          </span>
+        </div>
+        <div
+          id=""
+          class="grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
+        >
+          <div id="" class="align-middle text-center">
+            <span id="" class="">
+              <p id="" class="companyTitle">Wi-Metrix</p>
+              <p id="positionDescription" class="">
+                <b>Node.js Developer (Backend)</b>
+              </p>
+              <p id="positionDescription" class="">(July 2021 – April 2022)</p>
+              <br />
+              <ul id="workPoints" class="">
+                <li>
+                  Production Line Management System
+                  <br />
+                  (Node.js + Express + Microsoft SQL + Sequelize + JWT + Node
+                  Cache).
+                </li>
+                <br />
+                <li>
+                  Worked on the development aspect of the company’s production
+                  line management system geared towards the textile industry.
+                </li>
+                <br />
+                <li>
+                  Helped in maintaining the backend codebase for this software
+                  solution.
+                </li>
+                <br />
+                <li>
+                  Added new features in the codebase based on various client
+                  requirements.
+                </li>
+                <br />
+                <li>
+                  Worked on developing and integrating basic level caching
+                  mechanisms using node cache.
+                </li>
+                <br />
+                <li>
+                  Worked on integrating backend REST APIs with frontend
+                  engineers and Android applications.
+                </li>
+              </ul>
+            </span>
+            <br />
+            <br />
+            <span id="" class="">
+              <p id="" class="companyTitle">OnStak</p>
+              <p id="positionDescription" class="">
+                <b>Junior Node.js Developer (Backend)</b>
+              </p>
+              <p id="positionDescription" class="">(April 2022 – Present)</p>
+              <br />
+              <span id="" class="">
+                <ul id="workPoints" class="">
+                  <li>
+                    PCB-Cloud
+                    <br />
+                    (Node.js + Fastify + MYSQL + Prisma + JWT + MQTT):
+                  </li>
+                </ul>
+                <p id="workPoints" class="">
+                  Worked on the design and development aspect of Pakistan
+                  Cricket Board’s custom player analytics solution (backend).
+                  <br />
+                  <br />
+                  Created entire Backend structure in Node.js using Fastify as
+                  the Backend framework, MYSQL as the database and Prisma as the
+                  ORM.
+                  <br />
+                  <br />
+                  Implemented authentication, user registration and role based
+                  access using JSON Web Tokens (JWTs).
+                  <br />
+                  <br />
+                  Also implemented in-app notifications using MQTT PubSub
+                  methodologies.
+                </p>
+              </span>
+              <br />
+              <br />
+              <span id="" class="">
+                <ul id="workPoints" class="">
+                  <li>
+                    KFC Drive-Thru Analytics
+                    <br />
+                    (Node.js + Express + MYSQL + Sequelize + JWT).
+                  </li>
+                </ul>
+                <p id="workPoints" class="">
+                  Worked on the development aspect of KFC Pakistan’s Drive-Thru
+                  management and analytics application (backend).
+                  <br />
+                  <br />
+                  Created entire Backend structure in Node.js using Express.js
+                  as the Backend framework, MYSQL as the database and Sequelize
+                  as the ORM.
+                  <br />
+                  <br />
+                  Implemented authentication, user registration and role based
+                  access using JSON Web Tokens (JWTs).
+                  <br />
+                  <br />
+                  Briefly worked on the integration of third-party Point-Of-Sale
+                  terminal APIs with the application’s backend for data
+                  synchronization.
+                  <br />
+                  <br />
+                  Developed solution to store data regarding day to day
+                  drive-thru customers based on events generated by machine
+                  learning models. Also implemented features to generate reports
+                  based on this data.
+                </p>
+              </span>
+              <br>
+              <br>
+              <span id="" class="">
+                <ul id="workPoints" class="">
+                  <li>
+                    Video Analytics Platform
+                    <br />
+                    (Node.js + Express + MYSQL + Sequelize + JWT + AWS Storage).
+                  </li>
+                </ul>
+                <p id="workPoints" class="">
+                  Worked on the company’s primary product (machine learning and
+                  computer vision based analytics platform) as a backend
+                  engineer.
+                  <br />
+                  <br />
+                  Worked on integrating various machine learning models into the
+                  software solution.
+                  <br />
+                  <br />
+                  Integrated role based and tenant based authorization in the
+                  software solution.
+                  <br />
+                  <br />
+                  Made use of deployment strategies like Podman and Docker to
+                  deploy instances of the platform based on client requirements.
+                </p>
+              </span>
+              <!-- <ul id="workPoints" class="">
+                <li>
+                  KFC Drive-Thru Analytics (Node.js + Express + MYSQL + Sequelize + JWT):
+                </li>
+              </ul> -->
             </span>
             <br />
             <!-- <p id="moto" class="">The Ultimate Streaming Experience!</p> -->
@@ -22,127 +172,6 @@
                 type="password"
               />
             </form> -->
-            <p id="" class="shortDescription">
-              I am a <b>Software Engineer</b> with 3+ years of development
-              experience in the industry. Having worked on a wide variety of
-              projects, my knowledge and experience makes me a great addition to
-              any development team.
-            </p>
-            <br />
-            <div class="grid grid-cols-2 gap-4 px-4 mx-auto max-w-screen-lg">
-              <span id="" class="">
-                <Icon
-                  name="material-symbols:android-contacts"
-                  style="color: whitesmoke"
-                  id=""
-                  class="icons"
-                />
-                <p id="" class="introDetails">Muhammad Hamza Butt</p>
-              </span>
-              <span id="" class="">
-                <Icon
-                  name="material-symbols:calendar-month"
-                  style="color: whitesmoke"
-                  id=""
-                  class="icons"
-                />
-                <p id="" class="introDetails">19-06-1993</p>
-              </span>
-              <span id="" class="">
-                <Icon
-                  name="material-symbols:alternate-email"
-                  style="color: whitesmoke"
-                  id=""
-                  class="icons"
-                />
-                <p id="" class="introDetails">hamza.b93@protonmail.com</p>
-              </span>
-              <span id="" class="">
-                <Icon
-                  name="material-symbols:smartphone"
-                  style="color: whitesmoke"
-                  id=""
-                  class="icons"
-                />
-                <p id="" class="introDetails">+92-319-5040505</p>
-              </span>
-              <span id="" class="">
-                <a href="https://bit.ly/4fdsGz0">
-                  <Icon
-                    name="akar-icons:linkedin-box-fill"
-                    style="color: whitesmoke"
-                    id=""
-                    class="icons"
-                  />
-                </a>
-                <!-- <p id="" class=""></p> -->
-              </span>
-              <span id="" class="">
-                <a href="https://bit.ly/4goh1P1">
-                  <Icon
-                    name="octicon:logo-github-16"
-                    style="color: whitesmoke"
-                    id=""
-                    class="icons"
-                  />
-                </a>
-                <!-- <p id="" class=""></p> -->
-              </span>
-              <span id="" class="">
-                <a href="https://bit.ly/3ZtN8pB"
-                  ><Icon
-                    name="devicon-plain:gitlab-wordmark"
-                    style="color: whitesmoke"
-                    id=""
-                    class="icons"
-                /></a>
-                <!-- <p id="" class=""></p> -->
-              </span>
-              <span id="" class="">
-                <a href="https://bit.ly/4gtaPW4">
-                  <Icon
-                    name="bi:sourceforge"
-                    style="color: whitesmoke"
-                    id=""
-                    class="icons"
-                  />
-                </a>
-                <!-- <p id="" class=""></p> -->
-              </span>
-              <span id="" class="">
-                <a href="https://bit.ly/4gtaPW4">
-                  <Icon
-                    name="simple-icons:indeed"
-                    style="color: whitesmoke"
-                    id=""
-                    class="icons"
-                  />
-                </a>
-                <!-- <p id="" class=""></p> -->
-              </span>
-              <span id="" class="">
-                <a href="https://bit.ly/4gtaPW4">
-                  <Icon
-                    name="mdi:glassdoor"
-                    style="color: whitesmoke"
-                    id=""
-                    class="icons"
-                  />
-                </a>
-                <!-- <p id="" class=""></p> -->
-              </span>
-            </div>
-          </div>
-          <div
-            id=""
-            class="pentagon h-full md:w-auto 2xl:w-11/12 xl:w-11/12 lg:w-11/12"
-          >
-            <img
-              alt=""
-              id=""
-              class="images md:w-auto w-full"
-              src="../public/favicon.ico"
-            />
           </div>
         </div>
       </div>
@@ -153,7 +182,7 @@
 <script lang="js">
 export default {
   // components: { humanVerification },
-  name: "Bio",
+  name: "Experience",
   data() {
     return {
       // name: "Hamza",
@@ -228,10 +257,20 @@ export default {
     -webkit-text-fill-color: transparent;
     margin-top: 20%;
   }
-  #brandText {
+  #sectionHeading {
+    color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
     font-size: 25px;
     text-align: center;
+  }
+  .companyTitle {
+    background: #1858e2;
+    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* font-family: "Rubik", sans-serif; */
+    font-size: 25px;
+    font-family: "Rubik Mono One", monospace;
   }
   .formInput {
     border: 1px solid;
@@ -264,9 +303,15 @@ export default {
     font-size: 25px;
     text-align: center;
   }
-  .shortDescription {
+  #positionDescription {
     font-family: "Rubik", sans-serif;
-    font-size: 2px;
+    font-size: 18px;
+    color: whitesmoke;
+  }
+  #workPoints {
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    color: whitesmoke;
   }
 }
 
@@ -283,10 +328,20 @@ export default {
     -webkit-text-fill-color: transparent;
     margin-top: 20%;
   }
-  #brandText {
+  #sectionHeading {
+    color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 35px;
+    font-size: 25px;
     text-align: center;
+  }
+  .companyTitle {
+    background: #1858e2;
+    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* font-family: "Rubik", sans-serif; */
+    font-size: 25px;
+    font-family: "Rubik Mono One", monospace;
   }
   .formInput {
     border: 1px solid;
@@ -320,9 +375,15 @@ export default {
     font-size: 25px;
     text-align: center;
   }
-  .shortDescription {
+  #positionDescription {
     font-family: "Rubik", sans-serif;
-    font-size: 2px;
+    font-size: 18px;
+    color: whitesmoke;
+  }
+  #workPoints {
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    color: whitesmoke;
   }
 }
 
@@ -339,10 +400,20 @@ export default {
     -webkit-text-fill-color: transparent;
     margin-top: 20%;
   }
-  #brandText {
+  #sectionHeading {
+    color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 45px;
+    font-size: 25px;
     text-align: center;
+  }
+  .companyTitle {
+    background: #1858e2;
+    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* font-family: "Rubik", sans-serif; */
+    font-size: 25px;
+    font-family: "Rubik Mono One", monospace;
   }
   .formInput {
     border: 1px solid;
@@ -377,9 +448,15 @@ export default {
     font-size: 25px;
     text-align: center;
   }
-  .shortDescription {
+  #positionDescription {
     font-family: "Rubik", sans-serif;
-    font-size: 2px;
+    font-size: 18px;
+    color: whitesmoke;
+  }
+  #workPoints {
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    color: whitesmoke;
   }
 }
 
@@ -396,10 +473,20 @@ export default {
     -webkit-text-fill-color: transparent;
     margin-top: 20%;
   }
-  #brandText {
+  #sectionHeading {
+    color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 35px;
+    font-size: 25px;
     text-align: center;
+  }
+  .companyTitle {
+    background: #1858e2;
+    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* font-family: "Rubik", sans-serif; */
+    font-size: 25px;
+    font-family: "Rubik Mono One", monospace;
   }
   .formInput {
     border: 1px solid;
@@ -438,9 +525,15 @@ export default {
     clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
     width: 100%; /* Set the width of the pentagon container to 100% */
   }
-  .shortDescription {
+  #positionDescription {
     font-family: "Rubik", sans-serif;
-    font-size: 2px;
+    font-size: 18px;
+    color: whitesmoke;
+  }
+  #workPoints {
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    color: whitesmoke;
   }
 }
 
@@ -453,10 +546,20 @@ export default {
     -webkit-text-fill-color: transparent;
     margin-top: 20%;
   }
-  #brandText {
+  #sectionHeading {
+    color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 35px;
+    font-size: 25px;
     text-align: center;
+  }
+  .companyTitle {
+    background: #1858e2;
+    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* font-family: "Rubik", sans-serif; */
+    font-size: 25px;
+    font-family: "Rubik Mono One", monospace;
   }
   .formInput {
     border: 1px solid;
@@ -495,9 +598,15 @@ export default {
     clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
     width: 100%; /* Set the width of the pentagon container to 100% */
   }
-  .shortDescription {
+  #positionDescription {
     font-family: "Rubik", sans-serif;
-    font-size: 2px;
+    font-size: 18px;
+    color: whitesmoke;
+  }
+  #workPoints {
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    color: whitesmoke;
   }
 }
 
@@ -510,10 +619,20 @@ export default {
     -webkit-text-fill-color: transparent;
     margin-top: 20%;
   }
-  #brandText {
+  #sectionHeading {
+    color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 35px;
+    font-size: 25px;
     text-align: center;
+  }
+  .companyTitle {
+    background: #1858e2;
+    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* font-family: "Rubik", sans-serif; */
+    font-size: 25px;
+    font-family: "Rubik Mono One", monospace;
   }
   .formInput {
     border: 1px solid;
@@ -554,9 +673,18 @@ export default {
     clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
     width: 100%; /* Set the width of the pentagon container to 100% */
   }
-  .shortDescription {
+  #positionDescription {
+    background: #1858e2;
+    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: "Rubik", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+  }
+  #workPoints {
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    color: whitesmoke;
   }
 }
 </style>

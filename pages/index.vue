@@ -1,6 +1,7 @@
 <template>
   <div id="" class="">
     <Bio />
+    <Experience />
   </div>
 </template>
 
