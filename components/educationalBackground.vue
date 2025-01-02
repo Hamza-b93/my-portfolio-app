@@ -60,7 +60,7 @@
 <script lang="js">
 export default {
   // components: { humanVerification },
-  name: "CertificationsAndAchievements",
+  name: "EducationalBackground",
   data() {
     return {
       // name: "Hamza",

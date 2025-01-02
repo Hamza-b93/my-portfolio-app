@@ -3,6 +3,8 @@
     <Bio />
     <Experience />
     <CertificationsAndAchievements />
+    <CoreStrengthsAndSkills />
+    <SupportingSkillsAndStrengths />
   </div>
 </template>
 

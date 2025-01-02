@@ -7,7 +7,7 @@
           class="grid grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
         >
           <span id="sectionHeading" class="">
-            <h1>Certifications And Achievements</h1>
+            <h1>Supporting Skills And Strengths</h1>
           </span>
         </div>
         <div
@@ -15,41 +15,25 @@
           class="grid grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
         >
           <div id="" class="align-middle text-center">
-            <span id="" class="">
-              <p id="" class="companyTitle">Introduction to Data Analytics for Business (Coursera)</p>
-              <p id="positionDescription" class="">
-                <b>University Of Colorado Boulder.</b>
-              </p>
-              <p id="" class="companyTitle">UX Design Fundamentals (Coursera)</p>
-              <p id="positionDescription" class="">
-                <b>California Institute Of Arts.</b>
-              </p>
-              <p id="" class="companyTitle">Visual Elements Of User Interface Design (Coursera)</p>
-              <p id="positionDescription" class="">
-                <b>California Institute Of Arts.</b>
-              </p>
-              <p id="" class="companyTitle">Front-End Web UI Frameworks And Tools: Bootstrap 4 (Coursera)</p>
-              <p id="positionDescription" class="">
-                <b>The Hong Kong University Of Science And Technology.</b>
-              </p>
-              <p id="" class="companyTitle">Winner Of Forman Computing Society’s Freshmen Gaming Competition (Counter
-                Strike)</p>
-              <p id="positionDescription" class="">
-                <b>FCCU FCS 2016.</b>
-              </p>
-            </span>
-            <br />
-            <!-- <p id="moto" class="">The Ultimate Streaming Experience!</p> -->
-            <br />
-            <!-- <form id="" class="">
-              <input id="" class="formInput" placeholder="email" type="email" />
-              <input
-                id=""
-                class="formInput"
-                placeholder="password"
-                type="password"
-              />
-            </form> -->
+            <table class="table-auto">
+              <thead>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Nuxt.js</td>
+                  <td>WebSockets</td>
+                  <td>Linux</td>
+                </tr>
+                <tr>
+                  <td>HTML</td>
+                  <td>CSS</td>
+                  <td>Bootstrap</td>
+                </tr>
+                <tr>
+                  <td>Tailwind CSS</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -60,7 +44,7 @@
 <script lang="js">
 export default {
   // components: { humanVerification },
-  name: "CertificationsAndAchievements",
+  name: "SupportingSkillsAndStrengths",
   data() {
     return {
       // name: "Hamza",
