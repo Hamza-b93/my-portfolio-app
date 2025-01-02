@@ -68,34 +68,19 @@
               </span>
               <span id="" class="">
                 <a href="https://bit.ly/4fdsGz0">
-                  <Icon
-                    name="akar-icons:linkedin-box-fill"
-                    style="color: whitesmoke"
-                    id=""
-                    class="icons"
-                  />
+                  <Icon name="devicon:linkedin" width="128" height="128" />
                 </a>
                 <!-- <p id="" class=""></p> -->
               </span>
               <span id="" class="">
                 <a href="https://bit.ly/4goh1P1">
-                  <Icon
-                    name="octicon:logo-github-16"
-                    style="color: whitesmoke"
-                    id=""
-                    class="icons"
-                  />
+                  <Icon name="devicon:github" width="128" height="128" />
                 </a>
                 <!-- <p id="" class=""></p> -->
               </span>
               <span id="" class="">
                 <a href="https://bit.ly/3ZtN8pB"
-                  ><Icon
-                    name="devicon-plain:gitlab-wordmark"
-                    style="color: whitesmoke"
-                    id=""
-                    class="icons"
-                /></a>
+                  ><Icon name="devicon:gitlab" width="128" height="128" /></a>
                 <!-- <p id="" class=""></p> -->
               </span>
               <span id="" class="">

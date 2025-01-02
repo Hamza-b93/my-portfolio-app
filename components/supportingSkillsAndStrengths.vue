@@ -16,7 +16,7 @@
         >
           <div id="" class="align-middle text-center">
             <span id = 'positionDescription' class = "">
-              <Icon name="catppuccin:nuxt" width="16" height="16" />
+              <Icon name="devicon:nuxtjs" width="128" height="128" />
               Nuxt.js
             </span>
           </div>
@@ -39,19 +39,19 @@
         >
           <div id="" class="align-middle text-center">
             <span id = 'positionDescription' class = "">
-              <Icon name="logos:html-5" width="256" height="361" />
+              <Icon name="devicon:html5-wordmark" width="128" height="128" />
               HTML
             </span>
           </div>
           <div id="" class="align-middle text-center">
             <span id = 'positionDescription' class = "">
-              <Icon name="skill-icons:bootstrap" width="256" height="256" />
+              <Icon name="devicon:bootstrap" width="128" height="128" />
               BootStrap
             </span>
           </div>
           <div id="" class="align-middle text-center">
             <span id = 'positionDescription' class = "">
-              <Icon name="logos:css-3" width="256" height="361" />
+              <Icon name="devicon:css3-wordmark" width="128" height="128" />
               CSS
             </span>
           </div>
@@ -62,7 +62,7 @@
         >
           <div id="" class="align-middle text-center">
             <span id = 'positionDescription' class = "">
-              <Icon name="catppuccin:tailwind" width="16" height="16" />
+              <Icon name="devicon:tailwindcss" width="128" height="128" />
               Tailwind CSS
             </span>
           </div>

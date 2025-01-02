@@ -16,13 +16,13 @@
         >
           <div id="" class="align-middle text-center">
             <span id = 'positionDescription' class = "">
-              <Icon name="skill-icons:nodejs-light" width="256" height="256" />
+              <Icon name="devicon:nodejs" width="128" height="128" />
               Node.js
             </span>
           </div>
           <div id="positionDescription" class="align-middle text-center">
             <span id = '' class = "">
-              <Icon name="logos:javascript" width="256" height="256" />
+              <Icon name="devicon:javascript" width="128" height="128" />
               JavaScript
             </span>
           </div>
@@ -39,19 +39,19 @@
         >
           <div id="" class="align-middle text-center">
             <span id = 'positionDescription' class = "">
-              <Icon name="logos:docker-icon" width="256" height="185" />
+              <Icon name="devicon:docker" width="128" height="128" />
               Docker
             </span>
           </div>
           <div id="" class="align-middle text-center">
             <span id = 'positionDescription' class = "">
-              <Icon name="devicon:podman-wordmark" width="128" height="128" />
+              <Icon name="devicon:podman" width="128" height="128" />
               Podman
             </span>
           </div>
           <div id="positionDescription" class="align-middle text-center">
             <span id = '' class = "">
-              <Icon name="skill-icons:expressjs-light" width="256" height="256" />
+              <Icon name="devicon:express" width="128" height="128" />
               Express.js
             </span>
           </div>
@@ -62,19 +62,19 @@
         >
           <div id="positionDescription" class="align-middle text-center">
             <span id = '' class = "">
-              <Icon name="simple-icons:fastify" width="24" height="24" />
+              <Icon name="devicon:fastify" width="128" height="128" />
               Fastify
             </span>
           </div>
           <div id="positionDescription" class="align-middle text-center">
             <span id = '' class = "">
-              <Icon name="devicon:mongodb-wordmark" width="128" height="128" />
+              <Icon name="devicon:mongodb" width="128" height="128" />
               MongoDB
             </span>
           </div>
           <div id="positionDescription" class="align-middle text-center">
             <span id = '' class = "">
-              <Icon name="logos:mysql" width="512" height="349" />
+              <Icon name="devicon:mysql" width="128" height="128" />
               MySQL
             </span>
           </div>
@@ -91,7 +91,7 @@
           </div>
           <div id="positionDescription" class="align-middle text-center">
             <span id = '' class = "">
-              <Icon name="devicon:mongoose-wordmark" width="256" height="256" />
+              <Icon name="devicon:mongoose" width="128" height="128" />
               <!-- <Icon name="devicon:mongoose" width="128" height="128" /> -->
               Mongoose
             </span>
