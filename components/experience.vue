@@ -1,10 +1,10 @@
 <template>
   <div id="" class="px-0 container-fluid">
-    <div id="row" class="grid-rows-1">
+    <div id="row" class="grid grid-rows-1">
       <div id="content" class="bg-slate-950">
         <div
           id=""
-          class="grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
+          class="grid grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
         >
           <span id="sectionHeading" class="">
             <h1>Work Experience</h1>
@@ -12,7 +12,7 @@
         </div>
         <div
           id=""
-          class="grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
+          class="grid grid-cols-2 2xl:columns-2 xl:columns-2 lg:columns-2 md:columns-2 sm:columns-2 xs:columns-2"
         >
           <div id="" class="align-middle text-center">
             <span id="" class="">
@@ -57,7 +57,19 @@
               </ul>
             </span>
             <br />
+            <!-- <p id="moto" class="">The Ultimate Streaming Experience!</p> -->
             <br />
+            <!-- <form id="" class="">
+              <input id="" class="formInput" placeholder="email" type="email" />
+              <input
+                id=""
+                class="formInput"
+                placeholder="password"
+                type="password"
+              />
+            </form> -->
+          </div>
+          <div id="" class="align-middle text-center">
             <span id="" class="">
               <p id="" class="companyTitle">OnStak</p>
               <p id="positionDescription" class="">
@@ -126,8 +138,8 @@
                   based on this data.
                 </p>
               </span>
-              <br>
-              <br>
+              <br />
+              <br />
               <span id="" class="">
                 <ul id="workPoints" class="">
                   <li>
