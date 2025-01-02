@@ -12,40 +12,118 @@
         </div>
         <div
           id=""
-          class="grid grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
+          class="grid grid-cols-3 2xl:columns-3 xl:columns-3 lg:columns-3 md:columns-3 sm:columns-3 xs:columns-3"
         >
           <div id="" class="align-middle text-center">
-            <table class="table-auto">
-              <thead>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Node.js</td>
-                  <td>JavaScript</td>
-                  <td>Git</td>
-                </tr>
-                <tr>
-                  <td>Docker</td>
-                  <td>Podman</td>
-                  <td>Express.js</td>
-                </tr>
-                <tr>
-                  <td>Fastify</td>
-                  <td>MongoDB</td>
-                  <td>MySQL</td>
-                </tr>
-                <tr>
-                  <td>MSSQL</td>
-                  <td>Mongoose</td>
-                  <td>Sequelize</td>
-                </tr>
-                <tr>
-                  <td>Prisma</td>
-                  <td>JWT</td>
-                  <td>MQTT</td>
-                </tr>
-              </tbody>
-            </table>
+            <span id = 'positionDescription' class = "">
+              <Icon name="skill-icons:nodejs-light" width="256" height="256" />
+              Node.js
+            </span>
+          </div>
+          <div id="positionDescription" class="align-middle text-center">
+            <span id = '' class = "">
+              <Icon name="logos:javascript" width="256" height="256" />
+              JavaScript
+            </span>
+          </div>
+          <div id="positionDescription" class="align-middle text-center">
+            <span id = '' class = "">
+              <Icon name="devicon:git" width="128" height="128" />
+              Git
+            </span>
+          </div>
+        </div>
+        <div
+          id=""
+          class="grid grid-cols-3 2xl:columns-3 xl:columns-3 lg:columns-3 md:columns-3 sm:columns-3 xs:columns-3"
+        >
+          <div id="" class="align-middle text-center">
+            <span id = 'positionDescription' class = "">
+              <Icon name="logos:docker-icon" width="256" height="185" />
+              Docker
+            </span>
+          </div>
+          <div id="" class="align-middle text-center">
+            <span id = 'positionDescription' class = "">
+              <Icon name="devicon:podman-wordmark" width="128" height="128" />
+              Podman
+            </span>
+          </div>
+          <div id="positionDescription" class="align-middle text-center">
+            <span id = '' class = "">
+              <Icon name="skill-icons:expressjs-light" width="256" height="256" />
+              Express.js
+            </span>
+          </div>
+        </div>
+        <div
+          id=""
+          class="grid grid-cols-3 2xl:columns-3 xl:columns-3 lg:columns-3 md:columns-3 sm:columns-3 xs:columns-3"
+        >
+          <div id="positionDescription" class="align-middle text-center">
+            <span id = '' class = "">
+              <Icon name="simple-icons:fastify" width="24" height="24" />
+              Fastify
+            </span>
+          </div>
+          <div id="positionDescription" class="align-middle text-center">
+            <span id = '' class = "">
+              <Icon name="devicon:mongodb-wordmark" width="128" height="128" />
+              MongoDB
+            </span>
+          </div>
+          <div id="positionDescription" class="align-middle text-center">
+            <span id = '' class = "">
+              <Icon name="logos:mysql" width="512" height="349" />
+              MySQL
+            </span>
+          </div>
+        </div>
+        <div
+          id=""
+          class="grid grid-cols-3 2xl:columns-3 xl:columns-3 lg:columns-3 md:columns-3 sm:columns-3 xs:columns-3"
+        >
+          <div id="positionDescription" class="align-middle text-center">
+            <span id = '' class = "">
+              <Icon name="devicon:microsoftsqlserver" width="128" height="128" />
+              MSSQL
+            </span>
+          </div>
+          <div id="positionDescription" class="align-middle text-center">
+            <span id = '' class = "">
+              <Icon name="devicon:mongoose-wordmark" width="256" height="256" />
+              <!-- <Icon name="devicon:mongoose" width="128" height="128" /> -->
+              Mongoose
+            </span>
+          </div>
+          <div id="positionDescription" class="align-middle text-center">
+            <span id = '' class = "">
+              <Icon name="devicon:sequelize" width="128" height="128" />
+              Sequelize
+            </span>
+          </div>
+        </div>
+        <div
+          id=""
+          class="grid grid-cols-3 2xl:columns-3 xl:columns-3 lg:columns-3 md:columns-3 sm:columns-3 xs:columns-3"
+        >
+          <div id="positionDescription" class="align-middle text-center">
+            <span id = '' class = "">
+              <Icon name="skill-icons:prisma" width="256" height="256" />
+              Prisma
+            </span>
+          </div>
+          <div id="positionDescription" class="align-middle text-center">
+            <span id = '' class = "">
+              <Icon name="logos:jwt-icon" width="256" height="257" />
+              JWT
+            </span>
+          </div>
+          <div id="positionDescription" class="align-middle text-center">
+            <span id = '' class = "">
+              <Icon name="simple-icons:zigbee2mqtt" width="24" height="24" />
+              MQTT
+            </span>
           </div>
         </div>
       </div>

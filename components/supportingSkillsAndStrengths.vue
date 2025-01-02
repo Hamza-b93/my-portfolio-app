@@ -12,28 +12,59 @@
         </div>
         <div
           id=""
+          class="grid grid-cols-3 2xl:columns-3 xl:columns-3 lg:columns-3 md:columns-3 sm:columns-3 xs:columns-3"
+        >
+          <div id="" class="align-middle text-center">
+            <span id = 'positionDescription' class = "">
+              <Icon name="catppuccin:nuxt" width="16" height="16" />
+              Nuxt.js
+            </span>
+          </div>
+          <div id="" class="align-middle text-center">
+            <span id = 'positionDescription' class = "">
+              <Icon name="logos:websocket" width="256" height="193" />
+              WebSockets
+            </span>
+          </div>
+          <div id="" class="align-middle text-center">
+            <span id = 'positionDescription' class = "">
+              <Icon name="flat-color-icons:linux" width="48" height="48" />
+              Linux
+            </span>
+          </div>
+        </div>
+        <div
+          id=""
+          class="grid grid-cols-3 2xl:columns-3 xl:columns-3 lg:columns-3 md:columns-3 sm:columns-3 xs:columns-3"
+        >
+          <div id="" class="align-middle text-center">
+            <span id = 'positionDescription' class = "">
+              <Icon name="logos:html-5" width="256" height="361" />
+              HTML
+            </span>
+          </div>
+          <div id="" class="align-middle text-center">
+            <span id = 'positionDescription' class = "">
+              <Icon name="skill-icons:bootstrap" width="256" height="256" />
+              BootStrap
+            </span>
+          </div>
+          <div id="" class="align-middle text-center">
+            <span id = 'positionDescription' class = "">
+              <Icon name="logos:css-3" width="256" height="361" />
+              CSS
+            </span>
+          </div>
+        </div>
+        <div
+          id=""
           class="grid grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
         >
           <div id="" class="align-middle text-center">
-            <table class="table-auto">
-              <thead>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Nuxt.js</td>
-                  <td>WebSockets</td>
-                  <td>Linux</td>
-                </tr>
-                <tr>
-                  <td>HTML</td>
-                  <td>CSS</td>
-                  <td>Bootstrap</td>
-                </tr>
-                <tr>
-                  <td>Tailwind CSS</td>
-                </tr>
-              </tbody>
-            </table>
+            <span id = 'positionDescription' class = "">
+              <Icon name="catppuccin:tailwind" width="16" height="16" />
+              Tailwind CSS
+            </span>
           </div>
         </div>
       </div>
