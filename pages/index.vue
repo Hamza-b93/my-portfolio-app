@@ -2,6 +2,7 @@
   <div id="" class="">
     <Bio />
     <Experience />
+    <CertificationsAndAchievements />
   </div>
 </template>
 
