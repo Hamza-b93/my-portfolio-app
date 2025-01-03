@@ -5,6 +5,7 @@
     <CertificationsAndAchievements />
     <CoreStrengthsAndSkills />
     <SupportingSkillsAndStrengths />
+    <EducationalBackground />
   </div>
 </template>
 

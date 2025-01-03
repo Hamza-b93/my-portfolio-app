@@ -16,40 +16,28 @@
         >
           <div id="" class="align-middle text-center">
             <span id="" class="">
-              <p id="" class="companyTitle">Introduction to Data Analytics for Business (Coursera)</p>
-              <p id="positionDescription" class="">
+              <p id="" class="certificationTitle">Introduction to Data Analytics for Business (Coursera)</p>
+              <p id="institutionName" class="">
                 <b>University Of Colorado Boulder.</b>
               </p>
-              <p id="" class="companyTitle">UX Design Fundamentals (Coursera)</p>
-              <p id="positionDescription" class="">
+              <p id="" class="certificationTitle">UX Design Fundamentals (Coursera)</p>
+              <p id="institutionName" class="">
                 <b>California Institute Of Arts.</b>
               </p>
-              <p id="" class="companyTitle">Visual Elements Of User Interface Design (Coursera)</p>
-              <p id="positionDescription" class="">
+              <p id="" class="certificationTitle">Visual Elements Of User Interface Design (Coursera)</p>
+              <p id="institutionName" class="">
                 <b>California Institute Of Arts.</b>
               </p>
-              <p id="" class="companyTitle">Front-End Web UI Frameworks And Tools: Bootstrap 4 (Coursera)</p>
-              <p id="positionDescription" class="">
+              <p id="" class="certificationTitle">Front-End Web UI Frameworks And Tools: Bootstrap 4 (Coursera)</p>
+              <p id="institutionName" class="">
                 <b>The Hong Kong University Of Science And Technology.</b>
               </p>
-              <p id="" class="companyTitle">Winner Of Forman Computing Society’s Freshmen Gaming Competition (Counter
+              <p id="" class="certificationTitle">Winner Of Forman Computing Society’s Freshmen Gaming Competition (Counter
                 Strike)</p>
-              <p id="positionDescription" class="">
+              <p id="institutionName" class="">
                 <b>FCCU FCS 2016.</b>
               </p>
             </span>
-            <br />
-            <!-- <p id="moto" class="">The Ultimate Streaming Experience!</p> -->
-            <br />
-            <!-- <form id="" class="">
-              <input id="" class="formInput" placeholder="email" type="email" />
-              <input
-                id=""
-                class="formInput"
-                placeholder="password"
-                type="password"
-              />
-            </form> -->
           </div>
         </div>
       </div>
@@ -59,21 +47,9 @@
 
 <script lang="js">
 export default {
-  // components: { humanVerification },
   name: "CertificationsAndAchievements",
   data() {
-    return {
-      // name: "Hamza",
-      // date: new Date().getDate(),
-      // month: new Date().getMonth(),
-      // time: new Date().toTimeString(),
-      // day: new Date().getDay(),
-      // year: new Date().getFullYear(),
-      // bold: "<b> Bold Text </b>",
-      // blueText: "blueText",
-      // pinkText: "pinkText",
-      // highlightColor: "orange",
-    };
+    return {};
   },
 };
 </script>
@@ -138,10 +114,10 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
-  .companyTitle {
+  .certificationTitle {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
@@ -149,6 +125,7 @@ export default {
     /* font-family: "Rubik", sans-serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", monospace;
+    font-weight: bold;
   }
   .formInput {
     border: 1px solid;
@@ -181,7 +158,7 @@ export default {
     font-size: 25px;
     text-align: center;
   }
-  #positionDescription {
+  #institutionName {
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     color: whitesmoke;
@@ -209,10 +186,10 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
-  .companyTitle {
+  .certificationTitle {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
@@ -220,6 +197,7 @@ export default {
     /* font-family: "Rubik", sans-serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", monospace;
+    font-weight: bold;
   }
   .formInput {
     border: 1px solid;
@@ -253,7 +231,7 @@ export default {
     font-size: 25px;
     text-align: center;
   }
-  #positionDescription {
+  #institutionName {
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     color: whitesmoke;
@@ -281,10 +259,10 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
-  .companyTitle {
+  .certificationTitle {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
@@ -292,6 +270,7 @@ export default {
     /* font-family: "Rubik", sans-serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", monospace;
+    font-weight: bold;
   }
   .formInput {
     border: 1px solid;
@@ -326,7 +305,7 @@ export default {
     font-size: 25px;
     text-align: center;
   }
-  #positionDescription {
+  #institutionName {
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     color: whitesmoke;
@@ -354,10 +333,10 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
-  .companyTitle {
+  .certificationTitle {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
@@ -365,6 +344,7 @@ export default {
     /* font-family: "Rubik", sans-serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", monospace;
+    font-weight: bold;
   }
   .formInput {
     border: 1px solid;
@@ -403,7 +383,7 @@ export default {
     clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
     width: 100%; /* Set the width of the pentagon container to 100% */
   }
-  #positionDescription {
+  #institutionName {
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     color: whitesmoke;
@@ -427,10 +407,10 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
-  .companyTitle {
+  .certificationTitle {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
@@ -438,6 +418,7 @@ export default {
     /* font-family: "Rubik", sans-serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", monospace;
+    font-weight: bold;
   }
   .formInput {
     border: 1px solid;
@@ -476,7 +457,7 @@ export default {
     clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
     width: 100%; /* Set the width of the pentagon container to 100% */
   }
-  #positionDescription {
+  #institutionName {
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     color: whitesmoke;
@@ -500,10 +481,10 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
-  .companyTitle {
+  .certificationTitle {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
@@ -511,6 +492,7 @@ export default {
     /* font-family: "Rubik", sans-serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", monospace;
+    font-weight: bold;
   }
   .formInput {
     border: 1px solid;
@@ -551,7 +533,7 @@ export default {
     clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
     width: 100%; /* Set the width of the pentagon container to 100% */
   }
-  #positionDescription {
+  #institutionName {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;

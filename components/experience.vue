@@ -6,9 +6,9 @@
           id=""
           class="grid grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
         >
-          <span id="sectionHeading" class="">
-            <h1>Work Experience</h1>
-          </span>
+          <h1 id='sectionHeading' class="">
+            Work Experience
+          </h1>
         </div>
         <div
           id=""
@@ -56,18 +56,6 @@
                 </li>
               </ul>
             </span>
-            <br />
-            <!-- <p id="moto" class="">The Ultimate Streaming Experience!</p> -->
-            <br />
-            <!-- <form id="" class="">
-              <input id="" class="formInput" placeholder="email" type="email" />
-              <input
-                id=""
-                class="formInput"
-                placeholder="password"
-                type="password"
-              />
-            </form> -->
           </div>
           <div id="" class="align-middle text-center">
             <span id="" class="">
@@ -166,24 +154,7 @@
                   deploy instances of the platform based on client requirements.
                 </p>
               </span>
-              <!-- <ul id="workPoints" class="">
-                <li>
-                  KFC Drive-Thru Analytics (Node.js + Express + MYSQL + Sequelize + JWT):
-                </li>
-              </ul> -->
             </span>
-            <br />
-            <!-- <p id="moto" class="">The Ultimate Streaming Experience!</p> -->
-            <br />
-            <!-- <form id="" class="">
-              <input id="" class="formInput" placeholder="email" type="email" />
-              <input
-                id=""
-                class="formInput"
-                placeholder="password"
-                type="password"
-              />
-            </form> -->
           </div>
         </div>
       </div>
@@ -193,21 +164,9 @@
 
 <script lang="js">
 export default {
-  // components: { humanVerification },
   name: "Experience",
   data() {
-    return {
-      // name: "Hamza",
-      // date: new Date().getDate(),
-      // month: new Date().getMonth(),
-      // time: new Date().toTimeString(),
-      // day: new Date().getDay(),
-      // year: new Date().getFullYear(),
-      // bold: "<b> Bold Text </b>",
-      // blueText: "blueText",
-      // pinkText: "pinkText",
-      // highlightColor: "orange",
-    };
+    return {};
   },
 };
 </script>
@@ -272,7 +231,7 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
   .companyTitle {
@@ -283,6 +242,7 @@ export default {
     /* font-family: "Rubik", sans-serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", monospace;
+    font-weight: bold;
   }
   .formInput {
     border: 1px solid;
@@ -316,6 +276,10 @@ export default {
     text-align: center;
   }
   #positionDescription {
+    background: #1858e2;
+    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     color: whitesmoke;
@@ -343,7 +307,7 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
   .companyTitle {
@@ -354,6 +318,7 @@ export default {
     /* font-family: "Rubik", sans-serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", monospace;
+    font-weight: bold;
   }
   .formInput {
     border: 1px solid;
@@ -388,6 +353,10 @@ export default {
     text-align: center;
   }
   #positionDescription {
+    background: #1858e2;
+    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     color: whitesmoke;
@@ -415,7 +384,7 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
   .companyTitle {
@@ -426,6 +395,7 @@ export default {
     /* font-family: "Rubik", sans-serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", monospace;
+    font-weight: bold;
   }
   .formInput {
     border: 1px solid;
@@ -461,6 +431,10 @@ export default {
     text-align: center;
   }
   #positionDescription {
+    background: #1858e2;
+    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     color: whitesmoke;
@@ -488,7 +462,7 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
   .companyTitle {
@@ -499,6 +473,7 @@ export default {
     /* font-family: "Rubik", sans-serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", monospace;
+    font-weight: bold;
   }
   .formInput {
     border: 1px solid;
@@ -538,6 +513,10 @@ export default {
     width: 100%; /* Set the width of the pentagon container to 100% */
   }
   #positionDescription {
+    background: #1858e2;
+    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     color: whitesmoke;
@@ -561,7 +540,7 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
   .companyTitle {
@@ -572,6 +551,7 @@ export default {
     /* font-family: "Rubik", sans-serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", monospace;
+    font-weight: bold;
   }
   .formInput {
     border: 1px solid;
@@ -611,6 +591,10 @@ export default {
     width: 100%; /* Set the width of the pentagon container to 100% */
   }
   #positionDescription {
+    background: #1858e2;
+    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     color: whitesmoke;
@@ -634,7 +618,7 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
   .companyTitle {
@@ -645,6 +629,7 @@ export default {
     /* font-family: "Rubik", sans-serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", monospace;
+    font-weight: bold;
   }
   .formInput {
     border: 1px solid;

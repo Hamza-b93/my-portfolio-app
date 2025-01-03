@@ -153,7 +153,7 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
   .companyTitle {
@@ -224,7 +224,7 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
   .companyTitle {
@@ -296,7 +296,7 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
   .companyTitle {
@@ -369,7 +369,7 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
   .companyTitle {
@@ -442,7 +442,7 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
   .companyTitle {
@@ -515,7 +515,7 @@ export default {
   #sectionHeading {
     color: whitesmoke;
     font-family: "Rubik Mono One", monospace;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
   .companyTitle {
