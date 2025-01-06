@@ -214,7 +214,7 @@ export default {
     margin-top: 20%;
   }
   #brandText {
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 25px;
     text-align: center;
   }
@@ -224,7 +224,7 @@ export default {
     background: transparent;
     border-style: solid;
     border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 20px;
     margin: 5px;
     padding: 4px;
@@ -245,12 +245,12 @@ export default {
     font-size: 16px;
   }
   #moto {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 25px;
     text-align: center;
   }
   .shortDescription {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 2px;
   }
 }
@@ -269,7 +269,7 @@ export default {
     margin-top: 20%;
   }
   #brandText {
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 35px;
     text-align: center;
   }
@@ -279,7 +279,7 @@ export default {
     background: transparent;
     border-style: solid;
     border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 20px;
     margin: 5px;
     overflow-x: scroll;
@@ -301,12 +301,12 @@ export default {
     font-size: 16px;
   }
   #moto {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 25px;
     text-align: center;
   }
   .shortDescription {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 2px;
   }
 }
@@ -325,7 +325,7 @@ export default {
     margin-top: 20%;
   }
   #brandText {
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 45px;
     text-align: center;
   }
@@ -335,7 +335,7 @@ export default {
     background: transparent;
     border-style: solid;
     border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 20px;
     margin: 5px;
     overflow-x: scroll;
@@ -358,12 +358,12 @@ export default {
     font-size: 16px;
   }
   #moto {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 25px;
     text-align: center;
   }
   .shortDescription {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 2px;
   }
 }
@@ -382,7 +382,7 @@ export default {
     margin-top: 20%;
   }
   #brandText {
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 35px;
     text-align: center;
   }
@@ -392,7 +392,7 @@ export default {
     background: transparent;
     border-style: solid;
     border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 20px;
     margin: 5px;
     overflow-x: scroll;
@@ -415,7 +415,7 @@ export default {
     font-size: 16px;
   }
   #moto {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 25px;
     text-align: center;
   }
@@ -424,7 +424,7 @@ export default {
     width: 100%; /* Set the width of the pentagon container to 100% */
   }
   .shortDescription {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 2px;
   }
 }
@@ -439,7 +439,7 @@ export default {
     margin-top: 20%;
   }
   #brandText {
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 35px;
     text-align: center;
   }
@@ -449,7 +449,7 @@ export default {
     background: transparent;
     border-style: solid;
     border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 20px;
     margin: 5px;
     overflow-x: scroll;
@@ -472,7 +472,7 @@ export default {
     font-size: 16px;
   }
   #moto {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 25px;
     text-align: center;
   }
@@ -481,7 +481,7 @@ export default {
     width: 100%; /* Set the width of the pentagon container to 100% */
   }
   .shortDescription {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 2px;
   }
 }
@@ -496,7 +496,7 @@ export default {
     margin-top: 20%;
   }
   #brandText {
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 35px;
     text-align: center;
   }
@@ -506,7 +506,7 @@ export default {
     background: transparent;
     border-style: solid;
     border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 20px;
     margin: 5px;
     overflow-x: scroll;
@@ -530,7 +530,7 @@ export default {
     font-size: 16px;
   }
   #moto {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 25px;
     text-align: center;
   }
@@ -540,7 +540,7 @@ export default {
     width: 100%; /* Set the width of the pentagon container to 100% */
   }
   .shortDescription {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 20px;
   }
 }

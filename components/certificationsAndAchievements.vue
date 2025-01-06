@@ -12,28 +12,58 @@
         </div>
         <div
           id=""
-          class="grid grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
+          class="grid grid-cols-3 2xl:columns-3 xl:columns-3 lg:columns-3 md:columns-3 sm:columns-3 xs:columns-3"
         >
           <div id="" class="align-middle text-center">
             <span id="" class="">
-              <p id="" class="certificationTitle">Introduction to Data Analytics for Business (Coursera)</p>
+              <p id="" class="certificationTitle">
+                Introduction to Data Analytics for Business<br>(Coursera)
+              </p>
               <p id="institutionName" class="">
                 <b>University Of Colorado Boulder.</b>
               </p>
-              <p id="" class="certificationTitle">UX Design Fundamentals (Coursera)</p>
+            </span>
+          </div>
+          <div id="" class="align-middle text-center">
+            <span id="" class="">
+              <p id="" class="certificationTitle">
+                UX Design Fundamentals<br>(Coursera)
+              </p>
               <p id="institutionName" class="">
                 <b>California Institute Of Arts.</b>
               </p>
-              <p id="" class="certificationTitle">Visual Elements Of User Interface Design (Coursera)</p>
+            </span>
+          </div>
+          <div id="" class="align-middle text-center">
+            <span id="" class="">
+              <p id="" class="certificationTitle">
+                Visual Elements Of User Interface Design<br>(Coursera)
+              </p>
               <p id="institutionName" class="">
                 <b>California Institute Of Arts.</b>
               </p>
-              <p id="" class="certificationTitle">Front-End Web UI Frameworks And Tools: Bootstrap 4 (Coursera)</p>
+            </span>
+          </div>
+        </div>
+        <div
+          id=""
+          class="grid grid-cols-2 2xl:columns-2 xl:columns-2 lg:columns-2 md:columns-2 sm:columns-2 xs:columns-2"
+        >
+          <div id="" class="align-middle text-center">
+            <span id="" class="">
+              <p id="" class="certificationTitle">
+                Front-End Web UI Frameworks And Tools: Bootstrap 4<br>(Coursera)
+              </p>
               <p id="institutionName" class="">
                 <b>The Hong Kong University Of Science And Technology.</b>
               </p>
-              <p id="" class="certificationTitle">Winner Of Forman Computing Society’s Freshmen Gaming Competition (Counter
-                Strike)</p>
+            </span>
+          </div>
+          <div id="" class="align-middle text-center">
+            <span id="" class="">
+              <p id="" class="certificationTitle">
+                Winner Of Forman Computing Society’s Freshmen Gaming Competition<br>(Counter Strike)
+              </p>
               <p id="institutionName" class="">
                 <b>FCCU FCS 2016.</b>
               </p>
@@ -104,68 +134,35 @@ export default {
     margin: 0;
   }
 
-  #introSection {
+  #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #sectionHeading {
-    color: whitesmoke;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
   }
+
   .certificationTitle {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-family: "Rubik", sans-serif; */
-    font-size: 25px;
-    font-family: "Rubik Mono One", monospace;
+    /* font-family: "Rubik", serif; */
+    font-size: 20px;
+    font-family: "Rubik Mono One", serif;
     font-weight: bold;
   }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
-    font-size: 20px;
-    margin: 5px;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 300px;
-    box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-size: 16px;
-  }
-  #moto {
-    font-family: "Rubik", sans-serif;
-    font-size: 25px;
-    text-align: center;
-  }
+
   #institutionName {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
-    color: whitesmoke;
-  }
-  #workPoints {
-    font-family: "Rubik", sans-serif;
-    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     color: whitesmoke;
   }
 }
@@ -176,69 +173,35 @@ export default {
     margin: 0;
   }
 
-  #introSection {
+  #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #sectionHeading {
-    color: whitesmoke;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
   }
+
   .certificationTitle {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-family: "Rubik", sans-serif; */
-    font-size: 25px;
-    font-family: "Rubik Mono One", monospace;
+    /* font-family: "Rubik", serif; */
+    font-size: 20px;
+    font-family: "Rubik Mono One", serif;
     font-weight: bold;
   }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
-    font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 300px;
-    box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-size: 16px;
-  }
-  #moto {
-    font-family: "Rubik", sans-serif;
-    font-size: 25px;
-    text-align: center;
-  }
+
   #institutionName {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
-    color: whitesmoke;
-  }
-  #workPoints {
-    font-family: "Rubik", sans-serif;
-    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     color: whitesmoke;
   }
 }
@@ -249,70 +212,35 @@ export default {
     margin: 0;
   }
 
-  #introSection {
+  #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #sectionHeading {
-    color: whitesmoke;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
   }
+
   .certificationTitle {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-family: "Rubik", sans-serif; */
-    font-size: 25px;
-    font-family: "Rubik Mono One", monospace;
+    /* font-family: "Rubik", serif; */
+    font-size: 20px;
+    font-family: "Rubik Mono One", serif;
     font-weight: bold;
   }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
-    font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 700px;
-    width: 100%; /* Set image width to 100% */
-    box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-size: 16px;
-  }
-  #moto {
-    font-family: "Rubik", sans-serif;
-    font-size: 25px;
-    text-align: center;
-  }
+
   #institutionName {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
-    color: whitesmoke;
-  }
-  #workPoints {
-    font-family: "Rubik", sans-serif;
-    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     color: whitesmoke;
   }
 }
@@ -323,91 +251,50 @@ export default {
     margin: 0;
   }
 
-  #introSection {
+  #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #sectionHeading {
-    color: whitesmoke;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
   }
+
   .certificationTitle {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-family: "Rubik", sans-serif; */
-    font-size: 25px;
-    font-family: "Rubik Mono One", monospace;
+    /* font-family: "Rubik", serif; */
+    font-size: 20px;
+    font-family: "Rubik Mono One", serif;
     font-weight: bold;
   }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
-    font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 750px;
-    width: 100%; /* Set image width to 100% */
-    box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-size: 16px;
-  }
-  #moto {
-    font-family: "Rubik", sans-serif;
-    font-size: 25px;
-    text-align: center;
-  }
-  .pentagon {
-    clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
-    width: 100%; /* Set the width of the pentagon container to 100% */
-  }
+
   #institutionName {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
-    color: whitesmoke;
-  }
-  #workPoints {
-    font-family: "Rubik", sans-serif;
-    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     color: whitesmoke;
   }
 }
 
 /* Large devices (laptops/desktops, 1280px and up) */
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
-  #introSection {
+  #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #sectionHeading {
-    color: whitesmoke;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
   }
   .certificationTitle {
@@ -415,135 +302,51 @@ export default {
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-family: "Rubik", sans-serif; */
-    font-size: 25px;
-    font-family: "Rubik Mono One", monospace;
+    /* font-family: "Rubik", serif; */
+    font-size: 20px;
+    font-family: "Rubik Mono One", serif;
     font-weight: bold;
   }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
-    font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 750px;
-    width: 100%; /* Set image width to 100% */
-    box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-size: 16px;
-  }
-  #moto {
-    font-family: "Rubik", sans-serif;
-    font-size: 25px;
-    text-align: center;
-  }
-  .pentagon {
-    clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
-    width: 100%; /* Set the width of the pentagon container to 100% */
-  }
+
   #institutionName {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
-    color: whitesmoke;
-  }
-  #workPoints {
-    font-family: "Rubik", sans-serif;
-    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     color: whitesmoke;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1536px and up) */
 @media only screen and (min-width: 1536px) {
-  #introSection {
+  #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #sectionHeading {
-    color: whitesmoke;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
   }
   .certificationTitle {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* font-family: "Rubik", sans-serif; */
-    font-size: 25px;
-    font-family: "Rubik Mono One", monospace;
-    font-weight: bold;
-  }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
+    color: #dba204;
+    /* font-family: "Rubik", serif; */
     font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    margin-top: 50px;
-    height: 750px;
-    width: 100%; /* Set image width to 100% */
-    box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-size: 16px;
-  }
-  #moto {
-    font-family: "Rubik", sans-serif;
-    font-size: 25px;
+    font-family: "Rubik Mono One", serif;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
   }
-  .pentagon {
-    margin-top: 50px;
-    clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
-    width: 100%; /* Set the width of the pentagon container to 100% */
-  }
+
   #institutionName {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
-  }
-  #workPoints {
-    font-family: "Rubik", sans-serif;
-    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     color: whitesmoke;
   }
 }

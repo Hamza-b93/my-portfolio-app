@@ -221,71 +221,40 @@ export default {
     margin: 0;
   }
 
-  #introSection {
+  #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #sectionHeading {
-    color: whitesmoke;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
   }
+
   .companyTitle {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-family: "Rubik", sans-serif; */
+    /* font-family: "Rubik", serif; */
     font-size: 25px;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-weight: bold;
   }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
-    font-size: 20px;
-    margin: 5px;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 300px;
-    box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-size: 16px;
-  }
-  #moto {
-    font-family: "Rubik", sans-serif;
-    font-size: 25px;
-    text-align: center;
-  }
+
   #positionDescription {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
     color: whitesmoke;
   }
   #workPoints {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
     color: whitesmoke;
   }
@@ -297,17 +266,15 @@ export default {
     margin: 0;
   }
 
-  #introSection {
+  #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #sectionHeading {
-    color: whitesmoke;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
   }
   .companyTitle {
@@ -315,54 +282,23 @@ export default {
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-family: "Rubik", sans-serif; */
+    /* font-family: "Rubik", serif; */
     font-size: 25px;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-weight: bold;
   }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
-    font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 300px;
-    box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-size: 16px;
-  }
-  #moto {
-    font-family: "Rubik", sans-serif;
-    font-size: 25px;
-    text-align: center;
-  }
+
   #positionDescription {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
     color: whitesmoke;
   }
   #workPoints {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
     color: whitesmoke;
   }
@@ -374,17 +310,15 @@ export default {
     margin: 0;
   }
 
-  #introSection {
+  #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #sectionHeading {
-    color: whitesmoke;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
   }
   .companyTitle {
@@ -392,55 +326,23 @@ export default {
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-family: "Rubik", sans-serif; */
+    /* font-family: "Rubik", serif; */
     font-size: 25px;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-weight: bold;
   }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
-    font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 700px;
-    width: 100%; /* Set image width to 100% */
-    box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-size: 16px;
-  }
-  #moto {
-    font-family: "Rubik", sans-serif;
-    font-size: 25px;
-    text-align: center;
-  }
+
   #positionDescription {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
     color: whitesmoke;
   }
   #workPoints {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
     color: whitesmoke;
   }
@@ -452,17 +354,15 @@ export default {
     margin: 0;
   }
 
-  #introSection {
+  #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #sectionHeading {
-    color: whitesmoke;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
   }
   .companyTitle {
@@ -470,59 +370,23 @@ export default {
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-family: "Rubik", sans-serif; */
+    /* font-family: "Rubik", serif; */
     font-size: 25px;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-weight: bold;
   }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
-    font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 750px;
-    width: 100%; /* Set image width to 100% */
-    box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-size: 16px;
-  }
-  #moto {
-    font-family: "Rubik", sans-serif;
-    font-size: 25px;
-    text-align: center;
-  }
-  .pentagon {
-    clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
-    width: 100%; /* Set the width of the pentagon container to 100% */
-  }
+
   #positionDescription {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
     color: whitesmoke;
   }
   #workPoints {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
     color: whitesmoke;
   }
@@ -530,17 +394,16 @@ export default {
 
 /* Large devices (laptops/desktops, 1280px and up) */
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
-  #introSection {
+
+  #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #sectionHeading {
-    color: whitesmoke;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
   }
   .companyTitle {
@@ -548,59 +411,23 @@ export default {
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-family: "Rubik", sans-serif; */
+    /* font-family: "Rubik", serif; */
     font-size: 25px;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-weight: bold;
   }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
-    font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 750px;
-    width: 100%; /* Set image width to 100% */
-    box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-size: 16px;
-  }
-  #moto {
-    font-family: "Rubik", sans-serif;
-    font-size: 25px;
-    text-align: center;
-  }
-  .pentagon {
-    clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
-    width: 100%; /* Set the width of the pentagon container to 100% */
-  }
+
   #positionDescription {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
     color: whitesmoke;
   }
   #workPoints {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
     color: whitesmoke;
   }
@@ -608,17 +435,16 @@ export default {
 
 /* Extra large devices (large laptops and desktops, 1536px and up) */
 @media only screen and (min-width: 1536px) {
-  #introSection {
+
+  #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #sectionHeading {
-    color: whitesmoke;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
   }
   .companyTitle {
@@ -626,60 +452,23 @@ export default {
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-family: "Rubik", sans-serif; */
+    /* font-family: "Rubik", serif; */
     font-size: 25px;
-    font-family: "Rubik Mono One", monospace;
+    font-family: "Rubik Mono One", serif;
     font-weight: bold;
   }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", sans-serif;
-    font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    margin-top: 50px;
-    height: 750px;
-    width: 100%; /* Set image width to 100% */
-    box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-size: 16px;
-  }
-  #moto {
-    font-family: "Rubik", sans-serif;
-    font-size: 25px;
-    text-align: center;
-  }
-  .pentagon {
-    margin-top: 50px;
-    clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
-    width: 100%; /* Set the width of the pentagon container to 100% */
-  }
+
   #positionDescription {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
   }
+
   #workPoints {
-    font-family: "Rubik", sans-serif;
+    font-family: "Rubik", serif;
     font-size: 18px;
     color: whitesmoke;
   }
