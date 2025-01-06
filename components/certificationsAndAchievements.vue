@@ -147,14 +147,13 @@ export default {
   }
 
   .certificationTitle {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0770e0;
     /* font-family: "Rubik", serif; */
     font-size: 20px;
     font-family: "Rubik Mono One", serif;
-    font-weight: bold;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
 
   #institutionName {
@@ -186,14 +185,13 @@ export default {
   }
 
   .certificationTitle {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0770e0;
     /* font-family: "Rubik", serif; */
     font-size: 20px;
     font-family: "Rubik Mono One", serif;
-    font-weight: bold;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
 
   #institutionName {
@@ -225,14 +223,13 @@ export default {
   }
 
   .certificationTitle {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0770e0;
     /* font-family: "Rubik", serif; */
     font-size: 20px;
     font-family: "Rubik Mono One", serif;
-    font-weight: bold;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
 
   #institutionName {
@@ -264,14 +261,13 @@ export default {
   }
 
   .certificationTitle {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0770e0;
     /* font-family: "Rubik", serif; */
     font-size: 20px;
     font-family: "Rubik Mono One", serif;
-    font-weight: bold;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
 
   #institutionName {
@@ -298,14 +294,13 @@ export default {
     text-align: center;
   }
   .certificationTitle {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0770e0;
     /* font-family: "Rubik", serif; */
     font-size: 20px;
     font-family: "Rubik Mono One", serif;
-    font-weight: bold;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
 
   #institutionName {
@@ -332,7 +327,7 @@ export default {
     text-align: center;
   }
   .certificationTitle {
-    color: #dba204;
+    color: #0770e0;
     /* font-family: "Rubik", serif; */
     font-size: 20px;
     font-family: "Rubik Mono One", serif;

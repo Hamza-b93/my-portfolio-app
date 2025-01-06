@@ -14,50 +14,7 @@
           id=""
           class="grid grid-cols-2 2xl:columns-2 xl:columns-2 lg:columns-2 md:columns-2 sm:columns-2 xs:columns-2"
         >
-          <div id="" class="align-middle text-center">
-            <span id="" class="">
-              <p id="" class="companyTitle">Wi-Metrix</p>
-              <p id="positionDescription" class="">
-                <b>Node.js Developer (Backend)</b>
-              </p>
-              <p id="positionDescription" class="">(July 2021 – April 2022)</p>
-              <br />
-              <ul id="workPoints" class="">
-                <li>
-                  Production Line Management System
-                  <br />
-                  (Node.js + Express + Microsoft SQL + Sequelize + JWT + Node
-                  Cache).
-                </li>
-                <br />
-                <li>
-                  Worked on the development aspect of the company’s production
-                  line management system geared towards the textile industry.
-                </li>
-                <br />
-                <li>
-                  Helped in maintaining the backend codebase for this software
-                  solution.
-                </li>
-                <br />
-                <li>
-                  Added new features in the codebase based on various client
-                  requirements.
-                </li>
-                <br />
-                <li>
-                  Worked on developing and integrating basic level caching
-                  mechanisms using node cache.
-                </li>
-                <br />
-                <li>
-                  Worked on integrating backend REST APIs with frontend
-                  engineers and Android applications.
-                </li>
-              </ul>
-            </span>
-          </div>
-          <div id="" class="align-middle text-center">
+        <div id="" class="align-middle text-center">
             <span id="" class="">
               <p id="" class="companyTitle">OnStak</p>
               <p id="positionDescription" class="">
@@ -156,6 +113,49 @@
               </span>
             </span>
           </div>
+          <div id="" class="align-middle text-center">
+            <span id="" class="">
+              <p id="" class="companyTitle">Wi-Metrix</p>
+              <p id="positionDescription" class="">
+                <b>Node.js Developer (Backend)</b>
+              </p>
+              <p id="positionDescription" class="">(July 2021 – April 2022)</p>
+              <br />
+              <ul id="workPoints" class="">
+                <li>
+                  Production Line Management System
+                  <br />
+                  (Node.js + Express + Microsoft SQL + Sequelize + JWT + Node
+                  Cache).
+                </li>
+                <br />
+                <li>
+                  Worked on the development aspect of the company’s production
+                  line management system geared towards the textile industry.
+                </li>
+                <br />
+                <li>
+                  Helped in maintaining the backend codebase for this software
+                  solution.
+                </li>
+                <br />
+                <li>
+                  Added new features in the codebase based on various client
+                  requirements.
+                </li>
+                <br />
+                <li>
+                  Worked on developing and integrating basic level caching
+                  mechanisms using node cache.
+                </li>
+                <br />
+                <li>
+                  Worked on integrating backend REST APIs with frontend
+                  engineers and Android applications.
+                </li>
+              </ul>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -234,25 +234,25 @@ export default {
   }
 
   .companyTitle {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0770e0;
     /* font-family: "Rubik", serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", serif;
-    font-weight: bold;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
 
   #positionDescription {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik", serif;
-    font-size: 18px;
-    color: whitesmoke;
+    color: #0770e0;
+    /* font-family: "Rubik", serif; */
+    font-size: 20px;
+    font-family: "Rubik Mono One", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
+
   #workPoints {
     font-family: "Rubik", serif;
     font-size: 18px;
@@ -277,26 +277,27 @@ export default {
     font-style: normal;
     text-align: center;
   }
+
   .companyTitle {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0770e0;
     /* font-family: "Rubik", serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", serif;
-    font-weight: bold;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
 
   #positionDescription {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik", serif;
-    font-size: 18px;
-    color: whitesmoke;
+    color: #0770e0;
+    /* font-family: "Rubik", serif; */
+    font-size: 20px;
+    font-family: "Rubik Mono One", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
+
   #workPoints {
     font-family: "Rubik", serif;
     font-size: 18px;
@@ -321,26 +322,27 @@ export default {
     font-style: normal;
     text-align: center;
   }
+
   .companyTitle {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0770e0;
     /* font-family: "Rubik", serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", serif;
-    font-weight: bold;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
 
   #positionDescription {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik", serif;
-    font-size: 18px;
-    color: whitesmoke;
+    color: #0770e0;
+    /* font-family: "Rubik", serif; */
+    font-size: 20px;
+    font-family: "Rubik Mono One", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
+
   #workPoints {
     font-family: "Rubik", serif;
     font-size: 18px;
@@ -365,26 +367,27 @@ export default {
     font-style: normal;
     text-align: center;
   }
+
   .companyTitle {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0770e0;
     /* font-family: "Rubik", serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", serif;
-    font-weight: bold;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
 
   #positionDescription {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik", serif;
-    font-size: 18px;
-    color: whitesmoke;
+    color: #0770e0;
+    /* font-family: "Rubik", serif; */
+    font-size: 20px;
+    font-family: "Rubik Mono One", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
+
   #workPoints {
     font-family: "Rubik", serif;
     font-size: 18px;
@@ -406,26 +409,27 @@ export default {
     font-style: normal;
     text-align: center;
   }
+
   .companyTitle {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0770e0;
     /* font-family: "Rubik", serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", serif;
-    font-weight: bold;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
 
   #positionDescription {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik", serif;
-    font-size: 18px;
-    color: whitesmoke;
+    color: #0770e0;
+    /* font-family: "Rubik", serif; */
+    font-size: 20px;
+    font-family: "Rubik Mono One", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
+
   #workPoints {
     font-family: "Rubik", serif;
     font-size: 18px;
@@ -448,23 +452,23 @@ export default {
     text-align: center;
   }
   .companyTitle {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0770e0;
     /* font-family: "Rubik", serif; */
     font-size: 25px;
     font-family: "Rubik Mono One", serif;
-    font-weight: bold;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
 
   #positionDescription {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik", serif;
-    font-size: 18px;
+    color: #0770e0;
+    /* font-family: "Rubik", serif; */
+    font-size: 20px;
+    font-family: "Rubik Mono One", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
   }
 
   #workPoints {

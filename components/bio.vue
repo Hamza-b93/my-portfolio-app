@@ -126,7 +126,7 @@
               alt=""
               id=""
               class="images md:w-auto w-full"
-              src="../public/favicon.ico"
+              src="../public/1589652394983.jpeg"
             />
           </div>
         </div>
