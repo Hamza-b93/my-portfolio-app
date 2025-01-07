@@ -74,7 +74,7 @@
               </span>
               <span id="" class="">
                 <a href="https://bit.ly/4goh1P1">
-                  <Icon name="devicon:github" width="128" height="128" />
+                  <Icon name="skill-icons:github-light" width="128" height="128" />
                 </a>
                 <!-- <p id="" class=""></p> -->
               </span>
@@ -95,7 +95,7 @@
                 </a>
                 <!-- <p id="" class=""></p> -->
               </span>
-              <span id="" class="">
+              <!-- <span id="" class="">
                 <a href="https://bit.ly/4gtaPW4">
                   <Icon
                     name="simple-icons:indeed"
@@ -103,10 +103,10 @@
                     id=""
                     class="icons"
                   />
-                </a>
+                </a> -->
                 <!-- <p id="" class=""></p> -->
-              </span>
-              <span id="" class="">
+              <!-- </span> -->
+              <!-- <span id="" class="">
                 <a href="https://bit.ly/4gtaPW4">
                   <Icon
                     name="mdi:glassdoor"
@@ -114,9 +114,9 @@
                     id=""
                     class="icons"
                   />
-                </a>
+                </a> -->
                 <!-- <p id="" class=""></p> -->
-              </span>
+              <!-- </span> -->
             </div>
           </div>
           <div
