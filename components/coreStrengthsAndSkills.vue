@@ -208,7 +208,7 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Rubik Mono One", serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -216,7 +216,7 @@ export default {
 
   #skill {
     font-family: "Rubik", serif;
-    font-size: 18px;
+    font-size: 16px;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -236,7 +236,7 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Rubik Mono One", serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -244,7 +244,7 @@ export default {
 
   #skill {
     font-family: "Rubik", serif;
-    font-size: 18px;
+    font-size: 16px;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -264,7 +264,7 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Rubik Mono One", serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -272,7 +272,7 @@ export default {
 
   #skill {
     font-family: "Rubik", serif;
-    font-size: 18px;
+    font-size: 16px;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -292,7 +292,7 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Rubik Mono One", serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -300,7 +300,7 @@ export default {
 
   #skill {
     font-family: "Rubik", serif;
-    font-size: 18px;
+    font-size: 16px;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -317,7 +317,7 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Rubik Mono One", serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -325,7 +325,7 @@ export default {
 
   #skill {
     font-family: "Rubik", serif;
-    font-size: 18px;
+    font-size: 16px;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -342,7 +342,7 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Rubik Mono One", serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -350,7 +350,7 @@ export default {
 
   #skill {
     font-family: "Rubik", serif;
-    font-size: 18px;
+    font-size: 16px;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;

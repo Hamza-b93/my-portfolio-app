@@ -24,7 +24,7 @@
               <br />
               <span id="" class="">
                 <ul id="workPoints" class="">
-                  <li>
+                  <li id = '' class = "project">
                     PCB-Cloud
                     <br />
                     (Node.js + Fastify + MYSQL + Prisma + JWT + MQTT):
@@ -52,7 +52,7 @@
               <br />
               <span id="" class="">
                 <ul id="workPoints" class="">
-                  <li>
+                  <li id = '' class = "project">
                     KFC Drive-Thru Analytics
                     <br />
                     (Node.js + Express + MYSQL + Sequelize + JWT).
@@ -87,7 +87,7 @@
               <br />
               <span id="" class="">
                 <ul id="workPoints" class="">
-                  <li>
+                  <li id = '' class = "project">
                     Video Analytics Platform
                     <br />
                     (Node.js + Express + MYSQL + Sequelize + JWT + AWS Storage).
@@ -122,7 +122,7 @@
               <p id="positionDescription" class="">(July 2021 – April 2022)</p>
               <br />
               <ul id="workPoints" class="">
-                <li>
+                <li id = '' class = "project">
                   Production Line Management System
                   <br />
                   (Node.js + Express + Microsoft SQL + Sequelize + JWT + Node
@@ -227,7 +227,7 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Rubik Mono One", serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -236,7 +236,7 @@ export default {
   .companyTitle {
     color: #0770e0;
     /* font-family: "Rubik", serif; */
-    font-size: 25px;
+    font-size: 18px;
     font-family: "Rubik Mono One", serif;
     font-weight: 400;
     font-style: normal;
@@ -246,16 +246,23 @@ export default {
   #positionDescription {
     color: #0770e0;
     /* font-family: "Rubik", serif; */
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Rubik Mono One", serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
   }
 
+  .project {
+    color: #0770e0;
+  }
+
   #workPoints {
     font-family: "Rubik", serif;
-    font-size: 18px;
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     color: whitesmoke;
   }
 }
@@ -272,7 +279,7 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Rubik Mono One", serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -281,7 +288,7 @@ export default {
   .companyTitle {
     color: #0770e0;
     /* font-family: "Rubik", serif; */
-    font-size: 25px;
+    font-size: 18px;
     font-family: "Rubik Mono One", serif;
     font-weight: 400;
     font-style: normal;
@@ -291,16 +298,23 @@ export default {
   #positionDescription {
     color: #0770e0;
     /* font-family: "Rubik", serif; */
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Rubik Mono One", serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
   }
 
+  .project {
+    color: #0770e0;
+  }
+
   #workPoints {
     font-family: "Rubik", serif;
-    font-size: 18px;
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     color: whitesmoke;
   }
 }
@@ -317,7 +331,7 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Rubik Mono One", serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -326,7 +340,7 @@ export default {
   .companyTitle {
     color: #0770e0;
     /* font-family: "Rubik", serif; */
-    font-size: 25px;
+    font-size: 18px;
     font-family: "Rubik Mono One", serif;
     font-weight: 400;
     font-style: normal;
@@ -336,16 +350,23 @@ export default {
   #positionDescription {
     color: #0770e0;
     /* font-family: "Rubik", serif; */
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Rubik Mono One", serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
   }
 
+  .project {
+    color: #0770e0;
+  }
+
   #workPoints {
     font-family: "Rubik", serif;
-    font-size: 18px;
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     color: whitesmoke;
   }
 }
@@ -362,7 +383,7 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Rubik Mono One", serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -371,7 +392,7 @@ export default {
   .companyTitle {
     color: #0770e0;
     /* font-family: "Rubik", serif; */
-    font-size: 25px;
+    font-size: 18px;
     font-family: "Rubik Mono One", serif;
     font-weight: 400;
     font-style: normal;
@@ -381,16 +402,23 @@ export default {
   #positionDescription {
     color: #0770e0;
     /* font-family: "Rubik", serif; */
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Rubik Mono One", serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
   }
 
+  .project {
+    color: #0770e0;
+  }
+
   #workPoints {
     font-family: "Rubik", serif;
-    font-size: 18px;
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     color: whitesmoke;
   }
 }
@@ -404,7 +432,7 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Rubik Mono One", serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -413,7 +441,7 @@ export default {
   .companyTitle {
     color: #0770e0;
     /* font-family: "Rubik", serif; */
-    font-size: 25px;
+    font-size: 18px;
     font-family: "Rubik Mono One", serif;
     font-weight: 400;
     font-style: normal;
@@ -423,16 +451,23 @@ export default {
   #positionDescription {
     color: #0770e0;
     /* font-family: "Rubik", serif; */
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Rubik Mono One", serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
   }
 
+  .project {
+    color: #0770e0;
+  }
+
   #workPoints {
     font-family: "Rubik", serif;
-    font-size: 18px;
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     color: whitesmoke;
   }
 }
@@ -446,7 +481,7 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Rubik Mono One", serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -454,7 +489,7 @@ export default {
   .companyTitle {
     color: #0770e0;
     /* font-family: "Rubik", serif; */
-    font-size: 25px;
+    font-size: 18px;
     font-family: "Rubik Mono One", serif;
     font-weight: 400;
     font-style: normal;
@@ -464,16 +499,23 @@ export default {
   #positionDescription {
     color: #0770e0;
     /* font-family: "Rubik", serif; */
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Rubik Mono One", serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
   }
 
+  .project {
+    color: #0770e0;
+  }
+
   #workPoints {
     font-family: "Rubik", serif;
-    font-size: 18px;
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     color: whitesmoke;
   }
 }

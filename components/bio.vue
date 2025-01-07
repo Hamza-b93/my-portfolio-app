@@ -22,7 +22,7 @@
                 type="password"
               />
             </form> -->
-            <p id="" class="shortDescription">
+            <p id="shortDescription" class="">
               I am a <b>Software Engineer</b> with 3+ years of development
               experience in the industry. Having worked on a wide variety of
               projects, my knowledge and experience makes me a great addition to
@@ -80,7 +80,8 @@
               </span>
               <span id="" class="">
                 <a href="https://bit.ly/3ZtN8pB"
-                  ><Icon name="devicon:gitlab" width="128" height="128" /></a>
+                  ><Icon name="devicon:gitlab" width="128" height="128"
+                /></a>
                 <!-- <p id="" class=""></p> -->
               </span>
               <span id="" class="">
@@ -207,13 +208,13 @@ export default {
   }
 
   #introSection {
+    margin-top: 20%;
+  }
+  #brandText {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #brandText {
     font-family: "Rubik Mono One", serif;
     font-size: 25px;
     text-align: center;
@@ -242,16 +243,25 @@ export default {
     -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
   }
   .introDetails {
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-size: 16px;
+    font-style: normal;
+    color: #0770e0;
   }
   #moto {
     font-family: "Rubik", serif;
     font-size: 25px;
     text-align: center;
   }
-  .shortDescription {
+  #shortDescription {
     font-family: "Rubik", serif;
-    font-size: 2px;
+    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: whitesmoke;
   }
 }
 
@@ -262,13 +272,13 @@ export default {
   }
 
   #introSection {
+    margin-top: 20%;
+  }
+  #brandText {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #brandText {
     font-family: "Rubik Mono One", serif;
     font-size: 35px;
     text-align: center;
@@ -298,16 +308,25 @@ export default {
     -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
   }
   .introDetails {
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-size: 16px;
+    font-style: normal;
+    color: #0770e0;
   }
   #moto {
     font-family: "Rubik", serif;
     font-size: 25px;
     text-align: center;
   }
-  .shortDescription {
+  #shortDescription {
     font-family: "Rubik", serif;
-    font-size: 2px;
+    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: whitesmoke;
   }
 }
 
@@ -318,13 +337,13 @@ export default {
   }
 
   #introSection {
+    margin-top: 20%;
+  }
+  #brandText {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #brandText {
     font-family: "Rubik Mono One", serif;
     font-size: 45px;
     text-align: center;
@@ -355,16 +374,25 @@ export default {
     -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
   }
   .introDetails {
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-size: 16px;
+    font-style: normal;
+    color: #0770e0;
   }
   #moto {
     font-family: "Rubik", serif;
     font-size: 25px;
     text-align: center;
   }
-  .shortDescription {
+  #shortDescription {
     font-family: "Rubik", serif;
-    font-size: 2px;
+    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: whitesmoke;
   }
 }
 
@@ -375,13 +403,13 @@ export default {
   }
 
   #introSection {
+    margin-top: 20%;
+  }
+  #brandText {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #brandText {
     font-family: "Rubik Mono One", serif;
     font-size: 35px;
     text-align: center;
@@ -412,7 +440,12 @@ export default {
     -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
   }
   .introDetails {
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-size: 16px;
+    font-style: normal;
+    color: #0770e0;
   }
   #moto {
     font-family: "Rubik", serif;
@@ -423,22 +456,26 @@ export default {
     clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
     width: 100%; /* Set the width of the pentagon container to 100% */
   }
-  .shortDescription {
+  #shortDescription {
     font-family: "Rubik", serif;
-    font-size: 2px;
+    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: whitesmoke;
   }
 }
 
 /* Large devices (laptops/desktops, 1280px and up) */
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
   #introSection {
+    margin-top: 20%;
+  }
+  #brandText {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #brandText {
     font-family: "Rubik Mono One", serif;
     font-size: 35px;
     text-align: center;
@@ -469,7 +506,12 @@ export default {
     -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
   }
   .introDetails {
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-size: 16px;
+    font-style: normal;
+    color: #0770e0;
   }
   #moto {
     font-family: "Rubik", serif;
@@ -480,22 +522,26 @@ export default {
     clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
     width: 100%; /* Set the width of the pentagon container to 100% */
   }
-  .shortDescription {
+  #shortDescription {
     font-family: "Rubik", serif;
-    font-size: 2px;
+    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: whitesmoke;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1536px and up) */
 @media only screen and (min-width: 1536px) {
   #introSection {
+    margin-top: 20%;
+  }
+  #brandText {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 20%;
-  }
-  #brandText {
     font-family: "Rubik Mono One", serif;
     font-size: 35px;
     text-align: center;
@@ -527,7 +573,12 @@ export default {
     -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
   }
   .introDetails {
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-size: 16px;
+    font-style: normal;
+    color: #0770e0;
   }
   #moto {
     font-family: "Rubik", serif;
@@ -539,9 +590,13 @@ export default {
     clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
     width: 100%; /* Set the width of the pentagon container to 100% */
   }
-  .shortDescription {
+  #shortDescription {
     font-family: "Rubik", serif;
-    font-size: 20px;
+    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: whitesmoke;
   }
 }
 </style>
