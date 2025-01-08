@@ -19,6 +19,7 @@
               <p id="" class="certificationTitle">
                 Introduction to Data Analytics for Business<br>(Coursera)
               </p>
+              <br>
               <p id="institutionName" class="">
                 <b>University Of Colorado Boulder.</b>
               </p>
@@ -29,6 +30,7 @@
               <p id="" class="certificationTitle">
                 UX Design Fundamentals<br>(Coursera)
               </p>
+              <br>
               <p id="institutionName" class="">
                 <b>California Institute Of Arts.</b>
               </p>
@@ -39,6 +41,7 @@
               <p id="" class="certificationTitle">
                 Visual Elements Of User Interface Design<br>(Coursera)
               </p>
+              <br>
               <p id="institutionName" class="">
                 <b>California Institute Of Arts.</b>
               </p>
@@ -54,6 +57,7 @@
               <p id="" class="certificationTitle">
                 Front-End Web UI Frameworks And Tools: Bootstrap 4<br>(Coursera)
               </p>
+              <br>
               <p id="institutionName" class="">
                 <b>The Hong Kong University Of Science And Technology.</b>
               </p>
@@ -64,6 +68,7 @@
               <p id="" class="certificationTitle">
                 Winner Of Forman Computing Society’s Freshmen Gaming Competition<br>(Counter Strike)
               </p>
+              <br>
               <p id="institutionName" class="">
                 <b>FCCU FCS 2016.</b>
               </p>
