@@ -3,7 +3,7 @@
     <div id="row" class="grid grid-rows-1">
       <div id="content" class="bg-slate-950">
         <div
-          id=""
+          id="content"
           class="grid grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
         >
           <h1 id='sectionHeading' class="">
@@ -30,6 +30,7 @@
                     (Node.js + Fastify + MYSQL + Prisma + JWT + MQTT):
                   </li>
                 </ul>
+                <br>
                 <p id="workPoints" class="">
                   Worked on the design and development aspect of Pakistan
                   Cricket Board’s custom player analytics solution (backend).
@@ -49,7 +50,6 @@
                 </p>
               </span>
               <br />
-              <br />
               <span id="" class="">
                 <ul id="workPoints" class="">
                   <li id = '' class = "project">
@@ -58,6 +58,7 @@
                     (Node.js + Express + MYSQL + Sequelize + JWT).
                   </li>
                 </ul>
+                <br>
                 <p id="workPoints" class="">
                   Worked on the development aspect of KFC Pakistan’s Drive-Thru
                   management and analytics application (backend).
@@ -84,7 +85,6 @@
                 </p>
               </span>
               <br />
-              <br />
               <span id="" class="">
                 <ul id="workPoints" class="">
                   <li id = '' class = "project">
@@ -93,6 +93,7 @@
                     (Node.js + Express + MYSQL + Sequelize + JWT + AWS Storage).
                   </li>
                 </ul>
+                <br>
                 <p id="workPoints" class="">
                   Worked on the company’s primary product (machine learning and
                   computer vision based analytics platform) as a backend
@@ -217,8 +218,14 @@ export default {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 640px) {
+
   body {
     margin: 0;
+  }
+
+  #content {
+    /* margin-bottom: 17px; */
+    padding-bottom: 15px;
   }
 
   #sectionHeading {
@@ -231,6 +238,7 @@ export default {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    padding-top: 15px;
   }
 
   .companyTitle {
@@ -269,8 +277,14 @@ export default {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 641px) and (max-width: 767px) {
+
   body {
     margin: 0;
+  }
+
+  #content {
+    /* margin-bottom: 17px; */
+    padding-bottom: 15px;
   }
 
   #sectionHeading {
@@ -283,6 +297,7 @@ export default {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    padding-top: 15px;
   }
 
   .companyTitle {
@@ -321,8 +336,14 @@ export default {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+
   body {
     margin: 0;
+  }
+
+  #content {
+    /* margin-bottom: 17px; */
+    padding-bottom: 15px;
   }
 
   #sectionHeading {
@@ -335,6 +356,7 @@ export default {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    padding-top: 15px;
   }
 
   .companyTitle {
@@ -373,8 +395,14 @@ export default {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+
   body {
     margin: 0;
+  }
+
+  #content {
+    /* margin-bottom: 17px; */
+    padding-bottom: 15px;
   }
 
   #sectionHeading {
@@ -387,6 +415,7 @@ export default {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    padding-top: 15px;
   }
 
   .companyTitle {
@@ -426,6 +455,15 @@ export default {
 /* Large devices (laptops/desktops, 1280px and up) */
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
 
+  body {
+    margin: 0;
+  }
+
+  #content {
+    /* margin-bottom: 17px; */
+    padding-bottom: 15px;
+  }
+
   #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
@@ -436,6 +474,7 @@ export default {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    padding-top: 15px;
   }
 
   .companyTitle {
@@ -475,6 +514,15 @@ export default {
 /* Extra large devices (large laptops and desktops, 1536px and up) */
 @media only screen and (min-width: 1536px) {
 
+  body {
+    margin: 0;
+  }
+
+  #content {
+    /* margin-bottom: 17px; */
+    padding-bottom: 15px;
+  }
+
   #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
@@ -485,6 +533,7 @@ export default {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    padding-top: 15px;
   }
   .companyTitle {
     color: #0770e0;

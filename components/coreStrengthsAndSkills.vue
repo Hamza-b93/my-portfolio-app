@@ -3,7 +3,7 @@
     <div id="row" class="grid grid-rows-1">
       <div id="content" class="bg-slate-950">
         <div
-          id=""
+          id="content"
           class="grid grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
         >
           <span id="sectionHeading" class="">
@@ -198,8 +198,14 @@ export default {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 640px) {
+
   body {
     margin: 0;
+  }
+
+  #content {
+    /* margin-bottom: 17px; */
+    padding-bottom: 15px;
   }
 
   #sectionHeading {
@@ -212,6 +218,7 @@ export default {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    padding-top: 15px;
   }
 
   #skill {
@@ -226,8 +233,14 @@ export default {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 641px) and (max-width: 767px) {
+
   body {
     margin: 0;
+  }
+
+  #content {
+    /* margin-bottom: 17px; */
+    padding-bottom: 15px;
   }
 
   #sectionHeading {
@@ -240,6 +253,7 @@ export default {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    padding-top: 15px;
   }
 
   #skill {
@@ -254,8 +268,14 @@ export default {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+
   body {
     margin: 0;
+  }
+
+  #content {
+    /* margin-bottom: 17px; */
+    padding-bottom: 15px;
   }
 
   #sectionHeading {
@@ -268,6 +288,7 @@ export default {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    padding-top: 15px;
   }
 
   #skill {
@@ -282,8 +303,14 @@ export default {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+
   body {
     margin: 0;
+  }
+
+  #content {
+    /* margin-bottom: 17px; */
+    padding-bottom: 15px;
   }
 
   #sectionHeading {
@@ -296,6 +323,7 @@ export default {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    padding-top: 15px;
   }
 
   #skill {
@@ -311,6 +339,15 @@ export default {
 /* Large devices (laptops/desktops, 1280px and up) */
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
 
+  body {
+    margin: 0;
+  }
+
+  #content {
+    /* margin-bottom: 17px; */
+    padding-bottom: 15px;
+  }
+
   #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
@@ -321,6 +358,7 @@ export default {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    padding-top: 15px;
   }
 
   #skill {
@@ -336,6 +374,15 @@ export default {
 /* Extra large devices (large laptops and desktops, 1536px and up) */
 @media only screen and (min-width: 1536px) {
 
+  body {
+    margin: 0;
+  }
+
+  #content {
+    /* margin-bottom: 17px; */
+    padding-bottom: 15px;
+  }
+
   #sectionHeading {
     background: #1858e2;
     background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
@@ -346,6 +393,7 @@ export default {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    padding-top: 15px;
   }
 
   #skill {
