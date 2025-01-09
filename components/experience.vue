@@ -568,4 +568,5 @@ export default {
     color: whitesmoke;
   }
 }
+
 </style>
