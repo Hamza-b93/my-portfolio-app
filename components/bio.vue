@@ -1,19 +1,23 @@
 <template>
-  <div id="" class="px-0 container-fluid">
-    <div id="row" class="grid-rows-1">
-      <div id="content" class="bg-slate-950">
-        <div
-          id=""
-          class="grid-cols-2 2xl:columns-2 xl:columns-2 lg:columns-2 md:columns-1 sm:columns-1 xs:columns-1"
-        >
-          <div id="introSection" class="align-middle text-center slide-in-blurred-left">
-            <span id="brandText" class="">
-              Hi! I Am Hamza. Welcome To My Personal Portfolio Website!
-            </span>
-            <br />
-            <!-- <p id="moto" class="">The Ultimate Streaming Experience!</p> -->
-            <br />
-            <!-- <form id="" class="">
+    <div id="" class="px-0 container-fluid">
+        <div id="row" class="grid-rows-1">
+            <div id="content" class="bg-slate-950">
+                <div
+                    id=""
+                    class="grid-cols-2 2xl:columns-2 xl:columns-2 lg:columns-2 md:columns-1 sm:columns-1 xs:columns-1"
+                >
+                    <div
+                        id="introSection"
+                        class="align-middle text-center slide-in-blurred-left"
+                    >
+                        <span id="brandText" class="">
+                            Hi! I Am Hamza. Welcome To My Personal Portfolio
+                            Website!
+                        </span>
+                        <br />
+                        <!-- <p id="moto" class="">The Ultimate Streaming Experience!</p> -->
+                        <br />
+                        <!-- <form id="" class="">
               <input id="" class="formInput" placeholder="email" type="email" />
               <input
                 id=""
@@ -22,80 +26,100 @@
                 type="password"
               />
             </form> -->
-            <p id="shortDescription" class="">
-              I am a <b>Software Engineer</b> with 3+ years of development
-              experience in the industry. Having worked on a wide variety of
-              projects, my knowledge and experience makes me a great addition to
-              any development team.
-            </p>
-            <br />
-            <div class="grid grid-cols-2 gap-4 px-4 mx-auto max-w-screen-lg">
-              <span id="" class="">
-                <Icon
-                  name="material-symbols:android-contacts"
-                  style="color: whitesmoke"
-                  id=""
-                  class="icons"
-                />
-                <p id="" class="introDetails">Muhammad Hamza Butt</p>
-              </span>
-              <span id="" class="">
-                <Icon
-                  name="material-symbols:calendar-month"
-                  style="color: whitesmoke"
-                  id=""
-                  class="icons"
-                />
-                <p id="" class="introDetails">19-06-1993</p>
-              </span>
-              <span id="" class="">
-                <Icon
-                  name="material-symbols:alternate-email"
-                  style="color: whitesmoke"
-                  id=""
-                  class="icons"
-                />
-                <p id="" class="introDetails">hamza.b93@protonmail.com</p>
-              </span>
-              <span id="" class="">
-                <Icon
-                  name="material-symbols:smartphone"
-                  style="color: whitesmoke"
-                  id=""
-                  class="icons"
-                />
-                <p id="" class="introDetails">+92-319-5040505</p>
-              </span>
-              <span id="" class="">
-                <a href="https://bit.ly/4fdsGz0">
-                  <Icon name="devicon:linkedin" width="128" height="128" />
-                </a>
-                <!-- <p id="" class=""></p> -->
-              </span>
-              <span id="" class="">
-                <a href="https://bit.ly/4goh1P1">
-                  <Icon name="skill-icons:github-light" width="128" height="128" />
-                </a>
-                <!-- <p id="" class=""></p> -->
-              </span>
-              <span id="" class="">
-                <a href="https://bit.ly/3ZtN8pB"
-                  ><Icon name="devicon:gitlab" width="128" height="128"
-                /></a>
-                <!-- <p id="" class=""></p> -->
-              </span>
-              <span id="" class="">
-                <a href="https://bit.ly/4gtaPW4">
-                  <Icon
-                    name="bi:sourceforge"
-                    style="color: whitesmoke"
-                    id=""
-                    class="icons"
-                  />
-                </a>
-                <!-- <p id="" class=""></p> -->
-              </span>
-              <!-- <span id="" class="">
+                        <p id="shortDescription" class="">
+                            I am a <b>Software Engineer</b> with 3+ years of
+                            development experience in the industry. Having
+                            worked on a wide variety of projects, my knowledge
+                            and experience makes me a great addition to any
+                            development team.
+                        </p>
+                        <br />
+                        <div
+                            class="grid grid-cols-2 gap-4 px-4 mx-auto max-w-screen-lg"
+                        >
+                            <span id="" class="">
+                                <Icon
+                                    name="material-symbols:android-contacts"
+                                    style="color: whitesmoke"
+                                    id=""
+                                    class="icons"
+                                />
+                                <p id="" class="introDetails">
+                                    Muhammad Hamza Butt
+                                </p>
+                            </span>
+                            <span id="" class="">
+                                <Icon
+                                    name="material-symbols:calendar-month"
+                                    style="color: whitesmoke"
+                                    id=""
+                                    class="icons"
+                                />
+                                <p id="" class="introDetails">19-06-1993</p>
+                            </span>
+                            <span id="" class="">
+                                <Icon
+                                    name="material-symbols:alternate-email"
+                                    style="color: whitesmoke"
+                                    id=""
+                                    class="icons"
+                                />
+                                <p id="" class="introDetails">
+                                    hamza.b93@protonmail.com
+                                </p>
+                            </span>
+                            <span id="" class="">
+                                <Icon
+                                    name="material-symbols:smartphone"
+                                    style="color: whitesmoke"
+                                    id=""
+                                    class="icons"
+                                />
+                                <p id="" class="introDetails">
+                                    +92-319-5040505
+                                </p>
+                            </span>
+                            <span id="" class="">
+                                <a href="https://bit.ly/4fdsGz0">
+                                    <Icon
+                                        name="devicon:linkedin"
+                                        width="128"
+                                        height="128"
+                                    />
+                                </a>
+                                <!-- <p id="" class=""></p> -->
+                            </span>
+                            <span id="" class="">
+                                <a href="https://bit.ly/4goh1P1">
+                                    <Icon
+                                        name="skill-icons:github-light"
+                                        width="128"
+                                        height="128"
+                                    />
+                                </a>
+                                <!-- <p id="" class=""></p> -->
+                            </span>
+                            <span id="" class="">
+                                <a href="https://bit.ly/3ZtN8pB"
+                                    ><Icon
+                                        name="devicon:gitlab"
+                                        width="128"
+                                        height="128"
+                                /></a>
+                                <!-- <p id="" class=""></p> -->
+                            </span>
+                            <span id="" class="">
+                                <a href="https://bit.ly/4gtaPW4">
+                                    <Icon
+                                        name="bi:sourceforge"
+                                        style="color: whitesmoke"
+                                        id=""
+                                        class="icons"
+                                    />
+                                </a>
+                                <!-- <p id="" class=""></p> -->
+                            </span>
+                            <!-- <span id="" class="">
                 <a href="https://bit.ly/4gtaPW4">
                   <Icon
                     name="simple-icons:indeed"
@@ -104,9 +128,9 @@
                     class="icons"
                   />
                 </a> -->
-                <!-- <p id="" class=""></p> -->
-              <!-- </span> -->
-              <!-- <span id="" class="">
+                            <!-- <p id="" class=""></p> -->
+                            <!-- </span> -->
+                            <!-- <span id="" class="">
                 <a href="https://bit.ly/4gtaPW4">
                   <Icon
                     name="mdi:glassdoor"
@@ -115,53 +139,54 @@
                     class="icons"
                   />
                 </a> -->
-                <!-- <p id="" class=""></p> -->
-              <!-- </span> -->
+                            <!-- <p id="" class=""></p> -->
+                            <!-- </span> -->
+                        </div>
+                    </div>
+                    <div
+                        id=""
+                        class="pentagon h-full md:w-auto 2xl:w-11/12 xl:w-11/12 lg:w-11/12"
+                    >
+                        <img
+                            alt=""
+                            id=""
+                            class="images md:w-auto w-full"
+                            src="../public/1589652394983.png"
+                        />
+                    </div>
+                </div>
             </div>
-          </div>
-          <div
-            id=""
-            class="pentagon h-full md:w-auto 2xl:w-11/12 xl:w-11/12 lg:w-11/12"
-          >
-            <img
-              alt=""
-              id=""
-              class="images md:w-auto w-full"
-              src="../public/1589652394983.jpeg"
-            />
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </template>
 
 <script lang="js">
 export default {
-  // components: { humanVerification },
-  name: "Bio",
-  data() {
-    return {
-      // name: "Hamza",
-      // date: new Date().getDate(),
-      // month: new Date().getMonth(),
-      // time: new Date().toTimeString(),
-      // day: new Date().getDay(),
-      // year: new Date().getFullYear(),
-      // bold: "<b> Bold Text </b>",
-      // blueText: "blueText",
-      // pinkText: "pinkText",
-      // highlightColor: "orange",
-    };
-  },
+    // components: { humanVerification },
+    name: "Bio",
+    data() {
+        return {
+            // name: "Hamza",
+            // date: new Date().getDate(),
+            // month: new Date().getMonth(),
+            // time: new Date().toTimeString(),
+            // day: new Date().getDay(),
+            // year: new Date().getFullYear(),
+            // bold: "<b> Bold Text </b>",
+            // blueText: "blueText",
+            // pinkText: "pinkText",
+            // highlightColor: "orange",
+        };
+    },
 };
 </script>
 
 <style lang="css" scoped>
 .tracking-in-expand {
-  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
-    1s both;
-  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 1s both;
+    -webkit-animation: tracking-in-expand 0.7s
+        cubic-bezier(0.215, 0.61, 0.355, 1) 1s both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 1s
+        both;
 }
 
 /* ----------------------------------------------
@@ -177,434 +202,483 @@ export default {
  * ----------------------------------------
  */
 @-webkit-keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 @keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 640px) {
-  body {
-    margin: 0;
-  }
+    body {
+        margin: 0;
+    }
 
-  #introSection {
-    margin-top: 20%;
-  }
-  #brandText {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    text-align: center;
-  }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", serif;
-    font-size: 20px;
-    margin: 5px;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 300px;
-    box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-size: 16px;
-    font-style: normal;
-    color: #0770e0;
-  }
-  #moto {
-    font-family: "Rubik", serif;
-    font-size: 25px;
-    text-align: center;
-  }
-  #shortDescription {
-    font-family: "Rubik", serif;
-    font-size: 18px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
+    #introSection {
+        margin-top: 20%;
+    }
+    #brandText {
+        background: #1858e2;
+        background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "Rubik Mono One", serif;
+        font-size: 25px;
+        text-align: center;
+    }
+    .formInput {
+        border: 1px solid;
+        border-radius: 15px;
+        background: transparent;
+        border-style: solid;
+        border-color: #1858e2;
+        font-family: "Rubik", serif;
+        font-size: 20px;
+        margin: 5px;
+        padding: 4px;
+    }
+    .icons {
+        font-size: 25px;
+    }
+    .icons:hover {
+        opacity: 50%;
+    }
+    .images {
+        height: 300px;
+        box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
+    }
+    .introDetails {
+        font-family: "Rubik", serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-size: 16px;
+        font-style: normal;
+        color: #0770e0;
+    }
+    #moto {
+        font-family: "Rubik", serif;
+        font-size: 25px;
+        text-align: center;
+    }
+    #shortDescription {
+        font-family: "Rubik", serif;
+        font-size: 18px;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        color: whitesmoke;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 641px) and (max-width: 767px) {
-  body {
-    margin: 0;
-  }
+    body {
+        margin: 0;
+    }
 
-  #introSection {
-    margin-top: 20%;
-  }
-  #brandText {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 35px;
-    text-align: center;
-  }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", serif;
-    font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 300px;
-    box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-size: 16px;
-    font-style: normal;
-    color: #0770e0;
-  }
-  #moto {
-    font-family: "Rubik", serif;
-    font-size: 25px;
-    text-align: center;
-  }
-  #shortDescription {
-    font-family: "Rubik", serif;
-    font-size: 18px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
+    #introSection {
+        margin-top: 20%;
+    }
+    #brandText {
+        background: #1858e2;
+        background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "Rubik Mono One", serif;
+        font-size: 35px;
+        text-align: center;
+    }
+    .formInput {
+        border: 1px solid;
+        border-radius: 15px;
+        background: transparent;
+        border-style: solid;
+        border-color: #1858e2;
+        font-family: "Rubik", serif;
+        font-size: 20px;
+        margin: 5px;
+        overflow-x: scroll;
+        padding: 4px;
+    }
+    .icons {
+        font-size: 25px;
+    }
+    .icons:hover {
+        opacity: 50%;
+    }
+    .images {
+        height: 300px;
+        box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
+    }
+    .introDetails {
+        font-family: "Rubik", serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-size: 16px;
+        font-style: normal;
+        color: #0770e0;
+    }
+    #moto {
+        font-family: "Rubik", serif;
+        font-size: 25px;
+        text-align: center;
+    }
+    #shortDescription {
+        font-family: "Rubik", serif;
+        font-size: 18px;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        color: whitesmoke;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  body {
-    margin: 0;
-  }
+    body {
+        margin: 0;
+    }
 
-  #introSection {
-    margin-top: 20%;
-  }
-  #brandText {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 45px;
-    text-align: center;
-  }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", serif;
-    font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 700px;
-    width: 100%; /* Set image width to 100% */
-    box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-size: 16px;
-    font-style: normal;
-    color: #0770e0;
-  }
-  #moto {
-    font-family: "Rubik", serif;
-    font-size: 25px;
-    text-align: center;
-  }
-  #shortDescription {
-    font-family: "Rubik", serif;
-    font-size: 18px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
+    #introSection {
+        margin-top: 20%;
+    }
+    #brandText {
+        background: #1858e2;
+        background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "Rubik Mono One", serif;
+        font-size: 45px;
+        text-align: center;
+    }
+    .formInput {
+        border: 1px solid;
+        border-radius: 15px;
+        background: transparent;
+        border-style: solid;
+        border-color: #1858e2;
+        font-family: "Rubik", serif;
+        font-size: 20px;
+        margin: 5px;
+        overflow-x: scroll;
+        padding: 4px;
+    }
+    .icons {
+        font-size: 25px;
+    }
+    .icons:hover {
+        opacity: 50%;
+    }
+    .images {
+        height: 700px;
+        width: 100%; /* Set image width to 100% */
+        box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(255, 0, 0, 0.75);
+    }
+    .introDetails {
+        font-family: "Rubik", serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-size: 16px;
+        font-style: normal;
+        color: #0770e0;
+    }
+    #moto {
+        font-family: "Rubik", serif;
+        font-size: 25px;
+        text-align: center;
+    }
+    #shortDescription {
+        font-family: "Rubik", serif;
+        font-size: 18px;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        color: whitesmoke;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-  body {
-    margin: 0;
-  }
+    body {
+        margin: 0;
+    }
 
-  #introSection {
-    margin-top: 20%;
-  }
-  #brandText {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 35px;
-    text-align: center;
-  }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", serif;
-    font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 750px;
-    width: 100%; /* Set image width to 100% */
-    box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-size: 16px;
-    font-style: normal;
-    color: #0770e0;
-  }
-  #moto {
-    font-family: "Rubik", serif;
-    font-size: 25px;
-    text-align: center;
-  }
-  .pentagon {
-    clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
-    width: 100%; /* Set the width of the pentagon container to 100% */
-  }
-  #shortDescription {
-    font-family: "Rubik", serif;
-    font-size: 18px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
+    #introSection {
+        margin-top: 20%;
+    }
+    #brandText {
+        background: #1858e2;
+        background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "Rubik Mono One", serif;
+        font-size: 35px;
+        text-align: center;
+    }
+    .formInput {
+        border: 1px solid;
+        border-radius: 15px;
+        background: transparent;
+        border-style: solid;
+        border-color: #1858e2;
+        font-family: "Rubik", serif;
+        font-size: 20px;
+        margin: 5px;
+        overflow-x: scroll;
+        padding: 4px;
+    }
+    .icons {
+        font-size: 25px;
+    }
+    .icons:hover {
+        opacity: 50%;
+    }
+    .images {
+        height: 750px;
+        width: 100%; /* Set image width to 100% */
+        box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
+        -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
+        -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
+    }
+    .introDetails {
+        font-family: "Rubik", serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-size: 16px;
+        font-style: normal;
+        color: #0770e0;
+    }
+    #moto {
+        font-family: "Rubik", serif;
+        font-size: 25px;
+        text-align: center;
+    }
+    .pentagon {
+        clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
+        width: 100%; /* Set the width of the pentagon container to 100% */
+    }
+    #shortDescription {
+        font-family: "Rubik", serif;
+        font-size: 18px;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        color: whitesmoke;
+    }
 }
 
 /* Large devices (laptops/desktops, 1280px and up) */
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
-  #introSection {
-    margin-top: 20%;
-  }
-  #brandText {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 35px;
-    text-align: center;
-  }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", serif;
-    font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    height: 750px;
-    width: 100%; /* Set image width to 100% */
-    box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-size: 16px;
-    font-style: normal;
-    color: #0770e0;
-  }
-  #moto {
-    font-family: "Rubik", serif;
-    font-size: 25px;
-    text-align: center;
-  }
-  .pentagon {
-    clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
-    width: 100%; /* Set the width of the pentagon container to 100% */
-  }
-  #shortDescription {
-    font-family: "Rubik", serif;
-    font-size: 18px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
+    #introSection {
+        margin-top: 20%;
+    }
+    #brandText {
+        background: #1858e2;
+        background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "Rubik Mono One", serif;
+        font-size: 35px;
+        text-align: center;
+    }
+    .formInput {
+        border: 1px solid;
+        border-radius: 15px;
+        background: transparent;
+        border-style: solid;
+        border-color: #1858e2;
+        font-family: "Rubik", serif;
+        font-size: 20px;
+        margin: 5px;
+        overflow-x: scroll;
+        padding: 4px;
+    }
+    .icons {
+        font-size: 25px;
+    }
+    .icons:hover {
+        opacity: 50%;
+    }
+    .images {
+        height: 750px;
+        width: 100%; /* Set image width to 100% */
+        box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
+        -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
+        -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
+    }
+    .introDetails {
+        font-family: "Rubik", serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-size: 16px;
+        font-style: normal;
+        color: #0770e0;
+    }
+    #moto {
+        font-family: "Rubik", serif;
+        font-size: 25px;
+        text-align: center;
+    }
+    .pentagon {
+        clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
+        width: 100%; /* Set the width of the pentagon container to 100% */
+    }
+    #shortDescription {
+        font-family: "Rubik", serif;
+        font-size: 18px;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        color: whitesmoke;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1536px and up) */
 @media only screen and (min-width: 1536px) {
-  #introSection {
-    margin-top: 20%;
-  }
-  #brandText {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 35px;
-    text-align: center;
-  }
-  .formInput {
-    border: 1px solid;
-    border-radius: 15px;
-    background: transparent;
-    border-style: solid;
-    border-color: #1858e2;
-    font-family: "Rubik", serif;
-    font-size: 20px;
-    margin: 5px;
-    overflow-x: scroll;
-    padding: 4px;
-  }
-  .icons {
-    font-size: 25px;
-  }
-  .icons:hover {
-    opacity: 50%;
-  }
-  .images {
-    margin-top: 50px;
-    height: 750px;
-    width: 100%; /* Set image width to 100% */
-    box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-    -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
-  }
-  .introDetails {
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-size: 16px;
-    font-style: normal;
-    color: #0770e0;
-  }
-  #moto {
-    font-family: "Rubik", serif;
-    font-size: 25px;
-    text-align: center;
-  }
-  .pentagon {
-    margin-top: 50px;
-    clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
-    width: 100%; /* Set the width of the pentagon container to 100% */
-  }
-  #shortDescription {
-    font-family: "Rubik", serif;
-    font-size: 18px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
+    #introSection {
+        margin-top: 20%;
+    }
+    #brandText {
+        background: #1858e2;
+        background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "Rubik Mono One", serif;
+        font-size: 35px;
+        text-align: center;
+    }
+    .formInput {
+        border: 1px solid;
+        border-radius: 15px;
+        background: transparent;
+        border-style: solid;
+        border-color: #1858e2;
+        font-family: "Rubik", serif;
+        font-size: 20px;
+        margin: 5px;
+        overflow-x: scroll;
+        padding: 4px;
+    }
+    .icons {
+        font-size: 25px;
+    }
+    .icons:hover {
+        opacity: 50%;
+    }
+    .images {
+        margin-top: 50px;
+        height: 750px;
+        width: 100%; /* Set image width to 100% */
+        box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
+        -webkit-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
+        -moz-box-shadow: -4px 5px 5px 0px rgba(255, 0, 0, 0.75);
+    }
+    .introDetails {
+        font-family: "Rubik", serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-size: 16px;
+        font-style: normal;
+        color: #0770e0;
+    }
+    #moto {
+        font-family: "Rubik", serif;
+        font-size: 25px;
+        text-align: center;
+    }
+    .pentagon {
+        margin-top: 50px;
+        clip-path: polygon(100% 0, 100% 100%, 31% 100%, 25% 51%, 36% 0);
+        width: 100%; /* Set the width of the pentagon container to 100% */
+    }
+    #shortDescription {
+        font-family: "Rubik", serif;
+        font-size: 18px;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        color: whitesmoke;
+    }
 }
-.slide-in-blurred-left{-webkit-animation:slide-in-blurred-left 2s cubic-bezier(.23,1.000,.32,1.000) both;animation:slide-in-blurred-left 2s cubic-bezier(.23,1.000,.32,1.000) both}
+.slide-in-blurred-left {
+    -webkit-animation: slide-in-blurred-left 2s cubic-bezier(0.23, 1, 0.32, 1)
+        both;
+    animation: slide-in-blurred-left 2s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
 /* ----------------------------------------------
  * Generated by Animista on 2025-1-9 16:25:11
  * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
+ * See http://animista.net/license for more info.
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
- @-webkit-keyframes slide-in-blurred-left{0%{-webkit-transform:translateX(-1000px) scaleX(2.5) scaleY(.2);transform:translateX(-1000px) scaleX(2.5) scaleY(.2);-webkit-transform-origin:100% 50%;transform-origin:100% 50%;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}100%{-webkit-transform:translateX(0) scaleY(1) scaleX(1);transform:translateX(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes slide-in-blurred-left{0%{-webkit-transform:translateX(-1000px) scaleX(2.5) scaleY(.2);transform:translateX(-1000px) scaleX(2.5) scaleY(.2);-webkit-transform-origin:100% 50%;transform-origin:100% 50%;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}100%{-webkit-transform:translateX(0) scaleY(1) scaleX(1);transform:translateX(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+@-webkit-keyframes slide-in-blurred-left {
+    0% {
+        -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+        transform: translateX(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-blurred-left {
+    0% {
+        -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+        transform: translateX(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
 </style>
