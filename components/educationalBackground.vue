@@ -1,405 +1,98 @@
 <template>
-  <div id="" class="px-0 container-fluid">
-    <div id="row" class="grid grid-rows-1">
-      <div id="content" class="bg-slate-950">
-        <div
-          id="content"
-          class="grid grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
-        >
-          <span id="sectionHeading" class="">
-            <h1>Educational Background</h1>
-          </span>
-        </div>
-        <div
-          id=""
-          class="grid grid-cols-3 2xl:columns-3 xl:columns-3 lg:columns-3 md:columns-3 sm:columns-3 xs:columns-3"
-        >
-          <div id="" class="align-middle text-center">
-            <span id="" class="">
-              <!-- <p id="" class="companyTitle">Wi-Metrix</p> -->
-              <p id="qualification" class="">
-                <b>Bachelors Of Computer Science (BCS)</b>
-              </p>
-              <p id="qualification" class="">2016-2020</p>
-              <br />
-              <ul id="details" class="">
-                <li>
-                  Forman Christian College.
-                  <br />
-                  Final Year Project:<br>Social Media Predictive Analytics System. Used Machine Learning and Predictive Analytics models to predict social media post reach.
-                </li>
-              </ul>
+  <section class="mb-16">
+    <h2 class="section-heading">Educational Background</h2>
+
+    <div class="space-y-8">
+      <div
+        v-for="(education, index) in educationList"
+        :key="index"
+        class="relative bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300"
+      >
+        <div class="p-6">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">{{ education.degree }}</h3>
+              <p class="text-xl text-blue-600 dark:text-blue-400 mt-1">{{ education.institution }}</p>
+            </div>
+            <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-semibold px-3 py-1 rounded-full mt-2 md:mt-0">
+              {{ education.period }}
             </span>
           </div>
-          <div id="" class="align-middle text-center">
-            <span id="" class="">
-              <!-- <p id="" class="companyTitle">Wi-Metrix</p> -->
-              <p id="qualification" class="">
-                <b>A`Levels</b>
-              </p>
-              <p id="qualification" class="">2012-2014</p>
-              <br />
-              <ul id="details" class="">
-                <li>
-                  Beaconhouse Defence Campus Lahore.
-                </li>
-              </ul>
-            </span>
+
+          <p class="text-gray-700 dark:text-gray-300 mb-4 text-lg">{{ education.description }}</p>
+
+          <div v-if="education.skills && education.skills.length > 0" class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+            <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-2">Key Skills</h4>
+            <div class="flex flex-wrap gap-2">
+              <span 
+                v-for="(skill, skillIndex) in education.skills" 
+                :key="skillIndex"
+                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full"
+              >
+                {{ skill }}
+              </span>
+            </div>
           </div>
-          <div id="" class="align-middle text-center">
-            <span id="" class="">
-              <!-- <p id="" class="companyTitle">Wi-Metrix</p> -->
-              <p id="qualification" class="">
-                <b>O`Levels</b>
-              </p>
-              <p id="qualification" class="">2008-2012</p>
-              <br />
-              <ul id="details" class="">
-                <li>
-                  DHA Senior School For Boys Lahore.
-                  <br />
-                </li>
-              </ul>
-            </span>
+
+          <div v-if="education.project" class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+            <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-2 flex items-center">
+              <Icon name="mdi:certificate" class="mr-2 text-blue-500" />
+              Final Year Project
+            </h4>
+            <p class="text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-700/50 p-4 rounded-lg">
+              {{ education.project }}
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
+```
 
-<script lang="js">
+educationalBackground.vue
+```vue
+<<<<<<< SEARCH
+<script>
 export default {
-  // components: { humanVerification },
   name: "EducationalBackground",
   data() {
     return {
-      // name: "Hamza",
-      // date: new Date().getDate(),
-      // month: new Date().getMonth(),
-      // time: new Date().toTimeString(),
-      // day: new Date().getDay(),
-      // year: new Date().getFullYear(),
-      // bold: "<b> Bold Text </b>",
-      // blueText: "blueText",
-      // pinkText: "pinkText",
-      // highlightColor: "orange",
+      educationList: [
+        {
+          degree: "Bachelors Of Computer Science (BCS)",
+          institution: "Forman Christian College",
+          period: "2016-2020",
+          description: "Completed comprehensive computer science curriculum covering programming, algorithms, databases, and software engineering principles.",
+          skills: ["Linux", "Bootstrap"],
+          project: "Social Media Predictive Analytics System. Used Machine Learning and Predictive Analytics models to predict social media post reach."
+        },
+        {
+          degree: "A'Levels",
+          institution: "Beaconhouse Defence Campus Lahore",
+          period: "2012-2014",
+          description: "Completed advanced level studies with focus on science and mathematics.",
+          skills: [],
+          project: ""
+        },
+        {
+          degree: "O'Levels",
+          institution: "DHA Senior School For Boys Lahore",
+          period: "2008-2012",
+          description: "Completed secondary education with a strong foundation in mathematics and science.",
+          skills: [],
+          project: ""
+        }
+      ]
     };
-  },
+  }
 };
 </script>
+```
 
-<style lang="css" scoped>
-.tracking-in-expand {
-  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
-    1s both;
-  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 1s both;
-}
-
-/* ----------------------------------------------
- * Generated by Animista on 2024-4-17 13:25:39
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info.
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation tracking-in-expand
- * ----------------------------------------
- */
-@-webkit-keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 640px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #details {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  #qualification {
-    color: #0770e0;
-    /* font-family: "Rubik", serif; */
-    font-size: 18px;
-    font-family: "Rubik Mono One", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 641px) and (max-width: 767px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #details {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  #qualification {
-    color: #0770e0;
-    /* font-family: "Rubik", serif; */
-    font-size: 18px;
-    font-family: "Rubik Mono One", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #details {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  #qualification {
-    color: #0770e0;
-    /* font-family: "Rubik", serif; */
-    font-size: 18px;
-    font-family: "Rubik Mono One", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #details {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  #qualification {
-    color: #0770e0;
-    /* font-family: "Rubik", serif; */
-    font-size: 18px;
-    font-family: "Rubik Mono One", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-  }
-}
-
-/* Large devices (laptops/desktops, 1280px and up) */
-@media only screen and (min-width: 1280px) and (max-width: 1535px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #details {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  #qualification {
-    color: #0770e0;
-    /* font-family: "Rubik", serif; */
-    font-size: 18px;
-    font-family: "Rubik Mono One", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1536px and up) */
-@media only screen and (min-width: 1536px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #details {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  #qualification {
-    color: #0770e0;
-    /* font-family: "Rubik", serif; */
-    font-size: 18px;
-    font-family: "Rubik Mono One", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-  }
-}
+educationalBackground.vue
+```vue
+<<<<<<< SEARCH
+<style scoped>
+/* Using Tailwind classes instead of custom CSS */
 </style>

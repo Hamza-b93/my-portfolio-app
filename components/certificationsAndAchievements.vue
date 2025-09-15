@@ -1,403 +1,73 @@
 <template>
-  <div id="" class="px-0 container-fluid">
-    <div id="row" class="grid grid-rows-1">
-      <div id="content" class="bg-slate-950">
-        <div
-          id="content"
-          class="grid grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
-        >
-          <span id="sectionHeading" class="">
-            <h1>Certifications And Achievements</h1>
-          </span>
+  <section class="mb-12">
+    <h2 class="section-heading">Certifications And Achievements</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div 
+        v-for="(cert, index) in certifications" 
+        :key="index"
+        class="card"
+      >
+        <div class="flex items-center mb-4">
+          <Icon v-if="cert.type === 'certification'" name="mdi:certificate" class="text-blue-500 text-2xl mr-3" />
+          <Icon v-else name="mdi:trophy" class="text-yellow-500 text-2xl mr-3" />
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">{{ cert.title }}</h3>
         </div>
-        <div
-          id=""
-          class="grid grid-cols-3 2xl:columns-3 xl:columns-3 lg:columns-3 md:columns-3 sm:columns-3 xs:columns-3"
-        >
-          <div id="" class="align-middle text-center">
-            <span id="" class="">
-              <p id="" class="certificationTitle">
-                Introduction to Data Analytics for Business<br>(Coursera)
-              </p>
-              <br>
-              <p id="institutionName" class="">
-                <b>University Of Colorado Boulder.</b>
-              </p>
-            </span>
-          </div>
-          <div id="" class="align-middle text-center">
-            <span id="" class="">
-              <p id="" class="certificationTitle">
-                UX Design Fundamentals<br>(Coursera)
-              </p>
-              <br>
-              <p id="institutionName" class="">
-                <b>California Institute Of Arts.</b>
-              </p>
-            </span>
-          </div>
-          <div id="" class="align-middle text-center">
-            <span id="" class="">
-              <p id="" class="certificationTitle">
-                Visual Elements Of User Interface Design<br>(Coursera)
-              </p>
-              <br>
-              <p id="institutionName" class="">
-                <b>California Institute Of Arts.</b>
-              </p>
-            </span>
-          </div>
-        </div>
-        <div
-          id=""
-          class="grid grid-cols-2 2xl:columns-2 xl:columns-2 lg:columns-2 md:columns-2 sm:columns-2 xs:columns-2"
-        >
-          <div id="" class="align-middle text-center">
-            <span id="" class="">
-              <p id="" class="certificationTitle">
-                Front-End Web UI Frameworks And Tools: Bootstrap 4<br>(Coursera)
-              </p>
-              <br>
-              <p id="institutionName" class="">
-                <b>The Hong Kong University Of Science And Technology.</b>
-              </p>
-            </span>
-          </div>
-          <div id="" class="align-middle text-center">
-            <span id="" class="">
-              <p id="" class="certificationTitle">
-                Winner Of Forman Computing Society’s Freshmen Gaming Competition<br>(Counter Strike)
-              </p>
-              <br>
-              <p id="institutionName" class="">
-                <b>FCCU FCS 2016.</b>
-              </p>
-            </span>
-          </div>
-        </div>
+        <p v-if="cert.description" class="text-gray-600 dark:text-gray-300 mb-2">{{ cert.description }}</p>
+        <p class="font-medium text-gray-800 dark:text-gray-200">{{ cert.institution }}</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">{{ cert.date }}</p>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
-<script lang="js">
+<script>
 export default {
   name: "CertificationsAndAchievements",
   data() {
-    return {};
-  },
+    return {
+      certifications: [
+        {
+          type: "certification",
+          title: "Introduction to Data Analytics for Business",
+          description: "",
+          institution: "University Of Colorado Boulder",
+          date: "Coursera"
+        },
+        {
+          type: "certification",
+          title: "UX Design Fundamentals",
+          description: "",
+          institution: "California Institute Of Arts",
+          date: "Coursera"
+        },
+        {
+          type: "certification",
+          title: "Visual Elements Of User Interface Design",
+          description: "",
+          institution: "California Institute Of Arts",
+          date: "Coursera"
+        },
+        {
+          type: "certification",
+          title: "Front-End Web UI Frameworks And Tools: Bootstrap 4",
+          description: "",
+          institution: "The Hong Kong University Of Science And Technology",
+          date: "Coursera"
+        },
+        {
+          type: "achievement",
+          title: "Winner Of Forman Computing Society's Freshmen Gaming Competition (Counter Strike)",
+          description: "",
+          institution: "FCCU FCS 2016",
+          date: ""
+        }
+      ]
+    };
+  }
 };
 </script>
 
-<style lang="css" scoped>
-.tracking-in-expand {
-  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
-    1s both;
-  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 1s both;
-}
-
-/* ----------------------------------------------
- * Generated by Animista on 2024-4-17 13:25:39
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info.
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation tracking-in-expand
- * ----------------------------------------
- */
-@-webkit-keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 640px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  .certificationTitle {
-    color: #0770e0;
-    /* font-family: "Rubik", serif; */
-    font-size: 18px;
-    font-family: "Rubik Mono One", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-  }
-
-  #institutionName {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 641px) and (max-width: 767px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  .certificationTitle {
-    color: #0770e0;
-    /* font-family: "Rubik", serif; */
-    font-size: 18px;
-    font-family: "Rubik Mono One", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-  }
-
-  #institutionName {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  .certificationTitle {
-    color: #0770e0;
-    /* font-family: "Rubik", serif; */
-    font-size: 18px;
-    font-family: "Rubik Mono One", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-  }
-
-  #institutionName {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  .certificationTitle {
-    color: #0770e0;
-    /* font-family: "Rubik", serif; */
-    font-size: 18px;
-    font-family: "Rubik Mono One", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-  }
-
-  #institutionName {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-}
-
-/* Large devices (laptops/desktops, 1280px and up) */
-@media only screen and (min-width: 1280px) and (max-width: 1535px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-  .certificationTitle {
-    color: #0770e0;
-    /* font-family: "Rubik", serif; */
-    font-size: 18px;
-    font-family: "Rubik Mono One", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-  }
-
-  #institutionName {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1536px and up) */
-@media only screen and (min-width: 1536px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-  .certificationTitle {
-    color: #0770e0;
-    /* font-family: "Rubik", serif; */
-    font-size: 18px;
-    font-family: "Rubik Mono One", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-  }
-
-  #institutionName {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-}
+<style scoped>
+/* Using Tailwind classes instead of custom CSS */
 </style>

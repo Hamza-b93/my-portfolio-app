@@ -1,349 +1,50 @@
 <template>
-  <div id="" class="px-0 container-fluid">
-    <div id="row" class="grid grid-rows-1">
-      <div id="content" class="bg-slate-950">
-        <div
-          id="content"
-          class="grid grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
-        >
-          <span id="sectionHeading" class="">
-            <h1>Supporting Skills And Strengths</h1>
-          </span>
-        </div>
-        <div
-          id=""
-          class="grid grid-cols-3 2xl:columns-3 xl:columns-3 lg:columns-3 md:columns-3 sm:columns-3 xs:columns-3"
-        >
-          <div id="" class="align-middle text-center">
-            <span id = 'skill' class = "">
-              <Icon name="devicon:nuxtjs" width="128" height="128" />
-              Nuxt.js
-            </span>
-          </div>
-          <div id="" class="align-middle text-center">
-            <span id = 'skill' class = "">
-              <Icon name="logos:websocket" width="256" height="193" />
-              WebSockets
-            </span>
-          </div>
-          <div id="" class="align-middle text-center">
-            <span id = 'skill' class = "">
-              <Icon name="flat-color-icons:linux" width="48" height="48" />
-              Linux
-            </span>
-          </div>
-        </div>
-        <div
-          id=""
-          class="grid grid-cols-3 2xl:columns-3 xl:columns-3 lg:columns-3 md:columns-3 sm:columns-3 xs:columns-3"
-        >
-          <div id="" class="align-middle text-center">
-            <span id = 'skill' class = "">
-              <Icon name="devicon:html5-wordmark" width="128" height="128" />
-              HTML
-            </span>
-          </div>
-          <div id="" class="align-middle text-center">
-            <span id = 'skill' class = "">
-              <Icon name="devicon:bootstrap" width="128" height="128" />
-              BootStrap
-            </span>
-          </div>
-          <div id="" class="align-middle text-center">
-            <span id = 'skill' class = "">
-              <Icon name="devicon:css3-wordmark" width="128" height="128" />
-              CSS
-            </span>
-          </div>
-        </div>
-        <div
-          id=""
-          class="grid grid-cols-1 2xl:columns-1 xl:columns-1 lg:columns-1 md:columns-1 sm:columns-1 xs:columns-1"
-        >
-          <div id="" class="align-middle text-center">
-            <span id = 'skill' class = "">
-              <Icon name="devicon:tailwindcss" width="128" height="128" />
-              Tailwind CSS
-            </span>
-          </div>
-        </div>
+  <section class="mb-12">
+    <h2 class="section-heading">Supporting Skills And Strengths</h2>
+    
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+      <div 
+        v-for="(skill, index) in skills" 
+        :key="index"
+        class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+      >
+        <Icon :name="skill.icon" width="48" height="48" class="text-blue-500 mb-4" />
+        <span class="text-gray-800 dark:text-gray-200 font-medium text-center">{{ skill.name }}</span>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
-<script lang="js">
+<script>
 export default {
-  // components: { humanVerification },
   name: "SupportingSkillsAndStrengths",
   data() {
     return {
-      // name: "Hamza",
-      // date: new Date().getDate(),
-      // month: new Date().getMonth(),
-      // time: new Date().toTimeString(),
-      // day: new Date().getDay(),
-      // year: new Date().getFullYear(),
-      // bold: "<b> Bold Text </b>",
-      // blueText: "blueText",
-      // pinkText: "pinkText",
-      // highlightColor: "orange",
+      skills: [
+        { name: "Nuxt.js", icon: "devicon:nuxtjs" },
+        { name: "Linux", icon: "flat-color-icons:linux" },
+        { name: "HTML", icon: "devicon:html5-wordmark" },
+        { name: "Bootstrap", icon: "devicon:bootstrap" },
+        { name: "CSS", icon: "devicon:css3-wordmark" },
+        { name: "Tailwind CSS", icon: "devicon:tailwindcss" },
+        { name: "POSTGRESQL", icon: "devicon:postgresql" },
+        { name: "SupaBase", icon: "devicon:supabase" },
+        { name: "MySQL", icon: "devicon:mysql" },
+        { name: "MongoDB", icon: "devicon:mongodb" },
+        { name: "Firebase", icon: "devicon:firebase" },
+        { name: "AWS", icon: "skill-icons:aws-light" },
+        { name: "Fastify", icon: "devicon:fastify" },
+        { name: "Express.js", icon: "devicon:express" },
+        { name: "MQTT", icon: "logos:mqtt" },
+        { name: "Prisma", icon: "devicon:prisma" },
+        { name: "Sequelize", icon: "devicon:sequelize" },
+        { name: "Socket.IO", icon: "devicon:socketio" }
+      ]
     };
-  },
+  }
 };
 </script>
 
-<style lang="css" scoped>
-.tracking-in-expand {
-  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
-    1s both;
-  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 1s both;
-}
-
-/* ----------------------------------------------
- * Generated by Animista on 2024-4-17 13:25:39
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info.
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation tracking-in-expand
- * ----------------------------------------
- */
-@-webkit-keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 640px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  #skill {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 641px) and (max-width: 767px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  #skill {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  #skill {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  #skill {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-}
-
-/* Large devices (laptops/desktops, 1280px and up) */
-@media only screen and (min-width: 1280px) and (max-width: 1535px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  #skill {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1536px and up) */
-@media only screen and (min-width: 1536px) {
-
-  body {
-    margin: 0;
-  }
-
-  #content {
-    /* margin-bottom: 17px; */
-    padding-bottom: 15px;
-  }
-
-  #sectionHeading {
-    background: #1858e2;
-    background: linear-gradient(to bottom right, #1858e2 0%, #b316e7 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Rubik Mono One", serif;
-    font-size: 25px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    padding-top: 15px;
-  }
-
-  #skill {
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    color: whitesmoke;
-  }
-}
+<style scoped>
+/* Using Tailwind classes instead of custom CSS */
 </style>
