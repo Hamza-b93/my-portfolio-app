@@ -1,7 +1,7 @@
 <template>
   <button
     @click="toggleDarkMode"
-    class="fixed bottom-6 left-6 bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 font-medium py-3 px-6 rounded-full shadow-lg transition-all duration-300 flex items-center z-50 print:hidden hover:bg-gray-700 dark:hover:bg-gray-300"
+    class="fixed bottom-24 right-6 bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 font-medium py-3 px-6 rounded-full shadow-lg transition-all duration-300 flex items-center z-50 print:hidden hover:bg-gray-700 dark:hover:bg-gray-300"
     title="Toggle Dark Mode"
   >
     <Icon 
@@ -50,5 +50,5 @@ export default {
 </script>
 
 <style scoped>
-/* Button will be fixed at bottom left of screen */
+/* Button will be fixed at bottom right of screen, below the PDF download button */
 </style>

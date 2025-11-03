@@ -17,6 +17,34 @@
                 </div>
 
                 <div class="space-y-6">
+                    <!-- Predictive Maintenance Project -->
+                    <div>
+                        <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-3">Predictive Maintenance (Express.js +
+                            (Node.js) + POSTGRESQL + AWS S3 Bucket Service + JWT)</h4>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Worked on the design and development of an AI based Predictive Maintenance system
+                                    that is designed to observe and measure various sensor parameters of a Vehicle
+                                    Assembly Line and make predictions about hardware failure and overall
+                                    efficiency</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Setup complete database with authentication and tenant based access control in
+                                    POSTGRESQL</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Setup Docker based deployment pipeline using GitHub Actions and Github
+                                    Runners</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Implemented AWS S3 Bucket based storage solution for file uploads</span>
+                            </li>
+                        </ul>
+                    </div>
                     <!-- Military Mutual Project -->
                     <div>
                         <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-3">Military Mutual (SupaBase + Vercel +
@@ -47,7 +75,7 @@
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
                                 <span>Worked on the design and development aspect of Pakistan Cricket Board's custom
-                                    player analytics solution (backend)</span>
+                                    player analytics solution (Backend)</span>
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
