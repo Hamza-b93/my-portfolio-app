@@ -22,6 +22,13 @@ export function usePdfGenerator() {
     // Add custom fonts and styling
     const pageWidth = doc.internal.pageSize.width;
     const pageHeight = doc.internal.pageSize.height;
+    // Define safe margins
+    const marginTop = 20;
+    const marginBottom = 20; // Increased from default to accommodate footer
+    const marginLeft = 20;
+    const marginRight = 20;
+    // Define content boundaries
+    const contentHeight = pageHeight - marginTop - marginBottom;
     
     // Add header with name
     doc.setFillColor(25, 118, 210); // Blue background
@@ -51,31 +58,106 @@ export function usePdfGenerator() {
     doc.text("Location: Pakistan", pageWidth/2, yPos);
     
     // Add a line separator
-    doc.setDrawColor(210, 210, 210);
-    doc.line(20, 65, pageWidth - 20, 65);
+    yPos += 10;
+    doc.setDrawColor(200, 200, 200); // Light gray
+    doc.line(10, yPos, pageWidth - 10, yPos);
+    yPos += 10;
     
-    // Add Work Experience section
-    yPos = 75;
+    // Add Bio section with proper spacing
+    doc.setFontSize(20);
+    doc.setTextColor(25, 118, 210); // Blue color
+    doc.setFont(undefined, 'bold');
+    doc.text("Professional Summary", 20, yPos);
+    yPos += 12; // Add extra space after section title
+    
+    doc.setFontSize(12);
+    doc.setTextColor(0, 0, 0);
+    doc.setFont(undefined, 'normal');
+    const bioText = "I am a Software Engineer with 3+ years of development experience in the industry. " +
+      "Having worked on a wide variety of projects, my knowledge and experience makes me a great addition to any development team.";
+    const bioLines = doc.splitTextToSize(bioText, pageWidth - 40);
+    bioLines.forEach(line => {
+      // Check if we need a new page
+      if (yPos > pageHeight - marginBottom - 10) {
+        doc.addPage();
+        yPos = marginTop;
+      }
+      doc.text(line, 20, yPos);
+      yPos += 7;
+    });
+    
+    // Add Experience section with proper spacing
+    yPos += 15; // Add extra space before section
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
+    
     doc.setFontSize(20);
     doc.setTextColor(25, 118, 210);
     doc.setFont(undefined, 'bold');
     doc.text("Work Experience", 20, yPos);
+    yPos += 12; // Add extra space after section title
     
-    // Add experience details
-    yPos += 10;
+    // Add positions
     doc.setFontSize(14);
     doc.setTextColor(0, 0, 0);
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("Senior Software Engineer - OnStak", 20, yPos);
     yPos += 7;
     doc.setFontSize(12);
     doc.setFont(undefined, 'normal');
-    doc.text("April 2022 – Present", 20, yPos);
+    doc.text("April 2025 – Present", 20, yPos);
     
-    // Add Predictive Maintenance project
+    // Add responsibilities
     yPos += 8;
     doc.setFontSize(11);
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
+    doc.text("Privacy And Regulatory Compliance Framework (OnStak inc.)", 20, yPos);
+    yPos += 6;
+    doc.setFont(undefined, 'normal');
+    
+    const privacyCompliancePoints = [
+      "Worked on designing and developing a regulatory compliance framework for OnStak Inc. so that our products and solutions would be more regulatory compliant with GDPR and CCPA",
+      "Aligned database design and data processing workflows with GDPR and CCPA requirements, including implementing data encryption at rest and in transit, data minimization practices, and right to deletion functionalities",
+      "Collaborated closely with frontend and backend development teams to implement necessary changes for compliance, including cookie consent management, data access request handling, and privacy policy integration",
+      "Established audit trails and logging mechanisms to track data access and processing activities for compliance verification purposes",
+      "Conducted privacy impact assessments and worked with legal team to ensure all data handling procedures met regulatory standards"
+    ];
+    
+    privacyCompliancePoints.forEach(point => {
+      const lines = doc.splitTextToSize(point, pageWidth - 30);
+      lines.forEach(line => {
+        // Check if we need a new page
+        if (yPos > pageHeight - marginBottom - 10) {
+          doc.addPage();
+          yPos = marginTop;
+        }
+        doc.text("• " + line, 25, yPos);
+        yPos += 6;
+      });
+    });
+    
+    // Add next project
+    yPos += 5;
+    doc.setFontSize(11);
+    doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("Predictive Maintenance (Express.js + (Node.js) + POSTGRESQL + AWS S3 Bucket Service + JWT)", 20, yPos);
     yPos += 6;
     doc.setFont(undefined, 'normal');
@@ -90,6 +172,11 @@ export function usePdfGenerator() {
     predictiveMaintenancePoints.forEach(point => {
       const lines = doc.splitTextToSize(point, pageWidth - 30);
       lines.forEach(line => {
+        // Check if we need a new page
+        if (yPos > pageHeight - marginBottom - 10) {
+          doc.addPage();
+          yPos = marginTop;
+        }
         doc.text("• " + line, 25, yPos);
         yPos += 6;
       });
@@ -99,6 +186,11 @@ export function usePdfGenerator() {
     yPos += 5;
     doc.setFontSize(11);
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("Military Mutual (SupaBase + Vercel + GitHub)", 20, yPos);
     yPos += 6;
     doc.setFont(undefined, 'normal');
@@ -112,6 +204,11 @@ export function usePdfGenerator() {
     militaryMutualPoints.forEach(point => {
       const lines = doc.splitTextToSize(point, pageWidth - 30);
       lines.forEach(line => {
+        // Check if we need a new page
+        if (yPos > pageHeight - marginBottom - 10) {
+          doc.addPage();
+          yPos = marginTop;
+        }
         doc.text("• " + line, 25, yPos);
         yPos += 6;
       });
@@ -121,6 +218,11 @@ export function usePdfGenerator() {
     yPos += 5;
     doc.setFontSize(11);
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("PCB-Cloud (Node.js + Fastify + MYSQL + Prisma + JWT + MQTT)", 20, yPos);
     yPos += 6;
     doc.setFont(undefined, 'normal');
@@ -140,16 +242,32 @@ export function usePdfGenerator() {
     pcbCloudPoints.forEach(point => {
       const lines = doc.splitTextToSize(point, pageWidth - 30);
       lines.forEach(line => {
+        // Check if we need a new page
+        if (yPos > pageHeight - marginBottom - 10) {
+          doc.addPage();
+          yPos = marginTop;
+        }
         doc.text("• " + line, 25, yPos);
         yPos += 6;
       });
     });
+    
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     
     // Add next position
     yPos += 5;
     doc.setFontSize(14);
     doc.setTextColor(0, 0, 0);
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("Junior Software Engineer - OnStak", 20, yPos);
     yPos += 7;
     doc.setFontSize(12);
@@ -160,6 +278,11 @@ export function usePdfGenerator() {
     yPos += 8;
     doc.setFontSize(11);
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("KFC Drive-Thru Analytics (Node.js + Express + MYSQL + Sequelize + JWT)", 20, yPos);
     yPos += 6;
     doc.setFont(undefined, 'normal');
@@ -176,6 +299,11 @@ export function usePdfGenerator() {
     kfcPoints.forEach(point => {
       const lines = doc.splitTextToSize(point, pageWidth - 30);
       lines.forEach(line => {
+        // Check if we need a new page
+        if (yPos > pageHeight - marginBottom - 10) {
+          doc.addPage();
+          yPos = marginTop;
+        }
         doc.text("• " + line, 25, yPos);
         yPos += 6;
       });
@@ -185,6 +313,11 @@ export function usePdfGenerator() {
     yPos += 5;
     doc.setFontSize(11);
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("Video Analytics Platform (Node.js + Express + MYSQL + Sequelize + JWT + AWS Storage)", 20, yPos);
     yPos += 6;
     doc.setFont(undefined, 'normal');
@@ -199,15 +332,20 @@ export function usePdfGenerator() {
     videoAnalyticsPoints.forEach(point => {
       const lines = doc.splitTextToSize(point, pageWidth - 30);
       lines.forEach(line => {
+        // Check if we need a new page
+        if (yPos > pageHeight - marginBottom - 10) {
+          doc.addPage();
+          yPos = marginTop;
+        }
         doc.text("• " + line, 25, yPos);
         yPos += 6;
       });
     });
     
     // Check if we need a new page
-    if (yPos > 250) {
+    if (yPos > pageHeight - marginBottom - 20) {
       doc.addPage();
-      yPos = 20;
+      yPos = marginTop;
     }
     
     // Add next position
@@ -215,6 +353,11 @@ export function usePdfGenerator() {
     doc.setFontSize(14);
     doc.setTextColor(0, 0, 0);
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("Associate Software Engineer - Wi-Metrix", 20, yPos);
     yPos += 7;
     doc.setFontSize(12);
@@ -225,6 +368,11 @@ export function usePdfGenerator() {
     yPos += 8;
     doc.setFontSize(11);
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("Production Line Management System (Node.js + Express + Microsoft SQL + Sequelize + JWT + Node Cache)", 20, yPos);
     yPos += 6;
     doc.setFont(undefined, 'normal');
@@ -240,19 +388,29 @@ export function usePdfGenerator() {
     productionLinePoints.forEach(point => {
       const lines = doc.splitTextToSize(point, pageWidth - 30);
       lines.forEach(line => {
+        // Check if we need a new page
+        if (yPos > pageHeight - marginBottom - 10) {
+          doc.addPage();
+          yPos = marginTop;
+        }
         doc.text("• " + line, 25, yPos);
         yPos += 6;
       });
     });
     
     // Check if we need a new page
-    if (yPos > 250) {
+    if (yPos > pageHeight - marginBottom - 20) {
       doc.addPage();
-      yPos = 20;
+      yPos = marginTop;
     }
     
     // Add Skills section with proper spacing
     yPos += 10; // Add extra space before section
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.setFontSize(20);
     doc.setTextColor(25, 118, 210);
     doc.setFont(undefined, 'bold');
@@ -265,6 +423,11 @@ export function usePdfGenerator() {
     
     // Core Skills
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("Core Skills:", 20, yPos);
     yPos += 7;
     doc.setFont(undefined, 'normal');
@@ -272,6 +435,11 @@ export function usePdfGenerator() {
       "SupaBase, Alibaba Cloud, Web Sockets";
     const coreSkillsLines = doc.splitTextToSize(coreSkills, pageWidth - 35);
     coreSkillsLines.forEach(line => {
+      // Check if we need a new page
+      if (yPos > pageHeight - marginBottom - 10) {
+        doc.addPage();
+        yPos = marginTop;
+      }
       doc.text(line, 25, yPos);
       yPos += 6;
     });
@@ -280,6 +448,11 @@ export function usePdfGenerator() {
     
     // Supporting Skills
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("Supporting Skills:", 20, yPos);
     yPos += 7;
     doc.setFont(undefined, 'normal');
@@ -287,18 +460,28 @@ export function usePdfGenerator() {
       "MySQL, MongoDB, Firebase, AWS, Fastify, Express.js, MQTT, Prisma, Sequelize, Socket.IO";
     const supportingSkillsLines = doc.splitTextToSize(supportingSkills, pageWidth - 35);
     supportingSkillsLines.forEach(line => {
+      // Check if we need a new page
+      if (yPos > pageHeight - marginBottom - 10) {
+        doc.addPage();
+        yPos = marginTop;
+      }
       doc.text(line, 25, yPos);
       yPos += 6;
     });
     
     // Check if we need a new page
-    if (yPos > 250) {
+    if (yPos > pageHeight - marginBottom - 20) {
       doc.addPage();
-      yPos = 20;
+      yPos = marginTop;
     }
     
     // Add Education section with proper spacing
     yPos += 15; // Add extra space before section
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.setFontSize(20);
     doc.setTextColor(25, 118, 210);
     doc.setFont(undefined, 'bold');
@@ -308,6 +491,11 @@ export function usePdfGenerator() {
     doc.setFontSize(14);
     doc.setTextColor(0, 0, 0);
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("Bachelors Of Computer Science (BCS) - Forman Christian College", 20, yPos);
     yPos += 7;
     doc.setFontSize(12);
@@ -317,6 +505,11 @@ export function usePdfGenerator() {
     // Key Skills
     yPos += 7;
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("Key Skills:", 25, yPos);
     yPos += 6;
     doc.setFont(undefined, 'normal');
@@ -325,6 +518,11 @@ export function usePdfGenerator() {
     // Final Year Project
     yPos += 7;
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("Final Year Project:", 25, yPos);
     yPos += 6;
     doc.setFont(undefined, 'normal');
@@ -332,6 +530,11 @@ export function usePdfGenerator() {
       "Predictive Analytics models to predict social media post reach.";
     const projectLines = doc.splitTextToSize(projectText, pageWidth - 35);
     projectLines.forEach(line => {
+      // Check if we need a new page
+      if (yPos > pageHeight - marginBottom - 10) {
+        doc.addPage();
+        yPos = marginTop;
+      }
       doc.text(line, 30, yPos);
       yPos += 6;
     });
@@ -340,6 +543,11 @@ export function usePdfGenerator() {
     doc.setFontSize(14);
     doc.setTextColor(0, 0, 0);
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("A'Levels - Beaconhouse Defence Campus Lahore", 20, yPos);
     yPos += 7;
     doc.setFontSize(12);
@@ -350,20 +558,36 @@ export function usePdfGenerator() {
     doc.setFontSize(14);
     doc.setTextColor(0, 0, 0);
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("O'Levels - DHA Senior School For Boys Lahore", 20, yPos);
     yPos += 7;
     doc.setFontSize(12);
     doc.setFont(undefined, 'normal');
     doc.text("2008-2012", 20, yPos);
     
-    // Add new page for Certifications and Achievements
-    doc.addPage();
-    yPos = 20;
+    // Check if we need a new page for the next section
+    // Only add a new page if we're close to the bottom
+    if (yPos > pageHeight - marginBottom - 50) {
+      doc.addPage();
+      yPos = marginTop;
+    } else {
+      // Add some space before the next section
+      yPos += 15;
+    }
     
     // Add Certifications section with proper spacing
     doc.setFontSize(20);
     doc.setTextColor(25, 118, 210);
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("Certifications & Achievements", 20, yPos);
     yPos += 12; // Add extra space after section title
     
@@ -381,6 +605,11 @@ export function usePdfGenerator() {
     certifications.forEach(cert => {
       const lines = doc.splitTextToSize(cert, pageWidth - 30);
       lines.forEach(line => {
+        // Check if we need a new page
+        if (yPos > pageHeight - marginBottom - 10) {
+          doc.addPage();
+          yPos = marginTop;
+        }
         doc.text("• " + line, 20, yPos);
         yPos += 6;
       });
@@ -392,14 +621,19 @@ export function usePdfGenerator() {
     const achievement = "Winner Of Forman Computing Society's Freshmen Gaming Competition (Counter Strike) - FCCU FCS 2016";
     const achievementLines = doc.splitTextToSize(achievement, pageWidth - 30);
     achievementLines.forEach(line => {
+      // Check if we need a new page
+      if (yPos > pageHeight - marginBottom - 10) {
+        doc.addPage();
+        yPos = marginTop;
+      }
       doc.text("• " + line, 20, yPos);
       yPos += 6;
     });
     
     // Check if we need a new page
-    if (yPos > 250) {
+    if (yPos > pageHeight - marginBottom - 20) {
       doc.addPage();
-      yPos = 20;
+      yPos = marginTop;
     }
     
     // Add Interests section
@@ -407,6 +641,11 @@ export function usePdfGenerator() {
     doc.setFontSize(20);
     doc.setTextColor(25, 118, 210);
     doc.setFont(undefined, 'bold');
+    // Check if we need a new page
+    if (yPos > pageHeight - marginBottom - 20) {
+      doc.addPage();
+      yPos = marginTop;
+    }
     doc.text("Interests And Hobbies", 20, yPos);
     yPos += 12; // Add extra space after section title
     
@@ -428,6 +667,11 @@ export function usePdfGenerator() {
     
     // First column
     for (let i = 0; i < midPoint; i++) {
+      // Check if we need a new page
+      if (interestsY > pageHeight - marginBottom - 10) {
+        doc.addPage();
+        interestsY = marginTop;
+      }
       doc.text("• " + interests[i], 20, interestsY);
       interestsY += 7;
     }
@@ -435,6 +679,11 @@ export function usePdfGenerator() {
     // Second column
     interestsY = yPos;
     for (let i = midPoint; i < interests.length; i++) {
+      // Check if we need a new page
+      if (interestsY > pageHeight - marginBottom - 10) {
+        doc.addPage();
+        interestsY = marginTop;
+      }
       doc.text("• " + interests[i], pageWidth/2, interestsY);
       interestsY += 7;
     }
@@ -446,7 +695,6 @@ export function usePdfGenerator() {
       const footerY = pageHeight - 10;
       doc.setFontSize(10);
       doc.setTextColor(150, 150, 150);
-      doc.text("Generated on " + new Date().toLocaleDateString(), 20, footerY);
       doc.text(`Page ${i} of ${totalPages}`, pageWidth - 40, footerY);
     }
     

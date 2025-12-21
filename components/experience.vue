@@ -17,6 +17,42 @@
                 </div>
 
                 <div class="space-y-6">
+                    <!-- Privacy And Regulatory Compliance Framework Project -->
+                    <div>
+                        <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-3">Privacy And Regulatory Compliance
+                            Framework (OnStak inc.)</h4>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Worked on designing and developing a regulatory compliance framework for OnStak Inc.
+                                    so that our products and solutions would be more regulatory compliant with GDPR and
+                                    CCPA</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Aligned database design and data processing workflows with GDPR and CCPA requirements, 
+                                    including implementing data encryption at rest and in transit, data minimization practices, 
+                                    and right to deletion functionalities</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Collaborated closely with frontend and backend development teams to implement 
+                                    necessary changes for compliance, including cookie consent management, data access 
+                                    request handling, and privacy policy integration</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Established audit trails and logging mechanisms to track data access and processing 
+                                    activities for compliance verification purposes</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Conducted privacy impact assessments and worked with legal team to ensure all 
+                                    data handling procedures met regulatory standards</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
                     <!-- Predictive Maintenance Project -->
                     <div>
                         <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-3">Predictive Maintenance (Express.js +
@@ -45,6 +81,7 @@
                             </li>
                         </ul>
                     </div>
+                    
                     <!-- Military Mutual Project -->
                     <div>
                         <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-3">Military Mutual (SupaBase + Vercel +
@@ -167,7 +204,7 @@
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
-                                <span>Implemented features to generate reports based on this data</span>
+                                <span>Also implemented features to generate reports based on this data</span>
                             </li>
                         </ul>
                     </div>
@@ -189,8 +226,7 @@
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
-                                <span>Integrated role based and tenant based authorization in the software
-                                    solution</span>
+                                <span>Integrated role based and tenant based authorization in the software solution</span>
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
