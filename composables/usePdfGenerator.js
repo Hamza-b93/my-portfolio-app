@@ -1,6 +1,5 @@
 import jsPDF from 'jspdf';
 import { marked } from 'marked';
-import font from '../fonts/NotoSans-Regular.ttf'; // adjust path
 
 export function usePdfGenerator() {
     const generatePdf = async () => {
@@ -15,98 +14,61 @@ export function usePdfGenerator() {
             return;
         }
 
+        // Convert Markdown to HTML
+        const htmlContent = `
+      <html>
+        <head>
+          <style>
+            body {
+              font-family: Arial, sans-serif;
+              font-size: 11px;
+              line-height: 1.5;
+              color: #000;
+              padding: 10px;
+            }
+
+            h1 { font-size: 22px; color: #1976d2; border-bottom: 2px solid #1976d2; padding-bottom: 5px; }
+            h2 { font-size: 16px; color: #1976d2; margin-top: 15px; margin-bottom: 5px; }
+            h3 { font-size: 13px; margin-top: 10px; margin-bottom: 4px; }
+            p { margin: 4px 0; color: #000; }
+            ul { margin-left: 15px; padding-left: 10px; }
+            li { margin-bottom: 3px; color: #000; }
+            strong { font-weight: bold; }
+            hr { border: none; border-top: 1px solid #ccc; margin: 10px 0; }
+            a { color: #1976d2; text-decoration: none; }
+          </style>
+        </head>
+        <body>
+          ${marked.parse(markdownContent)}
+        </body>
+      </html>
+    `;
+
         const doc = new jsPDF({ unit: 'mm', format: 'a4' });
-        doc.addFileToVFS('NotoSans-Regular.ttf', font);
-        doc.addFont('NotoSans-Regular.ttf', 'NotoSans', 'normal');
-        doc.setFont('NotoSans', 'normal');
-        doc.setTextColor(0, 0, 0);
 
-        const pageWidth = doc.internal.pageSize.getWidth();
-        const pageHeight = doc.internal.pageSize.getHeight();
-        const margin = 15;
-        let yPos = margin;
-        const lineHeight = 6;
+        await doc.html(htmlContent, {
+            x: 10,
+            y: 10,
+            width: 190,
+            windowWidth: 800,
+            autoPaging: 'text',
+            callback: function (doc) {
+                const totalPages = doc.getNumberOfPages();
 
-        // Function to handle automatic page breaks
-        const addText = (text, fontSize = 11, fontStyle = 'normal', color = [0, 0, 0], xPos = margin) => {
-            doc.setFontSize(fontSize);
-            doc.setFont('NotoSans', fontStyle);
-            doc.setTextColor(...color);
+                for (let i = 1; i <= totalPages; i++) {
+                    doc.setPage(i);
+                    doc.setFontSize(9);
+                    doc.setTextColor(0); // Force black text for footer
+                    const pageHeight = doc.internal.pageSize.getHeight();
+                    const pageWidth = doc.internal.pageSize.getWidth();
 
-            const lines = doc.splitTextToSize(text, pageWidth - 2 * margin);
-            lines.forEach(line => {
-                if (yPos + lineHeight > pageHeight - margin) {
-                    doc.addPage();
-                    yPos = margin;
+                    doc.text(`Generated on ${new Date().toLocaleDateString()}`, 10, pageHeight - 10);
+                    doc.text(`Page ${i} of ${totalPages}`, pageWidth - 40, pageHeight - 10);
                 }
-                doc.text(line, xPos, yPos);
-                yPos += lineHeight;
-            });
-        };
 
-        const tokens = marked.lexer(markdownContent);
-
-        tokens.forEach(token => {
-            switch (token.type) {
-                case 'heading':
-                    const size = token.depth === 1 ? 20 : token.depth === 2 ? 16 : 13;
-                    const style = token.depth <= 2 ? 'bold' : 'normal';
-                    addText(token.text, size, style, [25, 118, 210]);
-                    yPos += 2;
-                    break;
-
-                case 'paragraph':
-                    const text = token.text.trim();
-                    // Handle contact info (emojis like 📧, 📱, 📍, 🔗)
-                    if (/^[📧📱📍🔗]/.test(text)) {
-                        const items = text.split(/\s{2,}/); // split by 2+ spaces
-                        let colY = yPos;
-                        items.forEach((item, i) => {
-                            const xPos = i % 2 === 0 ? margin : pageWidth / 2;
-                            addText(item, 11, 'normal', [0, 0, 0], xPos);
-                            if (i % 2 === 1) colY += lineHeight;
-                        });
-                        yPos = colY + lineHeight;
-                    } else {
-                        addText(text, 11, 'normal');
-                        yPos += 1;
-                    }
-                    break;
-
-                case 'list':
-                    token.items.forEach(item => {
-                        addText('• ' + item.text, 11, 'normal');
-                    });
-                    yPos += 1;
-                    break;
-
-                case 'hr':
-                    if (yPos + 3 > pageHeight - margin) {
-                        doc.addPage();
-                        yPos = margin;
-                    }
-                    doc.setDrawColor(200);
-                    doc.line(margin, yPos, pageWidth - margin, yPos);
-                    yPos += 4;
-                    break;
-
-                default:
-                    if (token.text) addText(token.text);
+                doc.save('Hamza_Butt_Resume.pdf');
             }
         });
-
-        // Footer with page numbers
-        const totalPages = doc.internal.getNumberOfPages();
-        for (let i = 1; i <= totalPages; i++) {
-            doc.setPage(i);
-            doc.setFontSize(9);
-            doc.setTextColor(120);
-            const footerY = pageHeight - 10;
-            doc.text(`Generated on ${new Date().toLocaleDateString()}`, margin, footerY);
-            doc.text(`Page ${i} of ${totalPages}`, pageWidth - 40, footerY);
-        }
-
-        doc.save('Hamza_Butt_Resume.pdf');
     };
 
     return { generatePdf };
