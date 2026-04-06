@@ -1,5 +1,6 @@
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
+import { marked } from 'marked';
 
 export function usePdfGenerator() {
   const generatePdf = async () => {
@@ -71,6 +72,58 @@ Software Engineer with 4+ years of experience building scalable Node.js systems.
 `;
     }
     
+    // Custom renderer to extract text content from markdown
+    const renderer = new marked.Renderer();
+    
+    // Override heading methods to return plain text
+    renderer.heading = function(text, level) {
+      return `[HEADING-${level}]${text}[/HEADING-${level}]`;
+    };
+    
+    renderer.paragraph = function(text) {
+      return `[PARAGRAPH]${text}[/PARAGRAPH]`;
+    };
+    
+    renderer.list = function(body, ordered, start) {
+      return `[LIST]${body}[/LIST]`;
+    };
+    
+    renderer.listitem = function(text) {
+      return `[LIST_ITEM]${text}[/LIST_ITEM]`;
+    };
+    
+    renderer.codespan = function(code) {
+      return code;
+    };
+    
+    renderer.code = function(code, lang, escaped) {
+      return `[CODE]${code}[/CODE]`;
+    };
+    
+    renderer.blockquote = function(quote) {
+      return `[BLOCKQUOTE]${quote}[/BLOCKQUOTE]`;
+    };
+    
+    renderer.link = function(href, title, text) {
+      return text || href;
+    };
+    
+    renderer.image = function(href, title, text) {
+      return text || '';
+    };
+    
+    renderer.strong = function(text) {
+      return `[STRONG]${text}[/STRONG]`;
+    };
+    
+    renderer.em = function(text) {
+      return `[EM]${text}[/EM]`;
+    };
+    
+    // Parse markdown to our custom format
+    marked.use({ renderer });
+    const parsedMarkdown = marked.parse(markdownContent);
+    
     // Create new PDF document with better formatting
     const doc = new jsPDF({
       orientation: 'portrait',
@@ -90,94 +143,121 @@ Software Engineer with 4+ years of experience building scalable Node.js systems.
     // Add custom fonts and styling
     const pageWidth = doc.internal.pageSize.width;
     const pageHeight = doc.internal.pageSize.height;
+    const margin = 20;
     
-    // Parse the markdown content
-    const lines = markdownContent.split('\n');
+    // Set default font
+    doc.setFont('helvetica');
     
-    // Start position
+    // Process the parsed markdown content
     let yPos = 20;
     
-    // Process each line of the markdown
-    for (const line of lines) {
-      // Skip horizontal rules
-      if (line.trim() === '---') continue;
+    // Split by our custom tags to separate content blocks
+    const blocks = parsedMarkdown.split(/(\[\/?(?:HEADING|PARAGRAPH|LIST|LIST_ITEM|CODE|BLOCKQUOTE|STRONG|EM)\][^[]*)/);
+    
+    for (const block of blocks) {
+      if (!block.trim()) continue;
       
-      // Handle headers
-      if (line.startsWith('# ')) {
-        // Main header (Name and title)
-        if (yPos === 20) {
-          // Add header with name
-          doc.setFillColor(25, 118, 210); // Blue background
-          doc.rect(0, 0, pageWidth, 40, 'F'); // Draw rectangle
+      // Handle headings
+      if (block.startsWith('[HEADING-1]')) {
+        const content = block.replace('[HEADING-1]', '').replace('[/HEADING-1]', '');
+        doc.setFontSize(24);
+        doc.setTextColor(25, 118, 210); // Blue color
+        doc.setFont(undefined, 'bold');
+        
+        // Draw header background
+        doc.setFillColor(235, 245, 255);
+        doc.rect(0, yPos - 8, pageWidth, 16, 'F');
+        
+        // Add name to header
+        const lines = doc.splitTextToSize(content, pageWidth - 2 * margin);
+        doc.text(lines, margin, yPos);
+        yPos += 10;
+      } 
+      else if (block.startsWith('[HEADING-2]')) {
+        const content = block.replace('[HEADING-2]', '').replace('[/HEADING-2]', '');
+        doc.setFontSize(18);
+        doc.setTextColor(25, 118, 210); // Blue color
+        doc.setFont(undefined, 'bold');
+        const lines = doc.splitTextToSize(content, pageWidth - 2 * margin);
+        doc.text(lines, margin, yPos);
+        yPos += 8;
+      }
+      else if (block.startsWith('[HEADING-3]')) {
+        const content = block.replace('[HEADING-3]', '').replace('[/HEADING-3]', '');
+        doc.setFontSize(14);
+        doc.setTextColor(0, 0, 0); // Black color
+        doc.setFont(undefined, 'bold');
+        const lines = doc.splitTextToSize(content, pageWidth - 2 * margin);
+        doc.text(lines, margin, yPos);
+        yPos += 7;
+      }
+      // Handle paragraphs
+      else if (block.startsWith('[PARAGRAPH]')) {
+        const content = block.replace('[PARAGRAPH]', '').replace('[/PARAGRAPH]', '');
+        doc.setFontSize(11);
+        doc.setTextColor(0, 0, 0); // Black color
+        doc.setFont(undefined, 'normal');
+        
+        // Check if this is contact info (starts with emoji icons)
+        if (content.trim().startsWith('📧') || content.trim().startsWith('📱') || 
+            content.trim().startsWith('📍') || content.trim().startsWith('🔗')) {
+          // Format contact info in two columns
+          const contactItems = content.trim().split('  '); // Split by double space or newlines
+          let colX = margin;
           
-          doc.setFontSize(28);
-          doc.setTextColor(255, 255, 255); // White text
-          doc.setFont(undefined, 'bold');
-          
-          // Extract just the name from the line
-          const namePart = line.substring(2).trim(); // Remove "# "
-          const name = namePart.split('\n')[0].split('|')[0].replace(/\*\*.*?\*\*/g, '').trim();
-          doc.text(name, 20, 25);
-          
-          // Look for the title in the next lines
-          let titleFound = false;
-          for (const nextLine of lines.slice(lines.indexOf(line) + 1)) {
-            if (nextLine.trim().startsWith('**') && nextLine.includes('Engineer')) {
-              const title = nextLine.replace(/\*\*/g, '').trim();
-              doc.setFontSize(16);
-              doc.setTextColor(255, 255, 255);
-              doc.setFont(undefined, 'normal');
-              doc.text(title, 20, 35);
-              titleFound = true;
-              break;
+          for (let i = 0; i < contactItems.length; i++) {
+            const item = contactItems[i].trim();
+            if (!item) continue;
+            
+            if (i % 2 === 0) {
+              // Left column
+              doc.text(item, colX, yPos);
+            } else {
+              // Right column
+              doc.text(item, pageWidth / 2, yPos);
+              yPos += 6; // Move down after each pair
             }
           }
-          if (!titleFound) {
-            doc.setFontSize(16);
-            doc.setTextColor(255, 255, 255);
-            doc.setFont(undefined, 'normal');
-            doc.text("Software Engineer", 20, 35);
-          }
           
-          yPos = 50;
-          continue;
+          // If odd number of items, move down after last item
+          if (contactItems.length % 2 === 1) {
+            yPos += 6;
+          }
         } else {
-          // Section header
-          const sectionTitle = line.substring(2).replace(/\*\*.*?\*\*/g, '').trim();
-          if (sectionTitle) {
-            doc.setFontSize(20);
-            doc.setTextColor(25, 118, 210);
-            doc.setFont(undefined, 'bold');
-            doc.text(sectionTitle, 20, yPos);
-            yPos += 10;
+          // Regular paragraph
+          const lines = doc.splitTextToSize(content, pageWidth - 2 * margin);
+          for (const line of lines) {
+            doc.text(line, margin, yPos);
+            yPos += 6;
+            
+            // Add new page if needed
+            if (yPos > pageHeight - 30) {
+              doc.addPage();
+              yPos = 20;
+            }
           }
         }
-      } 
-      // Handle subheaders (###)
-      else if (line.startsWith('### ')) {
-        const subHeader = line.substring(4).replace(/\*\*.*?\*\*/g, '').trim();
-        if (subHeader) {
-          doc.setFontSize(14);
-          doc.setTextColor(0, 0, 0);
-          doc.setFont(undefined, 'bold');
-          doc.text(subHeader, 20, yPos);
-          yPos += 7;
-        }
-      } 
+      }
       // Handle list items
-      else if (line.startsWith('- ') || line.startsWith('* ')) {
-        let listItem = line.substring(2).trim();
+      else if (block.startsWith('[LIST_ITEM]')) {
+        const content = block.replace('[LIST_ITEM]', '').replace('[/LIST_ITEM]', '');
+        doc.setFontSize(11);
+        doc.setTextColor(0, 0, 0);
+        doc.setFont(undefined, 'normal');
         
-        // Process bold text (remove ** and make note of it)
-        const boldRegex = /\*\*(.*?)\*\*/g;
-        let match;
+        // Process bold text inside the list item
+        const boldRegex = /\[STRONG\](.*?)\[\/STRONG\]/g;
         let lastIndex = 0;
+        let currentX = margin + 5; // Indent for list items
+        
+        // Find all bold sections
+        let match;
         const parts = [];
         
-        while ((match = boldRegex.exec(listItem)) !== null) {
+        while ((match = boldRegex.exec(content)) !== null) {
           // Add text before bold
           if (match.index > lastIndex) {
-            parts.push({ text: listItem.substring(lastIndex, match.index), bold: false });
+            parts.push({ text: content.substring(lastIndex, match.index), bold: false });
           }
           // Add bold text
           parts.push({ text: match[1], bold: true });
@@ -185,156 +265,60 @@ Software Engineer with 4+ years of experience building scalable Node.js systems.
         }
         
         // Add remaining text after last bold
-        if (lastIndex < listItem.length) {
-          parts.push({ text: listItem.substring(lastIndex), bold: false });
+        if (lastIndex < content.length) {
+          parts.push({ text: content.substring(lastIndex), bold: false });
         }
         
         // Render the parts
-        let currentX = 25;
-        let firstLine = true;
-        
         for (const part of parts) {
           doc.setFont(undefined, part.bold ? 'bold' : 'normal');
           
-          // Split the text to fit the page width
-          const textLines = doc.splitTextToSize(part.text, pageWidth - currentX - 10);
-          
-          for (let i = 0; i < textLines.length; i++) {
-            const textLine = textLines[i];
-            if (firstLine && i === 0) {
-              // Add bullet point only to the first line
-              doc.text('• ' + textLine, currentX, yPos);
-            } else {
-              // For continuation lines, align to the same indentation
-              doc.text(textLine, 25, yPos);
-            }
-            
-            // Move to next line if this wasn't the last line of this part
-            if (i < textLines.length - 1 || !firstLine) {
-              yPos += 6;
-              currentX = 25;
-            }
-            firstLine = false;
+          // For the first part, add the bullet point
+          if (part === parts[0]) {
+            doc.text('• ' + part.text, currentX, yPos);
+          } else {
+            // For subsequent parts in the same line, continue without bullet
+            const textWidth = doc.getStringUnitWidth(part.text) * doc.internal.getFontSize() / doc.internal.scaleFactor;
+            doc.text(part.text, currentX, yPos);
+            currentX += textWidth;
           }
         }
         
         doc.setFont(undefined, 'normal');
-        yPos += 2; // Small gap after list item
-      } 
-      // Handle contact info
-      else if (line.trim().startsWith('📧') || line.trim().startsWith('📱') || 
-               line.trim().startsWith('📍') || line.trim().startsWith('🔗')) {
-        if (yPos > 45 && yPos < 60) {
-          // This is the contact info section right after the header
-          doc.setFontSize(12);
+        yPos += 5;
+      }
+      // Handle horizontal rules (represented as ---)
+      else if (block.includes('---')) {
+        // Add a separator line
+        doc.setDrawColor(200); // Gray line
+        doc.line(margin, yPos, pageWidth - margin, yPos);
+        yPos += 10;
+      }
+      // Handle regular content that doesn't match our custom tags
+      else {
+        // Check if this is a simple line of text
+        if (!block.startsWith('[') && block.trim() !== '') {
+          doc.setFontSize(11);
           doc.setTextColor(0, 0, 0);
           doc.setFont(undefined, 'normal');
           
-          // Format contact info in two columns
-          if (line.includes('📧') || line.includes('📱')) {
-            doc.text(line.trim(), 20, yPos);
-          } else {
-            doc.text(line.trim(), pageWidth/2, yPos);
-            if (line.includes('📍') || line.includes('🔗')) {
-              yPos += 7; // Move to next line after location/link
-            }
-          }
-        } else {
-          // This is in another section, treat as regular text
-          doc.setFontSize(12);
-          doc.setTextColor(0, 0, 0);
-          doc.setFont(undefined, 'normal');
-          const lines = doc.splitTextToSize(line.trim(), pageWidth - 20);
-          lines.forEach(textLine => {
-            doc.text(textLine, 20, yPos);
+          // Split and render as normal text
+          const lines = doc.splitTextToSize(block, pageWidth - 2 * margin);
+          for (const line of lines) {
+            doc.text(line, margin, yPos);
             yPos += 6;
-          });
-        }
-      } 
-      // Handle regular text (positions, dates, descriptions)
-      else if (line.trim() !== '') {
-        // Check if it's a position with company and date
-        if (line.includes('|') && line.includes('*')) {
-          // Format: Position Name | Company Name *Date*
-          const parts = line.split('|');
-          if (parts.length >= 2) {
-            const position = parts[0].trim().replace(/\*\*.*?\*\*/g, '');
             
-            // Position title
-            doc.setFontSize(14);
-            doc.setTextColor(0, 0, 0);
-            doc.setFont(undefined, 'bold');
-            doc.text(position, 20, yPos);
-            yPos += 7;
-            
-            // Process the company and date part
-            let companyAndDate = parts.slice(1).join('|').trim();
-            
-            // Extract dates in asterisks
-            const dateRegex = /\*(.*?)\*/g;
-            let match;
-            let lastIndex = 0;
-            const segments = [];
-            
-            while ((match = dateRegex.exec(companyAndDate)) !== null) {
-              if (match.index > lastIndex) {
-                segments.push({ text: companyAndDate.substring(lastIndex, match.index), bold: false });
-              }
-              segments.push({ text: match[1], bold: true }); // Dates in bold
-              lastIndex = match.index + match[0].length;
+            // Add new page if needed
+            if (yPos > pageHeight - 30) {
+              doc.addPage();
+              yPos = 20;
             }
-            
-            if (lastIndex < companyAndDate.length) {
-              segments.push({ text: companyAndDate.substring(lastIndex), bold: false });
-            }
-            
-            // Render company and date
-            doc.setFontSize(12);
-            doc.setFont(undefined, 'normal');
-            let currentX = 20;
-            
-            for (const segment of segments) {
-              doc.setFont(undefined, segment.bold ? 'bold' : 'normal');
-              doc.text(segment.text, currentX, yPos);
-              
-              const textWidth = doc.getStringUnitWidth(segment.text) * doc.internal.getFontSize() / doc.internal.scaleFactor;
-              currentX += textWidth;
-            }
-            
-            doc.setFont(undefined, 'normal');
-            yPos += 7;
-          } else {
-            // Regular text
-            const cleanLine = line.replace(/\*\*.*?\*\*/g, '').trim();
-            if (cleanLine) {
-              doc.setFontSize(12);
-              doc.setTextColor(0, 0, 0);
-              doc.setFont(undefined, 'normal');
-              const lines = doc.splitTextToSize(cleanLine, pageWidth - 20);
-              lines.forEach(textLine => {
-                doc.text(textLine, 20, yPos);
-                yPos += 6;
-              });
-            }
-          }
-        } else {
-          // Regular text
-          const cleanLine = line.replace(/\*\*.*?\*\*/g, '').trim();
-          if (cleanLine) {
-            doc.setFontSize(12);
-            doc.setTextColor(0, 0, 0);
-            doc.setFont(undefined, 'normal');
-            const lines = doc.splitTextToSize(cleanLine, pageWidth - 20);
-            lines.forEach(textLine => {
-              doc.text(textLine, 20, yPos);
-              yPos += 6;
-            });
           }
         }
       }
       
-      // Add new page if we're getting close to the bottom
-      if (yPos > 250) {
+      // Add new page if needed
+      if (yPos > pageHeight - 30) {
         doc.addPage();
         yPos = 20;
       }
@@ -347,8 +331,9 @@ Software Engineer with 4+ years of experience building scalable Node.js systems.
       const footerY = pageHeight - 10;
       doc.setFontSize(10);
       doc.setTextColor(150, 150, 150);
-      doc.text("Generated on " + new Date().toLocaleDateString(), 20, footerY);
-      doc.text(`Page ${i} of ${totalPages}`, pageWidth - 40, footerY);
+      doc.setFont(undefined, 'normal');
+      doc.text("Generated on " + new Date().toLocaleDateString(), margin, footerY);
+      doc.text(`Page ${i} of ${totalPages}`, pageWidth - margin - 30, footerY);
     }
     
     // Save the PDF
