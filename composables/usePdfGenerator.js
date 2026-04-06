@@ -2,710 +2,360 @@ import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 
 export function usePdfGenerator() {
-    const generatePdf = () => {
-        // Create new PDF document with better formatting
-        const doc = new jsPDF({
-            orientation: 'portrait',
-            unit: 'mm',
-            format: 'a4'
-        });
+  const generatePdf = async () => {
+    // Fetch the markdown file content
+    let markdownContent = '';
+    
+    try {
+      const response = await fetch('/cv-resume.md');
+      if (response.ok) {
+        markdownContent = await response.text();
+      } else {
+        console.error('Could not fetch cv-resume.md');
+        // Fallback content
+        markdownContent = `
+# HAMZA BUTT  
+**Senior Backend / Platform Engineer**
 
-        // Set document properties
-        doc.setProperties({
-            title: "Hamza Butt - Professional Portfolio",
-            subject: "Software Engineer Portfolio",
-            author: "Hamza Butt",
-            keywords: "software engineer, portfolio, resume, cv",
-            creator: "Generated with jsPDF"
-        });
+📧 hamza.b93@protonmail.com  
+📱 +92-319-5040505  
+📍 Pakistan  
 
-        // Add custom fonts and styling
-        const pageWidth = doc.internal.pageSize.width;
-        const pageHeight = doc.internal.pageSize.height;
-        // Define safe margins
-        const marginTop = 20;
-        const marginBottom = 20; // Increased from default to accommodate footer
-        const marginLeft = 20;
-        const marginRight = 20;
-        // Define content boundaries
-        const contentHeight = pageHeight - marginTop - marginBottom;
+---
 
-        // Add header with name
-        doc.setFillColor(25, 118, 210); // Blue background
-        doc.rect(0, 0, pageWidth, 40, 'F'); // Draw rectangle
+## PROFESSIONAL SUMMARY
 
-        doc.setFontSize(28);
-        doc.setTextColor(255, 255, 255); // White text
-        doc.setFont(undefined, 'bold');
-        doc.text("Hamza Butt", 20, 25);
+Backend / Platform Engineer with 4+ years of experience building scalable Node.js systems. Specialized in high-throughput data pipelines and multi-tenant architectures.
 
-        doc.setFontSize(16);
-        doc.setTextColor(255, 255, 255);
-        doc.setFont(undefined, 'normal');
-        doc.text("Senior Software Engineer", 20, 35);
+---
 
-        // Add contact information in a cleaner format
-        doc.setFontSize(12);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont(undefined, 'normal');
+## CORE TECHNICAL SKILLS
 
-        // Contact info section
-        let yPos = 50;
-        doc.text("Email: hamza.b93@protonmail.com", 20, yPos);
-        doc.text("Phone: +92-319-5040505", pageWidth / 2, yPos);
-        yPos += 7;
-        doc.text("Date of Birth: 19-06-1993", 20, yPos);
-        doc.text("Location: Pakistan", pageWidth / 2, yPos);
-        yPos += 7;
-        doc.text("LinkedIn: https://www.linkedin.com/in/hamzabutt96/", 20, yPos);
-        yPos += 0;
-        doc.text("GitHub: https://github.com/Hamza-b93", pageWidth / 2, yPos);
+**Backend:** Node.js, Express.js, Fastify, TypeScript, REST APIs, JWT  
+**Databases:** PostgreSQL, MySQL, MongoDB, Prisma, Sequelize  
+**Cloud & DevOps:** AWS (S3, EC2), Docker, Podman, GitHub Actions, CI/CD, Linux  
+**Frontend:** Vue.js, Nuxt.js, Tailwind CSS  
+**Other:** MQTT, WebSockets, Multi-tenant Architecture, System Design  
 
-        // Add a line separator
-        yPos += 10;
-        doc.setDrawColor(200, 200, 200); // Light gray
-        doc.line(10, yPos, pageWidth - 10, yPos);
-        yPos += 10;
+---
+`;
+      }
+    } catch (error) {
+      console.error('Error fetching cv-resume.md:', error);
+      // Fallback content
+      markdownContent = `
+# HAMZA BUTT  
+**Software Engineer**
 
-        // Add Bio section with proper spacing
-        doc.setFontSize(20);
-        doc.setTextColor(25, 118, 210); // Blue color
-        doc.setFont(undefined, 'bold');
-        doc.text("Professional Summary", 20, yPos);
-        yPos += 12; // Add extra space after section title
+📧 hamza.b93@protonmail.com  
+📱 +92-319-5040505  
+📍 Pakistan  
 
-        doc.setFontSize(12);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont(undefined, 'normal');
-        const bioText = "Backend / Platform Engineer with 4+ years of experience building scalable Node.js systems across IoT, SaaS, and compliance-driven platforms. Specialized in high-throughput data pipelines, multi-tenant architectures, and privacy frameworks (GDPR/CCPA). Proven ability to design and deliver production systems handling 10K+ daily transactions, optimize performance, and lead backend development in fast-paced environments.";
-        const bioLines = doc.splitTextToSize(bioText, pageWidth - 40);
-        bioLines.forEach(line => {
-            // Check if we need a new page
-            if (yPos > pageHeight - marginBottom - 10) {
-                doc.addPage();
-                yPos = marginTop;
+---
+
+## PROFESSIONAL SUMMARY
+
+Software Engineer with 4+ years of experience building scalable Node.js systems. Specialized in high-throughput data pipelines and multi-tenant architectures.
+
+---
+
+## CORE TECHNICAL SKILLS
+
+**Backend:** Node.js, Express.js, Fastify, TypeScript, REST APIs, JWT  
+**Databases:** PostgreSQL, MySQL, MongoDB, Prisma, Sequelize  
+**Cloud & DevOps:** AWS (S3, EC2), Docker, Podman, GitHub Actions, CI/CD, Linux  
+**Frontend:** Vue.js, Nuxt.js, Tailwind CSS  
+**Other:** MQTT, WebSockets, Multi-tenant Architecture, System Design  
+
+---
+`;
+    }
+    
+    // Create new PDF document with better formatting
+    const doc = new jsPDF({
+      orientation: 'portrait',
+      unit: 'mm',
+      format: 'a4'
+    });
+    
+    // Set document properties
+    doc.setProperties({
+      title: "Hamza Butt - Professional Portfolio",
+      subject: "Software Engineer Portfolio",
+      author: "Hamza Butt",
+      keywords: "software engineer, portfolio, resume, cv",
+      creator: "Generated with jsPDF"
+    });
+    
+    // Add custom fonts and styling
+    const pageWidth = doc.internal.pageSize.width;
+    const pageHeight = doc.internal.pageSize.height;
+    
+    // Parse the markdown content
+    const lines = markdownContent.split('\n');
+    
+    // Start position
+    let yPos = 20;
+    
+    // Process each line of the markdown
+    for (const line of lines) {
+      // Skip horizontal rules
+      if (line.trim() === '---') continue;
+      
+      // Handle headers
+      if (line.startsWith('# ')) {
+        // Main header (Name and title)
+        if (yPos === 20) {
+          // Add header with name
+          doc.setFillColor(25, 118, 210); // Blue background
+          doc.rect(0, 0, pageWidth, 40, 'F'); // Draw rectangle
+          
+          doc.setFontSize(28);
+          doc.setTextColor(255, 255, 255); // White text
+          doc.setFont(undefined, 'bold');
+          
+          // Extract just the name from the line
+          const namePart = line.substring(2).trim(); // Remove "# "
+          const name = namePart.split('\n')[0].split('|')[0].replace(/\*\*.*?\*\*/g, '').trim();
+          doc.text(name, 20, 25);
+          
+          // Look for the title in the next lines
+          let titleFound = false;
+          for (const nextLine of lines.slice(lines.indexOf(line) + 1)) {
+            if (nextLine.trim().startsWith('**') && nextLine.includes('Engineer')) {
+              const title = nextLine.replace(/\*\*/g, '').trim();
+              doc.setFontSize(16);
+              doc.setTextColor(255, 255, 255);
+              doc.setFont(undefined, 'normal');
+              doc.text(title, 20, 35);
+              titleFound = true;
+              break;
             }
-            doc.text(line, 20, yPos);
-            yPos += 7;
-        });
-
-        // Add Experience section with proper spacing
-        yPos += 15; // Add extra space before section
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-
-        doc.setFontSize(20);
-        doc.setTextColor(25, 118, 210);
-        doc.setFont(undefined, 'bold');
-        doc.text("Work Experience", 20, yPos);
-        yPos += 12; // Add extra space after section title
-
-        // Add positions
-        doc.setFontSize(14);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("Senior Software Engineer - OnStak", 20, yPos);
-        yPos += 7;
-        doc.setFontSize(12);
-        doc.setFont(undefined, 'normal');
-        doc.text("April 2025 – Present", 20, yPos);
-
-        // Add responsibilities
-        yPos += 8;
-        doc.setFontSize(11);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("Privacy And Regulatory Compliance Framework (OnStak inc.)", 20, yPos);
-        yPos += 6;
-        doc.setFont(undefined, 'normal');
-
-        const privacyCompliancePoints = [
-            "Worked on designing and developing a regulatory compliance framework for OnStak Inc. so that our products and solutions would be more regulatory compliant with GDPR and CCPA",
-            "Aligned database design and data processing workflows with GDPR and CCPA requirements, including implementing data encryption at rest and in transit, data minimization practices, and right to deletion functionalities",
-            "Collaborated closely with frontend and backend development teams to implement necessary changes for compliance, including cookie consent management, data access request handling, and privacy policy integration",
-            "Established audit trails and logging mechanisms to track data access and processing activities for compliance verification purposes",
-            "Conducted privacy impact assessments and worked with legal team to ensure all data handling procedures met regulatory standards"
-        ];
-
-        privacyCompliancePoints.forEach(point => {
-            const lines = doc.splitTextToSize(point, pageWidth - 30);
-            lines.forEach(line => {
-                // Check if we need a new page
-                if (yPos > pageHeight - marginBottom - 10) {
-                    doc.addPage();
-                    yPos = marginTop;
-                }
-                doc.text("• " + line, 25, yPos);
-                yPos += 6;
-            });
-        });
-
-        // Add next project
-        yPos += 5;
-        doc.setFontSize(11);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("Predictive Maintenance (Express.js + (Node.js) + POSTGRESQL + AWS S3 Bucket Service + JWT)", 20, yPos);
-        yPos += 6;
-        doc.setFont(undefined, 'normal');
-
-        const predictiveMaintenancePoints = [
-            "Worked on the design and development of an AI based Predictive Maintenance system that is designed to observe and measure various sensor parameters of a Vehicle Assembly Line and make predictions about hardware failure and overall efficiency",
-            "Setup complete database with authentication and tenant based access control in POSTGRESQL",
-            "Setup Docker based deployment pipeline using GitHub Actions and Github Runners",
-            "Implemented AWS S3 Bucket based storage solution for file uploads"
-        ];
-
-        predictiveMaintenancePoints.forEach(point => {
-            const lines = doc.splitTextToSize(point, pageWidth - 30);
-            lines.forEach(line => {
-                // Check if we need a new page
-                if (yPos > pageHeight - marginBottom - 10) {
-                    doc.addPage();
-                    yPos = marginTop;
-                }
-                doc.text("• " + line, 25, yPos);
-                yPos += 6;
-            });
-        });
-
-        // Add Military Mutual project
-        yPos += 5;
-        doc.setFontSize(11);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("Military Mutual (SupaBase + Vercel + GitHub)", 20, yPos);
-        yPos += 6;
-        doc.setFont(undefined, 'normal');
-
-        const militaryMutualPoints = [
-            "Worked on the migration of client's AI based chatbot application to a new server instance",
-            "Migrated the database (SupaBase) while retaining all authentication and authorization functionality and data",
-            "Created deployment pipeline using GitHub for automated deployment"
-        ];
-
-        militaryMutualPoints.forEach(point => {
-            const lines = doc.splitTextToSize(point, pageWidth - 30);
-            lines.forEach(line => {
-                // Check if we need a new page
-                if (yPos > pageHeight - marginBottom - 10) {
-                    doc.addPage();
-                    yPos = marginTop;
-                }
-                doc.text("• " + line, 25, yPos);
-                yPos += 6;
-            });
-        });
-
-        // Add PCB-Cloud project
-        yPos += 5;
-        doc.setFontSize(11);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("PCB-Cloud (Node.js + Fastify + MYSQL + Prisma + JWT + MQTT)", 20, yPos);
-        yPos += 6;
-        doc.setFont(undefined, 'normal');
-
-        const pcbCloudPoints = [
-            "Worked on the design and development aspect of Pakistan Cricket Board's custom player analytics solution (Backend)",
-            "Created entire Backend structure in Node.js using Fastify as the Backend framework, MYSQL as the database and Prisma as the ORM",
-            "Implemented authentication, user registration and role based access using JSON Web Tokens (JWTs)",
-            "Implemented in-app notifications using MQTT PubSub methodologies",
-            "Guided junior development resources in-terms of functionality enhancement for the project",
-            "Assigned tasks to junior resources working on this project and helped these resources accomplish tasks in a timely manner",
-            "Developed CI/CD Pipelines for code deployment inside containerized environments using GitHub Actions, GitHub Runners and Podman",
-            "Acted as de facto tech lead on multiple client projects, managing task allocation, code reviews, and architectural decisions",
-            "Basic familiarity with TypeScript and AWS services like EC2, S3 (used for small-scale deployment or testing environments)"
-        ];
-
-        pcbCloudPoints.forEach(point => {
-            const lines = doc.splitTextToSize(point, pageWidth - 30);
-            lines.forEach(line => {
-                // Check if we need a new page
-                if (yPos > pageHeight - marginBottom - 10) {
-                    doc.addPage();
-                    yPos = marginTop;
-                }
-                doc.text("• " + line, 25, yPos);
-                yPos += 6;
-            });
-        });
-
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-
-        // Add next position
-        yPos += 5;
-        doc.setFontSize(14);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("Junior Software Engineer - OnStak", 20, yPos);
-        yPos += 7;
-        doc.setFontSize(12);
-        doc.setFont(undefined, 'normal');
-        doc.text("April 2022 – January 2025", 20, yPos);
-
-        // Add responsibilities
-        yPos += 8;
-        doc.setFontSize(11);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("KFC Drive-Thru Analytics (Node.js + Express + MYSQL + Sequelize + JWT)", 20, yPos);
-        yPos += 6;
-        doc.setFont(undefined, 'normal');
-
-        const kfcPoints = [
-            "Worked on the development aspect of KFC Pakistan's Drive-Thru management and analytics application (backend)",
-            "Created entire Backend structure in Node.js using Express.js as the Backend framework, MYSQL as the database and Sequelize as the ORM",
-            "Implemented authentication, user registration and role based access using JSON Web Tokens (JWTs)",
-            "Briefly worked on the integration of third-party Point-Of-Sale terminal APIs with the application's backend for data synchronization",
-            "Developed solution to store data regarding day to day drive-thru customers based on events generated by machine learning models",
-            "Also implemented features to generate reports based on this data"
-        ];
-
-        kfcPoints.forEach(point => {
-            const lines = doc.splitTextToSize(point, pageWidth - 30);
-            lines.forEach(line => {
-                // Check if we need a new page
-                if (yPos > pageHeight - marginBottom - 10) {
-                    doc.addPage();
-                    yPos = marginTop;
-                }
-                doc.text("• " + line, 25, yPos);
-                yPos += 6;
-            });
-        });
-
-        // Add Video Analytics Platform project
-        yPos += 5;
-        doc.setFontSize(11);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("Video Analytics Platform (Node.js + Express + MYSQL + Sequelize + JWT + AWS Storage)", 20, yPos);
-        yPos += 6;
-        doc.setFont(undefined, 'normal');
-
-        const videoAnalyticsPoints = [
-            "Worked on the company's primary product (machine learning and computer vision based analytics platform) as a backend engineer",
-            "Worked on integrating various machine learning models into the software solution",
-            "Integrated role based and tenant based authorization in the software solution",
-            "Made use of deployment strategies like Podman and Docker to deploy instances of the platform based on client requirements"
-        ];
-
-        videoAnalyticsPoints.forEach(point => {
-            const lines = doc.splitTextToSize(point, pageWidth - 30);
-            lines.forEach(line => {
-                // Check if we need a new page
-                if (yPos > pageHeight - marginBottom - 10) {
-                    doc.addPage();
-                    yPos = marginTop;
-                }
-                doc.text("• " + line, 25, yPos);
-                yPos += 6;
-            });
-        });
-
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-
-        // Add next position
-        yPos += 5;
-        doc.setFontSize(14);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("Associate Software Engineer - Wi-Metrix", 20, yPos);
-        yPos += 7;
-        doc.setFontSize(12);
-        doc.setFont(undefined, 'normal');
-        doc.text("July 2021 – April 2022", 20, yPos);
-
-        // Add responsibilities
-        yPos += 8;
-        doc.setFontSize(11);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("Production Line Management System (Node.js + Express + Microsoft SQL + Sequelize + JWT + Node Cache)", 20, yPos);
-        yPos += 6;
-        doc.setFont(undefined, 'normal');
-
-        const productionLinePoints = [
-            "Worked on the development aspect of the company's production line management system geared towards the textile industry",
-            "Helped in maintaining the backend codebase for this software solution",
-            "Added new features in the codebase based on various client requirements",
-            "Worked on developing and integrating basic level caching mechanisms using node cache",
-            "Worked on integrating backend REST APIs with frontend engineers and Android applications"
-        ];
-
-        productionLinePoints.forEach(point => {
-            const lines = doc.splitTextToSize(point, pageWidth - 30);
-            lines.forEach(line => {
-                // Check if we need a new page
-                if (yPos > pageHeight - marginBottom - 10) {
-                    doc.addPage();
-                    yPos = marginTop;
-                }
-                doc.text("• " + line, 25, yPos);
-                yPos += 6;
-            });
-        });
-
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-
-        // Add Skills section with proper spacing
-        yPos += 10; // Add extra space before section
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.setFontSize(20);
-        doc.setTextColor(25, 118, 210);
-        doc.setFont(undefined, 'bold');
-        doc.text("Skills", 20, yPos);
-        yPos += 12; // Add extra space after section title
-
-        doc.setFontSize(12);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont(undefined, 'normal');
-
-        // Core Skills
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("Core Skills:", 20, yPos);
-        yPos += 7;
-        doc.setFont(undefined, 'normal');
-        const coreSkills = "Node.js, JavaScript, Git, Docker, Podman, Vue.js, SQL, NOSQL, Linux, POSTGRESQL, " +
-            "SupaBase, Alibaba Cloud, Web Sockets";
-        const coreSkillsLines = doc.splitTextToSize(coreSkills, pageWidth - 35);
-        coreSkillsLines.forEach(line => {
-            // Check if we need a new page
-            if (yPos > pageHeight - marginBottom - 10) {
-                doc.addPage();
-                yPos = marginTop;
-            }
-            doc.text(line, 25, yPos);
-            yPos += 6;
-        });
-
-        yPos += 8; // Add extra space between skill sections
-
-        // Supporting Skills
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("Supporting Skills:", 20, yPos);
-        yPos += 7;
-        doc.setFont(undefined, 'normal');
-        const supportingSkills = "Nuxt.js, Linux, HTML, Bootstrap, CSS, Tailwind CSS, POSTGRESQL, SupaBase, " +
-            "MySQL, MongoDB, Firebase, AWS, Fastify, Express.js, MQTT, Prisma, Sequelize, Socket.IO";
-        const supportingSkillsLines = doc.splitTextToSize(supportingSkills, pageWidth - 35);
-        supportingSkillsLines.forEach(line => {
-            // Check if we need a new page
-            if (yPos > pageHeight - marginBottom - 10) {
-                doc.addPage();
-                yPos = marginTop;
-            }
-            doc.text(line, 25, yPos);
-            yPos += 6;
-        });
-
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-
-        // Add Education section with proper spacing
-        yPos += 15; // Add extra space before section
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.setFontSize(20);
-        doc.setTextColor(25, 118, 210);
-        doc.setFont(undefined, 'bold');
-        doc.text("Education", 20, yPos);
-        yPos += 12; // Add extra space after section title
-
-        doc.setFontSize(14);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("Bachelors Of Computer Science (BCS) - Forman Christian College", 20, yPos);
-        yPos += 7;
-        doc.setFontSize(12);
-        doc.setFont(undefined, 'normal');
-        doc.text("2016-2020", 20, yPos);
-
-        // Key Skills
-        yPos += 7;
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("Key Skills:", 25, yPos);
-        yPos += 6;
-        doc.setFont(undefined, 'normal');
-        doc.text("Linux, Bootstrap", 30, yPos);
-
-        // Final Year Project
-        yPos += 7;
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("Final Year Project:", 25, yPos);
-        yPos += 6;
-        doc.setFont(undefined, 'normal');
-        const projectText = "Social Media Predictive Analytics System. Used Machine Learning and " +
-            "Predictive Analytics models to predict social media post reach.";
-        const projectLines = doc.splitTextToSize(projectText, pageWidth - 35);
-        projectLines.forEach(line => {
-            // Check if we need a new page
-            if (yPos > pageHeight - marginBottom - 10) {
-                doc.addPage();
-                yPos = marginTop;
-            }
-            doc.text(line, 30, yPos);
-            yPos += 6;
-        });
-
-        yPos += 10; // Add extra space before next education entry
-        doc.setFontSize(14);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("A'Levels - Beaconhouse Defence Campus Lahore", 20, yPos);
-        yPos += 7;
-        doc.setFontSize(12);
-        doc.setFont(undefined, 'normal');
-        doc.text("2012-2014", 20, yPos);
-
-        yPos += 10; // Add extra space before next education entry
-        doc.setFontSize(14);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("O'Levels - DHA Senior School For Boys Lahore", 20, yPos);
-        yPos += 7;
-        doc.setFontSize(12);
-        doc.setFont(undefined, 'normal');
-        doc.text("2008-2012", 20, yPos);
-
-        // Check if we need a new page for the next section
-        // Only add a new page if we're close to the bottom
-        if (yPos > pageHeight - marginBottom - 50) {
-            doc.addPage();
-            yPos = marginTop;
+          }
+          if (!titleFound) {
+            doc.setFontSize(16);
+            doc.setTextColor(255, 255, 255);
+            doc.setFont(undefined, 'normal');
+            doc.text("Software Engineer", 20, 35);
+          }
+          
+          yPos = 50;
+          continue;
         } else {
-            // Add some space before the next section
-            yPos += 15;
+          // Section header
+          const sectionTitle = line.substring(2).replace(/\*\*.*?\*\*/g, '').trim();
+          if (sectionTitle) {
+            doc.setFontSize(20);
+            doc.setTextColor(25, 118, 210);
+            doc.setFont(undefined, 'bold');
+            doc.text(sectionTitle, 20, yPos);
+            yPos += 10;
+          }
         }
-
-        // Add Certifications section with proper spacing
-        doc.setFontSize(20);
-        doc.setTextColor(25, 118, 210);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
+      } 
+      // Handle subheaders (###)
+      else if (line.startsWith('### ')) {
+        const subHeader = line.substring(4).replace(/\*\*.*?\*\*/g, '').trim();
+        if (subHeader) {
+          doc.setFontSize(14);
+          doc.setTextColor(0, 0, 0);
+          doc.setFont(undefined, 'bold');
+          doc.text(subHeader, 20, yPos);
+          yPos += 7;
         }
-        doc.text("Certifications & Achievements", 20, yPos);
-        yPos += 12; // Add extra space after section title
-
-        doc.setFontSize(12);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont(undefined, 'normal');
-
-        const certifications = [
-            "Introduction to Data Analytics for Business - University Of Colorado Boulder (Coursera)",
-            "UX Design Fundamentals - California Institute Of Arts (Coursera)",
-            "Visual Elements Of User Interface Design - California Institute Of Arts (Coursera)",
-            "Front-End Web UI Frameworks And Tools: Bootstrap 4 - The Hong Kong University Of Science And Technology (Coursera)"
-        ];
-
-        certifications.forEach(cert => {
-            const lines = doc.splitTextToSize(cert, pageWidth - 30);
-            lines.forEach(line => {
-                // Check if we need a new page
-                if (yPos > pageHeight - marginBottom - 10) {
-                    doc.addPage();
-                    yPos = marginTop;
-                }
-                doc.text("• " + line, 20, yPos);
-                yPos += 6;
-            });
-            yPos += 2; // Add small space between items
-        });
-
-        // Add Achievement
-        yPos += 5;
-        const achievement = "Winner Of Forman Computing Society's Freshmen Gaming Competition (Counter Strike) - FCCU FCS 2016";
-        const achievementLines = doc.splitTextToSize(achievement, pageWidth - 30);
-        achievementLines.forEach(line => {
-            // Check if we need a new page
-            if (yPos > pageHeight - marginBottom - 10) {
-                doc.addPage();
-                yPos = marginTop;
+      } 
+      // Handle list items
+      else if (line.startsWith('- ') || line.startsWith('* ')) {
+        let listItem = line.substring(2).trim();
+        
+        // Process bold text (remove ** and make note of it)
+        const boldRegex = /\*\*(.*?)\*\*/g;
+        let match;
+        let lastIndex = 0;
+        const parts = [];
+        
+        while ((match = boldRegex.exec(listItem)) !== null) {
+          // Add text before bold
+          if (match.index > lastIndex) {
+            parts.push({ text: listItem.substring(lastIndex, match.index), bold: false });
+          }
+          // Add bold text
+          parts.push({ text: match[1], bold: true });
+          lastIndex = match.index + match[0].length;
+        }
+        
+        // Add remaining text after last bold
+        if (lastIndex < listItem.length) {
+          parts.push({ text: listItem.substring(lastIndex), bold: false });
+        }
+        
+        // Render the parts
+        let currentX = 25;
+        let firstLine = true;
+        
+        for (const part of parts) {
+          doc.setFont(undefined, part.bold ? 'bold' : 'normal');
+          
+          // Split the text to fit the page width
+          const textLines = doc.splitTextToSize(part.text, pageWidth - currentX - 10);
+          
+          for (let i = 0; i < textLines.length; i++) {
+            const textLine = textLines[i];
+            if (firstLine && i === 0) {
+              // Add bullet point only to the first line
+              doc.text('• ' + textLine, currentX, yPos);
+            } else {
+              // For continuation lines, align to the same indentation
+              doc.text(textLine, 25, yPos);
             }
-            doc.text("• " + line, 20, yPos);
+            
+            // Move to next line if this wasn't the last line of this part
+            if (i < textLines.length - 1 || !firstLine) {
+              yPos += 6;
+              currentX = 25;
+            }
+            firstLine = false;
+          }
+        }
+        
+        doc.setFont(undefined, 'normal');
+        yPos += 2; // Small gap after list item
+      } 
+      // Handle contact info
+      else if (line.trim().startsWith('📧') || line.trim().startsWith('📱') || 
+               line.trim().startsWith('📍') || line.trim().startsWith('🔗')) {
+        if (yPos > 45 && yPos < 60) {
+          // This is the contact info section right after the header
+          doc.setFontSize(12);
+          doc.setTextColor(0, 0, 0);
+          doc.setFont(undefined, 'normal');
+          
+          // Format contact info in two columns
+          if (line.includes('📧') || line.includes('📱')) {
+            doc.text(line.trim(), 20, yPos);
+          } else {
+            doc.text(line.trim(), pageWidth/2, yPos);
+            if (line.includes('📍') || line.includes('🔗')) {
+              yPos += 7; // Move to next line after location/link
+            }
+          }
+        } else {
+          // This is in another section, treat as regular text
+          doc.setFontSize(12);
+          doc.setTextColor(0, 0, 0);
+          doc.setFont(undefined, 'normal');
+          const lines = doc.splitTextToSize(line.trim(), pageWidth - 20);
+          lines.forEach(textLine => {
+            doc.text(textLine, 20, yPos);
             yPos += 6;
-        });
-
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
+          });
         }
-
-        // Add Interests section
-        yPos += 15; // Add extra space before section
-        doc.setFontSize(20);
-        doc.setTextColor(25, 118, 210);
-        doc.setFont(undefined, 'bold');
-        // Check if we need a new page
-        if (yPos > pageHeight - marginBottom - 20) {
-            doc.addPage();
-            yPos = marginTop;
-        }
-        doc.text("Interests And Hobbies", 20, yPos);
-        yPos += 12; // Add extra space after section title
-
-        doc.setFontSize(12);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont(undefined, 'normal');
-
-        const interests = [
-            "Photography and videography",
-            "Graphics Design (2D and 3D)",
-            "Videogames and e-sports",
-            "Tennis, Football, Swimming and Hiking",
-            "Bilingual (English and Urdu)",
-            "Content creation"
-        ];
-
-        let interestsY = yPos;
-        const midPoint = Math.ceil(interests.length / 2);
-
-        // First column
-        for (let i = 0; i < midPoint; i++) {
-            // Check if we need a new page
-            if (interestsY > pageHeight - marginBottom - 10) {
-                doc.addPage();
-                interestsY = marginTop;
+      } 
+      // Handle regular text (positions, dates, descriptions)
+      else if (line.trim() !== '') {
+        // Check if it's a position with company and date
+        if (line.includes('|') && line.includes('*')) {
+          // Format: Position Name | Company Name *Date*
+          const parts = line.split('|');
+          if (parts.length >= 2) {
+            const position = parts[0].trim().replace(/\*\*.*?\*\*/g, '');
+            
+            // Position title
+            doc.setFontSize(14);
+            doc.setTextColor(0, 0, 0);
+            doc.setFont(undefined, 'bold');
+            doc.text(position, 20, yPos);
+            yPos += 7;
+            
+            // Process the company and date part
+            let companyAndDate = parts.slice(1).join('|').trim();
+            
+            // Extract dates in asterisks
+            const dateRegex = /\*(.*?)\*/g;
+            let match;
+            let lastIndex = 0;
+            const segments = [];
+            
+            while ((match = dateRegex.exec(companyAndDate)) !== null) {
+              if (match.index > lastIndex) {
+                segments.push({ text: companyAndDate.substring(lastIndex, match.index), bold: false });
+              }
+              segments.push({ text: match[1], bold: true }); // Dates in bold
+              lastIndex = match.index + match[0].length;
             }
-            doc.text("• " + interests[i], 20, interestsY);
-            interestsY += 7;
-        }
-
-        // Second column
-        interestsY = yPos;
-        for (let i = midPoint; i < interests.length; i++) {
-            // Check if we need a new page
-            if (interestsY > pageHeight - marginBottom - 10) {
-                doc.addPage();
-                interestsY = marginTop;
+            
+            if (lastIndex < companyAndDate.length) {
+              segments.push({ text: companyAndDate.substring(lastIndex), bold: false });
             }
-            doc.text("• " + interests[i], pageWidth / 2, interestsY);
-            interestsY += 7;
+            
+            // Render company and date
+            doc.setFontSize(12);
+            doc.setFont(undefined, 'normal');
+            let currentX = 20;
+            
+            for (const segment of segments) {
+              doc.setFont(undefined, segment.bold ? 'bold' : 'normal');
+              doc.text(segment.text, currentX, yPos);
+              
+              const textWidth = doc.getStringUnitWidth(segment.text) * doc.internal.getFontSize() / doc.internal.scaleFactor;
+              currentX += textWidth;
+            }
+            
+            doc.setFont(undefined, 'normal');
+            yPos += 7;
+          } else {
+            // Regular text
+            const cleanLine = line.replace(/\*\*.*?\*\*/g, '').trim();
+            if (cleanLine) {
+              doc.setFontSize(12);
+              doc.setTextColor(0, 0, 0);
+              doc.setFont(undefined, 'normal');
+              const lines = doc.splitTextToSize(cleanLine, pageWidth - 20);
+              lines.forEach(textLine => {
+                doc.text(textLine, 20, yPos);
+                yPos += 6;
+              });
+            }
+          }
+        } else {
+          // Regular text
+          const cleanLine = line.replace(/\*\*.*?\*\*/g, '').trim();
+          if (cleanLine) {
+            doc.setFontSize(12);
+            doc.setTextColor(0, 0, 0);
+            doc.setFont(undefined, 'normal');
+            const lines = doc.splitTextToSize(cleanLine, pageWidth - 20);
+            lines.forEach(textLine => {
+              doc.text(textLine, 20, yPos);
+              yPos += 6;
+            });
+          }
         }
-
-        // Add footer with correct page numbering
-        const totalPages = doc.internal.getNumberOfPages();
-        for (let i = 1; i <= totalPages; i++) {
-            doc.setPage(i);
-            const footerY = pageHeight - 10;
-            doc.setFontSize(10);
-            doc.setTextColor(150, 150, 150);
-            doc.text(`Page ${i} of ${totalPages}`, pageWidth - 40, footerY);
-        }
-
-        // Save the PDF
-        doc.save("Hamza_Butt_Professional_Portfolio.pdf");
-    };
-
-    return {
-        generatePdf
-    };
+      }
+      
+      // Add new page if we're getting close to the bottom
+      if (yPos > 250) {
+        doc.addPage();
+        yPos = 20;
+      }
+    }
+    
+    // Add footer with correct page numbering
+    const totalPages = doc.internal.getNumberOfPages();
+    for (let i = 1; i <= totalPages; i++) {
+      doc.setPage(i);
+      const footerY = pageHeight - 10;
+      doc.setFontSize(10);
+      doc.setTextColor(150, 150, 150);
+      doc.text("Generated on " + new Date().toLocaleDateString(), 20, footerY);
+      doc.text(`Page ${i} of ${totalPages}`, pageWidth - 40, footerY);
+    }
+    
+    // Save the PDF
+    doc.save("Hamza_Butt_Professional_Resume.pdf");
+  };
+  
+  return {
+    generatePdf
+  };
 }
