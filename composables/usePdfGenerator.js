@@ -7,35 +7,13 @@ export function usePdfGenerator() {
 
         try {
             const response = await fetch('/cv-resume.md');
-            if (response.ok) {
-                markdownContent = await response.text();
-            } else {
+            if (!response.ok) {
                 throw new Error('Failed to fetch markdown');
             }
+            markdownContent = await response.text();
         } catch (error) {
             console.error('Error fetching cv-resume.md:', error);
-
-            // Fallback content
-            markdownContent = `
-# HAMZA BUTT  
-**Senior Backend / Platform Engineer**
-
-📧 hamza.b93@protonmail.com  
-📱 +92-319-5040505  
-📍 Pakistan  
-
----
-
-## PROFESSIONAL SUMMARY
-Backend / Platform Engineer with 4+ years of experience building scalable Node.js systems.
-
----
-
-## CORE TECHNICAL SKILLS
-- Node.js, Express.js, Fastify
-- PostgreSQL, MySQL, MongoDB
-- AWS, Docker, CI/CD
-      `;
+            return; // stop execution, file must exist
         }
 
         // Convert Markdown → HTML
@@ -114,7 +92,7 @@ Backend / Platform Engineer with 4+ years of experience building scalable Node.j
             format: 'a4'
         });
 
-        // Metadata
+        // PDF metadata
         doc.setProperties({
             title: "Hamza Butt - Professional Resume",
             subject: "Resume",
@@ -131,24 +109,25 @@ Backend / Platform Engineer with 4+ years of experience building scalable Node.j
             autoPaging: 'text',
 
             callback: function (doc) {
-                const pageCount = doc.getNumberOfPages();
+                const totalPages = doc.getNumberOfPages();
 
-                // Footer
-                for (let i = 1; i <= pageCount; i++) {
+                // Add footer with page numbers and date
+                for (let i = 1; i <= totalPages; i++) {
                     doc.setPage(i);
                     doc.setFontSize(9);
                     doc.setTextColor(150);
+                    const pageWidth = doc.internal.pageSize.getWidth();
+                    const pageHeight = doc.internal.pageSize.getHeight();
 
                     doc.text(
-                        `Page ${i} of ${pageCount}`,
-                        doc.internal.pageSize.getWidth() - 40,
-                        doc.internal.pageSize.getHeight() - 10
+                        `Page ${i} of ${totalPages}`,
+                        pageWidth - 40,
+                        pageHeight - 10
                     );
-
                     doc.text(
                         `Generated on ${new Date().toLocaleDateString()}`,
                         10,
-                        doc.internal.pageSize.getHeight() - 10
+                        pageHeight - 10
                     );
                 }
 
