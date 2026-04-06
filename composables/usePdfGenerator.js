@@ -1,5 +1,6 @@
 import jsPDF from 'jspdf';
 import { marked } from 'marked';
+import font from './NotoSans-Regular-normal.js'; // base64 encoded font file
 
 export function usePdfGenerator() {
     const generatePdf = async () => {
@@ -14,27 +15,19 @@ export function usePdfGenerator() {
             return;
         }
 
-        // Convert Markdown to HTML
+        // Convert Markdown → HTML
         const htmlContent = `
       <html>
         <head>
           <style>
-            body {
-              font-family: Arial, sans-serif;
-              font-size: 11px;
-              line-height: 1.5;
-              color: #000;
-              padding: 10px;
-            }
-
+            body { font-family: NotoSans; font-size: 11px; line-height: 1.5; color: #000; padding: 10px; }
             h1 { font-size: 22px; color: #1976d2; border-bottom: 2px solid #1976d2; padding-bottom: 5px; }
             h2 { font-size: 16px; color: #1976d2; margin-top: 15px; margin-bottom: 5px; }
             h3 { font-size: 13px; margin-top: 10px; margin-bottom: 4px; }
-            p { margin: 4px 0; color: #000; }
+            p, li { color: #000; }
             ul { margin-left: 15px; padding-left: 10px; }
-            li { margin-bottom: 3px; color: #000; }
             strong { font-weight: bold; }
-            hr { border: none; border-top: 1px solid #ccc; margin: 10px 0; }
+            hr { border-top: 1px solid #ccc; margin: 10px 0; }
             a { color: #1976d2; text-decoration: none; }
           </style>
         </head>
@@ -44,7 +37,12 @@ export function usePdfGenerator() {
       </html>
     `;
 
+        // Load UTF-8 font
+        jsPDF.API.addFileToVFS('NotoSans-Regular.ttf', font);
+        jsPDF.API.addFont('NotoSans-Regular.ttf', 'NotoSans', 'normal');
+
         const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+        doc.setFont('NotoSans');
 
         await doc.html(htmlContent, {
             x: 10,
@@ -58,7 +56,7 @@ export function usePdfGenerator() {
                 for (let i = 1; i <= totalPages; i++) {
                     doc.setPage(i);
                     doc.setFontSize(9);
-                    doc.setTextColor(0); // Force black text for footer
+                    doc.setTextColor(0);
                     const pageHeight = doc.internal.pageSize.getHeight();
                     const pageWidth = doc.internal.pageSize.getWidth();
 
