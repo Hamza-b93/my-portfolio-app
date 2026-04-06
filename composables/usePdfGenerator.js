@@ -58,6 +58,7 @@ export function usePdfGenerator() {
         doc.text("Location: Pakistan", pageWidth / 2, yPos);
         yPos += 7;
         doc.text("LinkedIn: https://www.linkedin.com/in/hamzabutt96/", 20, yPos);
+        yPos += 7;
         doc.text("GitHub: https://github.com/Hamza-b93", pageWidth / 2, yPos);
 
         // Add a line separator
