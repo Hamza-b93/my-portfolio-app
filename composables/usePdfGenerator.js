@@ -58,7 +58,7 @@ export function usePdfGenerator() {
         doc.text("Location: Pakistan", pageWidth / 2, yPos);
         yPos += 7;
         doc.text("LinkedIn: https://www.linkedin.com/in/hamzabutt96/", 20, yPos);
-        yPos += 7;
+        yPos += 0;
         doc.text("GitHub: https://github.com/Hamza-b93", pageWidth / 2, yPos);
 
         // Add a line separator
@@ -77,8 +77,7 @@ export function usePdfGenerator() {
         doc.setFontSize(12);
         doc.setTextColor(0, 0, 0);
         doc.setFont(undefined, 'normal');
-        const bioText = "I am a Software Engineer with 3+ years of development experience in the industry. " +
-            "Having worked on a wide variety of projects, my knowledge and experience makes me a great addition to any development team.";
+        const bioText = "Backend / Platform Engineer with 4+ years of experience building scalable Node.js systems across IoT, SaaS, and compliance-driven platforms. Specialized in high-throughput data pipelines, multi-tenant architectures, and privacy frameworks (GDPR/CCPA). Proven ability to design and deliver production systems handling 10K+ daily transactions, optimize performance, and lead backend development in fast-paced environments.";
         const bioLines = doc.splitTextToSize(bioText, pageWidth - 40);
         bioLines.forEach(line => {
             // Check if we need a new page
