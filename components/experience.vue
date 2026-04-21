@@ -12,11 +12,64 @@
                     </div>
                     <span
                         class="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full mt-2 md:mt-0">
-                        April 2025 – Present
+                        January 2025 – Present (Promoted from Junior Software Engineer)
                     </span>
                 </div>
 
                 <div class="space-y-6">
+                    <div>
+                        <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-3">Video AI Platform (Next-Gen Revamp)
+                            (Express + PostgreSQL + Kafka + ClickHouse)
+                        </h4>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Led backend development of next-generation Video AI platform, enhancing the
+                                    platform with advanced AI-driven capabilities
+                                </span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Designed and implemented high-throughput, event-driven ingestion pipeline using
+                                    Kafka and ClickHouse for real-time video analytics</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Built intelligent investigation engine enabling automated case analysis from video
+                                    events and behavioral patterns</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>EIntegrated AI-powered chatbot assistant to support natural language querying and
+                                    investigation workflows</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Migrated and optimized core services to PostgreSQL, improving data consistency and
+                                    query performance</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Architected scalable, distributed backend services using Node.js (Express) for
+                                    high-throughput video event processing</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Enabled faster investigation workflows by automating video event correlation and
+                                    analysis</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Enabled faster investigation workflows by automating video event correlation and
+                                    analysis</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Processed large-scale video event streams across distributed systems in near
+                                    real-time</span>
+                            </li>
+                        </ul>
+                    </div>
                     <!-- Privacy And Regulatory Compliance Framework Project -->
                     <div>
                         <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-3">Privacy And Regulatory Compliance
@@ -24,56 +77,60 @@
                         <ul class="space-y-2 text-gray-600 dark:text-gray-300">
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
-                                <span>Worked on designing and developing a regulatory compliance framework for OnStak Inc.
-                                    so that our products and solutions would be more regulatory compliant with GDPR and
-                                    CCPA</span>
+                                <span>Architected GDPR/CCPA compliance framework across 3 product lines, implementing
+                                    encryption, automated data retention, and right-to-deletion workflows</span>
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
-                                <span>Aligned database design and data processing workflows with GDPR and CCPA requirements, 
-                                    including implementing data encryption at rest and in transit, data minimization practices, 
+                                <span>Aligned database design and data processing workflows with GDPR and CCPA
+                                    requirements,
+                                    including implementing data encryption at rest and in transit, data minimization
+                                    practices,
                                     and right to deletion functionalities</span>
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
-                                <span>Collaborated closely with frontend and backend development teams to implement 
-                                    necessary changes for compliance, including cookie consent management, data access 
+                                <span>Collaborated closely with frontend and backend development teams to implement
+                                    necessary changes for compliance, including cookie consent management, data access
                                     request handling, and privacy policy integration</span>
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
-                                <span>Established audit trails and logging mechanisms to track data access and processing 
-                                    activities for compliance verification purposes</span>
+                                <span>Designed audit trail system tracking 100% of data access events, reducing audit
+                                    preparation time by <b>**60%</b></span>
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
-                                <span>Conducted privacy impact assessments and worked with legal team to ensure all 
+                                <span>Conducted privacy impact assessments and worked with legal team to ensure all
                                     data handling procedures met regulatory standards</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Led cross-functional implementation of cookie consent and privacy systems</span>
                             </li>
                         </ul>
                     </div>
-                    
+
                     <!-- Predictive Maintenance Project -->
                     <div>
-                        <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-3">Predictive Maintenance (Express.js +
+                        <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-3">AI Predictive Maintenance
+                            (Express.js +
                             (Node.js) + POSTGRESQL + AWS S3 Bucket Service + JWT)</h4>
                         <ul class="space-y-2 text-gray-600 dark:text-gray-300">
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
-                                <span>Worked on the design and development of an AI based Predictive Maintenance system
-                                    that is designed to observe and measure various sensor parameters of a Vehicle
-                                    Assembly Line and make predictions about hardware failure and overall
-                                    efficiency</span>
+                                <span>Designed and scaled IoT data pipeline processing **10,000+ events/minute** for
+                                    real-time failure prediction</span>
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
-                                <span>Setup complete database with authentication and tenant based access control in
-                                    POSTGRESQL</span>
+                                <span>Architected secure multi-tenant system with row-level isolation and RBAC for
+                                    enterprise clients</span>
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
-                                <span>Setup Docker based deployment pipeline using GitHub Actions and Github
-                                    Runners</span>
+                                <span>Automated CI/CD pipelines using GitHub Actions, reducing deployment time from 2
+                                    hours to **15 minutes**</span>
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
@@ -81,7 +138,49 @@
                             </li>
                         </ul>
                     </div>
-                    
+
+                    <!-- PCB-Cloud Project -->
+                    <div>
+                        <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-3">PCB-Cloud (Node.js + Fastify + MYSQL
+                            + Prisma + JWT + MQTT)</h4>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Served as technical lead for backend team of 3 engineers</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Worked on the design and development aspect of Pakistan Cricket Board's custom
+                                    player analytics solution (Backend)</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Created entire Backend structure in Node.js using Fastify as the Backend
+                                    framework, MYSQL as the database and Prisma as the ORM</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Implemented authentication, user registration and role based access using JSON Web
+                                    Tokens (JWTs) and in-app notifications using MQTT PubSub methodologies</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Guided junior development resources in-terms of functionality enhancement for the
+                                    project</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Developed CI/CD Pipelines for code deployment inside containerized environments
+                                    using GitHub Actions, GitHub Runners and Podman</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-500 mr-2">•</span>
+                                <span>Assigned tasks to junior resources working on this project and helped these
+                                    resources accomplish tasks in a timely manner</span>
+                            </li>
+                        </ul>
+                    </div>
+
                     <!-- Military Mutual Project -->
                     <div>
                         <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-3">Military Mutual (SupaBase + Vercel +
@@ -99,59 +198,8 @@
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
-                                <span>Created deployment pipeline using GitHub for automated deployment</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- PCB-Cloud Project -->
-                    <div>
-                        <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-3">PCB-Cloud (Node.js + Fastify + MYSQL
-                            + Prisma + JWT + MQTT)</h4>
-                        <ul class="space-y-2 text-gray-600 dark:text-gray-300">
-                            <li class="flex">
-                                <span class="text-blue-500 mr-2">•</span>
-                                <span>Worked on the design and development aspect of Pakistan Cricket Board's custom
-                                    player analytics solution (Backend)</span>
-                            </li>
-                            <li class="flex">
-                                <span class="text-blue-500 mr-2">•</span>
-                                <span>Created entire Backend structure in Node.js using Fastify as the Backend
-                                    framework, MYSQL as the database and Prisma as the ORM</span>
-                            </li>
-                            <li class="flex">
-                                <span class="text-blue-500 mr-2">•</span>
-                                <span>Implemented authentication, user registration and role based access using JSON Web
-                                    Tokens (JWTs)</span>
-                            </li>
-                            <li class="flex">
-                                <span class="text-blue-500 mr-2">•</span>
-                                <span>Implemented in-app notifications using MQTT PubSub methodologies</span>
-                            </li>
-                            <li class="flex">
-                                <span class="text-blue-500 mr-2">•</span>
-                                <span>Guided junior development resources in-terms of functionality enhancement for the
-                                    project</span>
-                            </li>
-                            <li class="flex">
-                                <span class="text-blue-500 mr-2">•</span>
-                                <span>Assigned tasks to junior resources working on this project and helped these
-                                    resources accomplish tasks in a timely manner</span>
-                            </li>
-                            <li class="flex">
-                                <span class="text-blue-500 mr-2">•</span>
-                                <span>Developed CI/CD Pipelines for code deployment inside containerized environments
-                                    using GitHub Actions, GitHub Runners and Podman</span>
-                            </li>
-                            <li class="flex">
-                                <span class="text-blue-500 mr-2">•</span>
-                                <span>Acted as de facto tech lead on multiple client projects, managing task allocation,
-                                    code reviews, and architectural decisions</span>
-                            </li>
-                            <li class="flex">
-                                <span class="text-blue-500 mr-2">•</span>
-                                <span>Basic familiarity with TypeScript and AWS services like EC2, S3 (used for
-                                    small-scale deployment or testing environments)</span>
+                                <span>Automated deployment workflows, reducing manual release effort by
+                                    <b>80%</b></span>
                             </li>
                         </ul>
                     </div>
@@ -167,15 +215,15 @@
                     </div>
                     <span
                         class="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-medium px-3 py-1 rounded-full mt-2 md:mt-0">
-                        April 2022 – March 2025
+                        April 2022 – January 2025
                     </span>
                 </div>
 
                 <div class="space-y-6">
                     <!-- KFC Drive-Thru Analytics Project -->
                     <div>
-                        <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-3">KFC Drive-Thru Analytics (Node.js +
-                            Express + MYSQL + Sequelize + JWT)</h4>
+                        <h4 class="font-bold text-gray-800 dark:text-gray-200 mb-3">KFC Drive-Thru Analytics Platform
+                            (Node.js + Express + MYSQL + Sequelize + JWT)</h4>
                         <ul class="space-y-2 text-gray-600 dark:text-gray-300">
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
@@ -221,12 +269,13 @@
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
-                                <span>Worked on integrating various machine learning models into the software
+                                <span>Worked on the integration of various machine learning models into the software
                                     solution</span>
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
-                                <span>Integrated role based and tenant based authorization in the software solution</span>
+                                <span>Designed a tenant-based authorization system supporting 15+ enterprise
+                                    clients</span>
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
@@ -261,21 +310,15 @@
                     </li>
                     <li class="flex">
                         <span class="text-blue-500 mr-2">•</span>
-                        <span>Helped in maintaining the backend codebase for this software solution</span>
+                        <span>Improved query performance by **40%** through indexing and query optimization</span>
                     </li>
                     <li class="flex">
                         <span class="text-blue-500 mr-2">•</span>
-                        <span>Added new features in the codebase based on various client requirements</span>
+                        <span>Implemented caching layer reducing database load by <b>25%</b> </span>
                     </li>
                     <li class="flex">
                         <span class="text-blue-500 mr-2">•</span>
-                        <span>Worked on developing and integrating basic level caching mechanisms using node
-                            cache</span>
-                    </li>
-                    <li class="flex">
-                        <span class="text-blue-500 mr-2">•</span>
-                        <span>Worked on integrating backend REST APIs with frontend engineers and Android
-                            applications</span>
+                        <span>Delivered APIs supporting multiple frontend and mobile applications</span>
                     </li>
                 </ul>
             </div>

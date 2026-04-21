@@ -12,12 +12,10 @@
 
                 <p class="text-gray-600 dark:text-gray-300 mt-6 mb-8 text-lg">
                     <strong>Backend / Platform Engineer</strong> with 4+ years of experience building scalable Node.js
-                    systems across
-                    IoT, SaaS, and compliance-driven platforms. Specialized in high-throughput data pipelines,
-                    multi-tenant architectures, and privacy frameworks (GDPR/CCPA). Proven ability to design and deliver
-                    production systems handling 10K+ daily transactions, optimize performance, and lead backend
-                    development in fast-paced environments.
-
+                    systems across IoT, SaaS, and compliance-driven platforms. Specialized in high-throughput data
+                    pipelines, multi-tenant architectures, and privacy frameworks (GDPR/CCPA). Proven ability to design
+                    and deliver production systems handling 10K+ daily transactions, optimize performance, and lead
+                    backend development in fast-paced environments.
                 </p>
 
                 <!-- Contact Info -->
