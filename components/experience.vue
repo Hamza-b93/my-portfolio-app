@@ -40,7 +40,7 @@
                             </li>
                             <li class="flex">
                                 <span class="text-blue-500 mr-2">•</span>
-                                <span>EIntegrated AI-powered chatbot assistant to support natural language querying and
+                                <span>Integrated AI-powered chatbot assistant to support natural language querying and
                                     investigation workflows</span>
                             </li>
                             <li class="flex">
