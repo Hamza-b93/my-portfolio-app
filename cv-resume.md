@@ -15,13 +15,13 @@ Backend / Platform Engineer with 4+ years of experience building scalable Node.j
 
 ---
 
-## CORE TECHNICAL SKILLS
+## CORE STRENGTHS AND SKILLS
 
-**Backend:** Node.js, Express.js, Fastify, TypeScript, REST APIs, JWT  
-**Databases:** PostgreSQL, MySQL, MongoDB, ClickHouse, Prisma, Sequelize  
-**Cloud & DevOps:** AWS (S3, EC2), Docker, Podman, GitHub Actions, Self-hosted GitHub Runners, CI/CD, Linux  
-**Frontend:** Vue.js, Nuxt.js, Tailwind CSS  
-**Other:** MQTT, WebSockets, Kafka, Multi-tenant Architecture, System Design, Event-driven Systems  
+Node.js, JavaScript, Git, Docker, Podman, Vue.js, SQL, NOSQL, Linux, Alibaba Cloud, Web Sockets
+
+## SUPPORTING SKILLS AND STRENGTHS
+
+Nuxt.js, Linux, HTML, Bootstrap, CSS, Tailwind CSS, POSTGRESQL, SupaBase, MySQL, MongoDB, Firebase, AWS, Fastify, Express.js, MQTT, Prisma, Sequelize, Socket.IO
 
 ---
 
@@ -107,21 +107,62 @@ _Promoted from Junior Software Engineer_
 
 ## EDUCATION
 
-**Bachelor of Science in Computer Science (BSCS)**  
-Forman Christian College, Lahore | *2016 – 2020*  
+### Bachelors Of Computer Science (BCS)
+**Forman Christian College** | 2016 – 2020
 
-- Final Year Project: Social Media Predictive Analytics System (ML-based, 85% accuracy)  
-- Relevant Coursework: Data Structures, Algorithms, Database Systems, Software Engineering  
+Completed comprehensive computer science curriculum covering programming, algorithms, databases, and software engineering principles.
+
+**Skills:** Linux, Bootstrap
+
+**Final Year Project:** Social Media Predictive Analytics System. Used Machine Learning and Predictive Analytics models to predict social media post reach.
+
+### A'Levels
+**Beaconhouse Defence Campus Lahore** | 2012 – 2014
+
+Completed advanced level studies with focus on science and mathematics.
+
+### O'Levels
+**DHA Senior School For Boys Lahore** | 2008 – 2012
+
+Completed secondary education with a strong foundation in mathematics and science.
 
 ---
 
-## CERTIFICATIONS
+## CERTIFICATIONS AND ACHIEVEMENTS
 
-- Introduction to Data Analytics for Business — University of Colorado Boulder (2024)  
+### Certifications
+
+#### Introduction to Data Analytics for Business
+**Institution:** University Of Colorado Boulder  
+**Platform:** Coursera
+
+#### UX Design Fundamentals
+**Institution:** California Institute Of Arts  
+**Platform:** Coursera
+
+#### Visual Elements Of User Interface Design
+**Institution:** California Institute Of Arts  
+**Platform:** Coursera
+
+#### Front-End Web UI Frameworks And Tools: Bootstrap 4
+**Institution:** The Hong Kong University Of Science And Technology  
+**Platform:** Coursera
+
+### Achievements
+
+#### Winner Of Forman Computing Society's Freshmen Gaming Competition (Counter Strike)
+**Event:** FCCU FCS 2016
 
 ---
 
 ## ADDITIONAL INFORMATION
 
-**Languages:** English (Professional), Urdu (Native)  
-**Interests:** Technical content creation, photography, competitive gaming  
+**Languages:** English (Bi-Lingual), Urdu (Native)
+
+**Interests:**
+- Photography and Videography
+- Graphics Design (2D and 3D)
+- Videogames and E-sports
+- Tennis, Football, Swimming and Hiking
+- Bilingual (English and Urdu)
+- Content Creation

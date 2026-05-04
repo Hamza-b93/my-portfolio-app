@@ -1,6 +1,6 @@
 <template>
-  <button 
-    @click="generatePdf"
+  <button
+    @click="handleDownload"
     class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full shadow-lg transition-all duration-300 flex items-center z-50 print:hidden"
     title="Download PDF Resume"
   >
@@ -9,21 +9,13 @@
   </button>
 </template>
 
-<script>
-import { usePdfGenerator } from '~/composables/usePdfGenerator';
+<script setup lang="ts">
+import { usePdfGenerator } from '~/composables/usePdfGenerator'
 
-export default {
-  name: "PdfDownloadButton",
-  setup() {
-    const { generatePdf } = usePdfGenerator();
-    
-    return {
-      generatePdf
-    };
-  }
-};
+const { data } = useResumeData()
+const { generatePdf } = usePdfGenerator()
+
+function handleDownload() {
+  if (data.value) generatePdf(data.value)
+}
 </script>
-
-<style scoped>
-/* Button will be fixed at bottom right of screen */
-</style>
