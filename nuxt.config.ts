@@ -12,5 +12,16 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: ''
+  },
+  nitro: {
+    // Bundle cv-resume.md into the server output so it works on Node.js and edge runtimes
+    serverAssets: [{
+      baseName: 'resume',
+      dir: '../'
+    }],
+    prerender: {
+      // Generate /api/resume as a static JSON file for static (Cloudflare Pages) deployments
+      routes: ['/api/resume']
+    }
   }
 });

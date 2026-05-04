@@ -1,6 +1,4 @@
 import { marked, type Token } from 'marked'
-import { readFile } from 'fs/promises'
-import { resolve } from 'path'
 
 // Strip markdown syntax to plain text
 function plain(text: string): string {
@@ -204,7 +202,7 @@ function parseAdditionalInfo(tokens: Token[]) {
 }
 
 export default defineEventHandler(async () => {
-  const markdown = await readFile(resolve(process.cwd(), 'cv-resume.md'), 'utf-8')
+  const markdown = await useStorage('assets:resume').getItem('cv-resume.md') as string
   const tokens = marked.lexer(markdown)
   const sections = groupSections(tokens)
 
