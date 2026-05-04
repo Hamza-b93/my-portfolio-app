@@ -1,5 +1,3 @@
-import jsPDF from 'jspdf';
-
 export function usePdfGenerator() {
 
     // ── Constants ──────────────────────────────────────────────────────────────
@@ -191,7 +189,8 @@ export function usePdfGenerator() {
     }
 
     // ── Main build ─────────────────────────────────────────────────────────────
-    function buildPdf(data) {
+    async function buildPdf(data) {
+        const { default: jsPDF } = await import('jspdf');
         doc = new jsPDF({ unit: 'mm', format: 'a4', compress: true });
         y = MARGIN_TOP;
         pageNum = 1;
@@ -293,9 +292,9 @@ export function usePdfGenerator() {
     }
 
     // ── Public API ─────────────────────────────────────────────────────────────
-    const generatePdf = (data) => {
+    const generatePdf = async (data) => {
         try {
-            const pdfDoc = buildPdf(data);
+            const pdfDoc = await buildPdf(data);
             pdfDoc.save('Hamza_Butt_Resume.pdf');
         } catch (err) {
             console.error('PDF generation error:', err);
