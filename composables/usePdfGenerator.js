@@ -173,9 +173,6 @@ export function usePdfGenerator() {
             doc.setFontSize(SZ.small);
             setColor(GREY);
 
-            const dateStr = `Generated ${new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}`;
-            doc.text(dateStr, MARGIN_LEFT, PAGE_H - 10);
-
             const pgStr = `Page ${i} of ${total}`;
             const pw = doc.getTextWidth(pgStr);
             doc.text(pgStr, PAGE_W - MARGIN_RIGHT - pw, PAGE_H - 10);
