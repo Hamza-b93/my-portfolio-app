@@ -10,6 +10,13 @@ export const coreSkillIcons: Record<string, string> = {
   'Linux': 'skill-icons:linux-light',
   'Alibaba Cloud': 'devicon:alibabacloud',
   'Web Sockets': 'logos:websocket',
+  'Kubernetes': 'devicon:kubernetes',
+  'Rancher': 'devicon:rancher',
+  'Argo CD': 'devicon:argocd',
+  'Bitbucket Pipelines': 'devicon:bitbucket',
+  'Helm': 'devicon:helm',
+  'GitOps': 'mdi:git',
+  'CI/CD': 'mdi:git',
 }
 
 export const supportingSkillIcons: Record<string, string> = {
@@ -31,6 +38,17 @@ export const supportingSkillIcons: Record<string, string> = {
   'Prisma': 'devicon:prisma',
   'Sequelize': 'devicon:sequelize',
   'Socket.IO': 'devicon:socketio',
+  'Kubernetes': 'devicon:kubernetes',
+  'Rancher': 'devicon:rancher',
+  'Argo CD': 'devicon:argocd',
+  'Bitbucket': 'devicon:bitbucket',
+  'Helm': 'devicon:helm',
+  'Prometheus': 'devicon:prometheus',
+  'Grafana': 'devicon:grafana',
+  'Terraform': 'devicon:terraform',
+  'Ansible': 'devicon:ansible',
+  'Traefik': 'devicon:traefik',
+  'Kustomize': 'mdi:kubernetes',
 }
 
 export const interestIcons: Record<string, string> = {

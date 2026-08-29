@@ -1,5 +1,5 @@
 # HAMZA BUTT  
-**Senior Backend / Platform Engineer**
+**DevOps Engineer / Senior Backend Engineer**
 
 📧 hamza.b93@protonmail.com  
 📱 +92-319-5040505  
@@ -11,22 +11,23 @@
 
 ## PROFESSIONAL SUMMARY
 
-Backend / Platform Engineer with 4+ years of experience building scalable Node.js systems across IoT, SaaS, and compliance-driven platforms. Specialized in high-throughput data pipelines, multi-tenant architectures, and privacy frameworks (GDPR/CCPA). Proven ability to design and deliver production systems handling 10K+ daily transactions, optimize performance, and lead backend development in fast-paced environments.
+DevOps Engineer & Senior Backend Engineer with 4+ years of experience building scalable Node.js systems and cloud-native platforms across IoT, SaaS, and compliance-driven environments. Specialized in Kubernetes (Rancher), GitOps (Argo CD), CI/CD pipelines (Bitbucket Pipelines), and high-throughput data pipelines. Proven ability to design and deliver production systems handling 10K+ daily transactions, migrate 15 applications to Kubernetes with zero-downtime deployments, optimize performance, and lead platform engineering in fast-paced environments.
 
 ---
 
 ## CORE STRENGTHS AND SKILLS
 
-Node.js, JavaScript, Git, Docker, Podman, Vue.js, SQL, NOSQL, Linux, Alibaba Cloud, Web Sockets
+Node.js, JavaScript, Git, Docker, Podman, Vue.js, SQL, NOSQL, Linux, Alibaba Cloud, Web Sockets, Kubernetes, Rancher, Argo CD, Bitbucket Pipelines, Helm, GitOps, CI/CD
 
 ## SUPPORTING SKILLS AND STRENGTHS
 
-Nuxt.js, Linux, HTML, Bootstrap, CSS, Tailwind CSS, POSTGRESQL, SupaBase, MySQL, MongoDB, Firebase, AWS, Fastify, Express.js, MQTT, Prisma, Sequelize, Socket.IO
+Nuxt.js, Linux, HTML, Bootstrap, CSS, Tailwind CSS, POSTGRESQL, SupaBase, MySQL, MongoDB, Firebase, AWS, Fastify, Express.js, MQTT, Prisma, Sequelize, Socket.IO, Kubernetes, Rancher, Argo CD, Bitbucket, Helm, Prometheus, Grafana, Terraform, Ansible, Traefik, Kustomize
 
 ---
 
 ## KEY ACHIEVEMENTS
 
+- Migrated **15 applications** from AWS EC2 to Rancher-managed Kubernetes via Argo CD GitOps with Bitbucket Pipelines, achieving zero-downtime deployments  
 - Reduced deployment time by **87%** (2 hours → 15 minutes) through CI/CD automation  
 - Designed IoT pipeline processing **10,000+ events/minute** for predictive maintenance  
 - Built backend systems handling **50,000+ daily transactions**  
@@ -37,8 +38,27 @@ Nuxt.js, Linux, HTML, Bootstrap, CSS, Tailwind CSS, POSTGRESQL, SupaBase, MySQL,
 
 ## PROFESSIONAL EXPERIENCE
 
+### DevOps Engineer | OnStak Inc.  
+*June 2025 – Present*  
+
+_Transitioned from Senior Software Engineer to lead platform engineering and DevOps initiatives_
+
+#### Platform Migration: 15 Applications to Rancher/Kubernetes via Argo CD GitOps  
+*(Kubernetes, Rancher, Argo CD, Bitbucket Pipelines, Helm, Traefik, Kustomize, GitOps)*  
+
+- Migrated **15 applications** from AWS EC2 to Rancher-managed Kubernetes clusters via Argo CD GitOps, eliminating manual deployment processes  
+- Configured **Bitbucket Pipelines** for each project enabling automated build, test, security scanning, and deploy workflows  
+- Implemented **Traefik as ingress controller** handling TLS termination, routing, and load balancing for all 15 services with automated certificate management  
+- Designed **Helm charts and Kustomize overlays** for consistent, environment-specific deployments across dev/staging/production  
+- Established GitOps workflow with Argo CD enabling progressive delivery, automated sync, and rollback on health check failures  
+- Integrated **Prometheus/Grafana** for cluster monitoring, alerting, and observability across all migrated workloads  
+- Achieved **zero-downtime deployments** with blue-green and canary strategies, reducing release risk to near-zero  
+- Reduced deployment time from hours to minutes through fully automated GitOps pipelines  
+
+---
+
 ### Senior Software Engineer | OnStak Inc.  
-*April 2025 – Present*  
+*April 2022 – May 2025*  
 
 _Promoted from Junior Software Engineer_
 
